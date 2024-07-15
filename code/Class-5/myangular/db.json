@@ -1,0 +1,58 @@
+{
+  "locations": [
+    {
+      "id": "af0a",
+      "name": "Lalbagh",
+      "city": "Dhaka",
+      "state": "bd",
+      "photo": "fgfd",
+      "availableUnits": "6",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "4f15",
+      "name": "lalmatia",
+      "city": "dhaka",
+      "state": "bd",
+      "photo": "dddd",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "cellNo": "01763001787",
+      "location": {
+        "id": "af0a",
+        "name": "rsfrg",
+        "city": "hdggj",
+        "state": "fjfhj",
+        "photo": "jf ",
+        "availableUnits": "6",
+        "wifi": true,
+        "laundry": ""
+      }
+    },
+    {
+      "id": "2b02",
+      "name": "sanaullah",
+      "email": "rofik1787@gmail.com",
+      "cellNo": "01763001787",
+      "location": {
+        "id": "af0a",
+        "name": "Lalbagh",
+        "city": "Dhaka",
+        "state": "bd",
+        "photo": "fgfd",
+        "availableUnits": "6",
+        "wifi": true,
+        "laundry": true
+      }
+    }
+  ]
+}
