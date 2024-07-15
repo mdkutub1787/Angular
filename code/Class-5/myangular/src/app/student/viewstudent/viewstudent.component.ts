@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
 import { LocationService } from '../../location/location.service';
 import { Router } from '@angular/router';
+import { StudentModel } from '../student.model';
 
 @Component({
   selector: 'app-viewstudent',
@@ -42,4 +43,10 @@ export class ViewstudentComponent implements OnInit {
 
   }
 
+  editStudent(student:StudentModel):void{
+
+    this.router.navigate(['/updateStudent',student.id]);
+  }
+
 }
+

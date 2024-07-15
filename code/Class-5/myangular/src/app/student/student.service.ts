@@ -28,4 +28,14 @@ export class StudentService {
 
   }
 
+  updateStudent(student: StudentModel): Observable<StudentModel> {
+    return this.http.post<StudentModel>(this.baseUrl, student);
+
+  }
+
+  getByStudentId(studentId: string): Observable<StudentModel> {
+    return this.http.get<StudentModel>(this.baseUrl + studentId);
+
+  }
+
 }

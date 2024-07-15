@@ -29,54 +29,59 @@ export class CreatestudentComponent implements OnInit {
     this.loadLocation();
 
     this.studentForm = this.formBuilder.group({
+
       name: [''],
       email: [''],
       cellNo: [''],
       location: this.formBuilder.group({
+
         id: [undefined],
-        name: [undefined,],
+        name: [undefined],
         city: [undefined],
         state: [undefined],
         photo: [undefined],
         availableUnits: [undefined],
         wifi: [undefined],
         laundry: [undefined]
+
       })
 
+
     });
+
     this.studentForm.get('location')?.get('name')?.valueChanges
       .subscribe(name => {
+
         const selectedLocation = this.location.find(loc => loc.name === name);
 
         if (selectedLocation) {
           this.studentForm.patchValue({ location: selectedLocation });
+
         }
 
       });
 
+
   }
-
-
-
 
   loadLocation() {
     this.locationService.getAllLocationforStudent()
       .subscribe({
         next: res => {
           this.location = res;
-         
-          
         },
-
-        error: er => {
-          console.log(er);
+        error: error => {
+          console.log(error);
 
         }
-      });
+      })
 
   }
 
+
+
   createStudent() {
+
     this.student.name = this.studentForm.value.name;
     this.student.email = this.studentForm.value.email;
     this.student.cellNo = this.studentForm.value.cellNo;
@@ -84,17 +89,17 @@ export class CreatestudentComponent implements OnInit {
 
     this.studentService.createStudent(this.student)
       .subscribe({
+
         next: res => {
           this.loadLocation();
           this.studentForm.reset();
-          this.router.navigate(['viewstudent'])
+          this.router.navigate(['viewstudent']);
         },
-        error: err => {
-          console.log(err);
+        error: error => {
+          console.log(error);
         }
 
       });
-
   }
 
 }

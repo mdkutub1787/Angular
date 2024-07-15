@@ -33,7 +33,7 @@
                     <td>{{ st.location.name }}</td>
 
                     <td>
-                        <button class="btn btn-warning btn-m- p-1"> Edit </button>
+                        <button class="btn btn-warning btn-m- p-1" (click)="editStudent(st)"> Edit </button>
                     </td>
                     <td>
                         <button class="btn btn-danger btn- m-2 p-1" (click)="deleteStudent(st.id)">Delete</button>
