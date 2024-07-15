@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>           
+            <th>Photo</th>
+            <th>Unit</th>
+            <th>Wifi</th>
+            <th>Laundry</th>
+        </tr>
+
+        <tr *ngFor="let s of locations |async">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.city}}</td>
+            <td>{{s.state}}</td>
+            <td>{{s.photo}}</td>
+            <td>{{s.availableUnits}}</td>
+            <td>{{s.wifi}}</td>
+            <td>{{s.laundry}}</td>
+            <td></td>
+
+        </tr>
+    </table>
+
+</div>

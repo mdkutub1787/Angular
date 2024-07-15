@@ -1,0 +1,64 @@
+{
+  "locations": [
+    {
+      "id": "5ceb",
+      "name": "rabiul",
+      "city": "pabna",
+      "state": "dhaka",
+      "photo": "jklbxljkhgxhnn",
+      "availableUnits": "552",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "58bd",
+      "name": "sanaullah",
+      "city": "chapay",
+      "state": "bd",
+      "photo": "jgkugikuy8kuhylo",
+      "availableUnits": "52",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "6005",
+      "name": "gfhgfjhn",
+      "city": "jfgjfhj",
+      "state": "hjfgjfjkf",
+      "photo": "jghjkjl",
+      "availableUnits": "585",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "ff1d",
+      "name": "cghjfjh",
+      "city": "jfhjkjk",
+      "state": "hkhklg",
+      "photo": "kjgkjg",
+      "availableUnits": "55",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "b2e2",
+      "name": "vbnbvnb",
+      "city": "hjhgvn",
+      "state": "mg,",
+      "photo": "jg,hj.k",
+      "availableUnits": "55",
+      "wifi": false,
+      "laundry": true
+    },
+    {
+      "id": "2dc7",
+      "name": "idb",
+      "city": "dhaka",
+      "state": "bd",
+      "photo": "https://www.google.com/imgres?q=idb&imgurl=https%3A%2F%2Fwww.gpit.com.bd%2Fuploads%2Fwebsite%2FIDB-2022-03-14-622f1be95ef05.jpg&imgrefurl=http%3A%2F%2Fgpit.com.bd%2FIDB&docid=x62Qk-W0sswBRM&tbnid=AqboDd8tyQz9iM&vet=12ahUKEwi-x7eH95mHAxUpyDgGHaDYOSAQM3oECFAQAA..i&w=400&h=400&hcb=2&ved=2ahUKEwi-x7eH95mHAxUpyDgGHaDYOSAQM3oECFAQAA",
+      "availableUnits": "12",
+      "wifi": true,
+      "laundry": true
+    }
+  ]
+}
