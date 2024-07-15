@@ -29,7 +29,7 @@ export class UpdatestudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentId = this.route.snapshot.params['id'];
-     console.log(this.studentId);
+    console.log(this.studentId);
     this.studentForm = this.fromBuilder.group({
       name: [''],
       email: [''],
@@ -85,27 +85,28 @@ export class UpdatestudentComponent implements OnInit {
       });
   }
 
-  updateStudent():void{
-    const updateStudent:StudentModel={
+  updateStudent(): void {
+    const updateStudent: StudentModel = {
 
       ...this.student,
       ...this.studentForm.value
+
     };
 
     this.studentService.updateStudent(updateStudent)
-    .subscribe({
-      next:res=>{
+      .subscribe({
+        next: res => {
 
-        console.log('student update successfully:',res);
-        this.studentForm.reset();
-        this.router.navigate(['viewstudent']);
-      },
-      error:error=>{
+          console.log('student update successfully:', res);
+          this.studentForm.reset();
+          this.router.navigate(['viewstudent']);
+        },
+        error: error => {
 
-        console.log('Error updating student:',error);
-      }
+          console.log('Error updating student:', error);
+        }
 
-    });
+      });
 
   }
 

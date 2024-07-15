@@ -29,7 +29,8 @@ export class StudentService {
   }
 
   updateStudent(student: StudentModel): Observable<StudentModel> {
-    return this.http.post<StudentModel>(this.baseUrl, student);
+    console.log(student);
+    return this.http.put<StudentModel>(this.baseUrl + student.id, student);
 
   }
 

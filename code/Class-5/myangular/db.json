@@ -34,7 +34,7 @@
   "students": [
     {
       "id": "b4fb",
-      "name": "Shabab ahmed",
+      "name": "Shabab ahmed Skip",
       "email": "mdkutuddin1787@gmail.com",
       "cellNo": "01763",
       "location": {
@@ -49,67 +49,35 @@
       }
     },
     {
-      "id": "b4fb",
-      "name": "fgdhgfhgd",
-      "email": "din1787@gmail.com",
+      "id": "1456",
+      "name": "towhid 2222",
+      "email": "rofik1787@gmail.com",
+      "cellNo": "0121454333",
+      "location": {
+        "id": "af0a",
+        "name": "Lalbagh",
+        "city": "Dhaka",
+        "state": "bd",
+        "photo": "fgfd",
+        "availableUnits": "6",
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "c3eb",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
       "cellNo": "01763001787",
       "location": {
-        "id": "55b3",
-        "name": "Azimpur",
-        "city": "Dhaka",
+        "id": "4f15",
+        "name": "lalmatia",
+        "city": "dhaka",
         "state": "bd",
-        "photo": "https://logowik.com/java-vector-logo-1028.html",
-        "availableUnits": "",
-        "wifi": false,
-        "laundry": false
-      }
-    },
-    {
-      "id": "b4fb",
-      "name": "Shabab ahmed",
-      "email": "mdkutuddin1787@gmail.com",
-      "cellNo": "01763",
-      "location": {
-        "id": "55b3",
-        "name": "Azimpur",
-        "city": "Dhaka",
-        "state": "bd",
-        "photo": "https://logowik.com/java-vector-logo-1028.html",
-        "availableUnits": "",
-        "wifi": false,
-        "laundry": false
-      }
-    },
-    {
-      "id": "b4fb",
-      "name": "Shabab ahmed",
-      "email": "mdkutuddin1787@gmail.com",
-      "cellNo": "01763",
-      "location": {
-        "id": "55b3",
-        "name": "Azimpur",
-        "city": "Dhaka",
-        "state": "bd",
-        "photo": "https://logowik.com/java-vector-logo-1028.html",
-        "availableUnits": "",
-        "wifi": false,
-        "laundry": false
-      }
-    },
-    {
-      "id": "b4fb",
-      "name": "Shabab ahmed",
-      "email": "mdkutuddin1787@gmail.com",
-      "cellNo": "01763",
-      "location": {
-        "id": "55b3",
-        "name": "Azimpur",
-        "city": "Dhaka",
-        "state": "bd",
-        "photo": "https://logowik.com/java-vector-logo-1028.html",
-        "availableUnits": "",
-        "wifi": false,
-        "laundry": false
+        "photo": "https://minhphanjavahome.wordpress.com/2019/04/19/what-is-java/",
+        "availableUnits": "4",
+        "wifi": true,
+        "laundry": true
       }
     }
   ]
