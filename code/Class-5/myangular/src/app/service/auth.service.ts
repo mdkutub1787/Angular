@@ -1,9 +1,9 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { catchError, map, Observable } from 'rxjs';
-import { UserModel } from '../model/user.model';
-import { AuthResponse } from '../model/auth-response';
-import { error } from 'console';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { UserModel } from "../model/user.model";
+import { AuthResponse } from "../model/auth-response";
+import { catchError, map, Observable } from "rxjs";
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,6 @@ export class AuthService {
 
 
   constructor(private http: HttpClient) { }
-
 
   registration(user: UserModel): Observable<AuthResponse> {
 
@@ -48,7 +47,7 @@ export class AuthService {
         }
       }),
       catchError(err => {
-        console.error('Login error', error);
+        console.error('Login error', err);
         throw err;
       })
     );

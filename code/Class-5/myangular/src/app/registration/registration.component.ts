@@ -4,6 +4,7 @@ import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { UserModel } from '../model/user.model';
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -47,5 +48,6 @@ export class RegistrationComponent {
       alert("Complte mandatory Field");
     }
   }
+
 
 }
