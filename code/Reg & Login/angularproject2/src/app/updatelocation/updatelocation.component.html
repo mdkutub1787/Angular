@@ -1,0 +1,37 @@
+<div class="container">
+    <form (ngSubmit)="updateLocation()">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="location.name">
+        </div>
+
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="location.city">
+        </div>
+        <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" name="state" [(ngModel)]="location.state">
+        </div>
+        <div class="mb-3">
+            <label for="photo" class="form-label">Photo</label>
+            <input type="text" class="form-control" id="photo" name="photo" [(ngModel)]="location.photo">
+        </div>
+        <div class="mb-3">
+            <label for="availableUnits" class="form-label">Unit</label>
+            <input type="text" class="form-control" id="availableUnits" name="availableUnits"
+                [(ngModel)]="location.availableUnits">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="wifi" name="wifi" [(ngModel)]="location.wifi">
+            <label for="wifi" class="form-check-label">WIFI</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="laundry" name="laundry" [(ngModel)]="location.laundry">
+            <label for="laundry" class="form-check-label">Laundry</label>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+</div>

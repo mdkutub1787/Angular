@@ -1,0 +1,39 @@
+.container {
+    max-width: 400px; /* Adjust maximum width as needed */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Center align the form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style form inputs */
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  /* Style form labels */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Custom styling for form validation feedback */
+  .invalid-feedback {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
