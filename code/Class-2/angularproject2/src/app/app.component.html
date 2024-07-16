@@ -1,53 +1,45 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" routerLink="/">My App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/reg" routerLinkActive="active">Signup</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Form</title>
+</head>
+<body>
 
+         <!-- FORMULAIRE DE CONNEXION -->
+    <div class="card">
+        <h2>Login Form</h2>
 
-<router-outlet></router-outlet>
-<!-- Main Content -->
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">
-          Featured
+            <!-- SE CONNECTER / S'INSCRIRE -->
+        <div class="login_register">
+            <a href="
+https://codepen.io/pen?template=gOEqMVq
+" class="login" target="blank">Login</a>
+            <a href="
+https://codepen.io/pen?template=VwRgKYB
+" class="register" target="blank">Signup</a>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <!-- FORMULAIRE -->
+        <form class="form">
+            <input type="email" placeholder="Email Adress" class="email">
+            <input type="password" placeholder="password" class="pass">
+        </form>
+
+            <!-- MOT DE PASSE OUBLIE ? -->
+        <a href="#" class="fp">Forgot password?</a>
+
+            <!-- BOUTTON LOGIN -->
+            <button type="button" class="login_btn">Login</button>
+
+            <!-- PIED DE LA CARD -->
+        <div class="footer_card">
+        <p>Not a member?</p>
+        <a href="#">Singup now</a>
         </div>
-      </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  </div>
+        
+</body>
 </div>

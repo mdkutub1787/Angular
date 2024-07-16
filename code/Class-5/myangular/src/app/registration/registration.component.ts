@@ -10,6 +10,7 @@ import { UserModel } from '../model/user.model';
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
+
   regForm!: FormGroup;
 
   constructor(
@@ -23,10 +24,11 @@ export class RegistrationComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
 
-    });
 
+    })
 
   }
+
   onSubmit(): void {
     if (this.regForm.valid) {
       const user: UserModel = this.regForm.value;
@@ -45,6 +47,5 @@ export class RegistrationComponent {
       alert("Complte mandatory Field");
     }
   }
-
 
 }
