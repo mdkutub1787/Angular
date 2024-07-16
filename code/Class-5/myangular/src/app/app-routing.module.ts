@@ -7,8 +7,6 @@ import { UpdatelocationComponent } from './updatelocation/updatelocation.compone
 import { ViewstudentComponent } from './student/viewstudent/viewstudent.component';
 import { CreatestudentComponent } from './student/createstudent/createstudent.component';
 import { UpdatestudentComponent } from './student/updatestudent/updatestudent.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
@@ -18,8 +16,7 @@ const routes: Routes = [
   { path: 'viewstudent', component: ViewstudentComponent },
   { path: 'createstudent', component: CreatestudentComponent },
   { path: 'updateStudent/:id', component: UpdatestudentComponent },
-  { path: 'reg', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent },
+
 
 ];
 

@@ -20,7 +20,7 @@
 
         <div class="mb-3">
             <label for="location" class="form-label">Location:</label>
-            <select id="location" formGroupName="location" class="form-select">
+            <select id="location" formControlName="location" class="form-select">
                 <option *ngFor="let loc of location" [ngValue]="loc">{{ loc.name }}</option>
             </select>
         </div>

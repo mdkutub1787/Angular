@@ -134,13 +134,23 @@
     },
     {
       "id": "55b3",
-      "name": "Azimpur",
+      "name": "Chockbazar",
       "city": "Dhaka",
       "state": "bd",
-      "photo": "https://logowik.com/java-vector-logo-1028.html",
-      "availableUnits": "",
-      "wifi": false,
-      "laundry": false
+      "photo": "https://logowik.com/java-ve",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "8734",
+      "name": "Mirpur",
+      "city": "Dhaka",
+      "state": "bd",
+      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
+      "availableUnits": "555",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "students": [
@@ -182,12 +192,28 @@
       "email": "mdkutubuddin1787@gmail.com",
       "cellNo": "01763001787",
       "location": {
-        "id": "4f15",
-        "name": "lalmatia",
-        "city": "dhaka",
+        "id": "55b3",
+        "name": "Chockbazar",
+        "city": "Dhaka",
         "state": "bd",
-        "photo": "https://minhphanjavahome.wordpress.com/2019/04/19/what-is-java/",
+        "photo": "https://logowik.com/java-ve",
         "availableUnits": "4",
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "8813",
+      "name": "Skip khan",
+      "email": "Shabab1787@gmail.com",
+      "cellNo": "01763001787",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
+        "availableUnits": 4,
         "wifi": true,
         "laundry": true
       }

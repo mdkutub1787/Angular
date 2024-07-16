@@ -25,6 +25,7 @@ export class AuthService {
     )
   }
 
+
   login(credentials: { email: string; password: string }): Observable<AuthResponse> {
     let params = new HttpParams();
     params = params.append('email', credentials.email);
@@ -50,10 +51,10 @@ export class AuthService {
     );
   }
 
-  
   logout(): void {
     localStorage.removeItem('token');
   }
+
 
 
   storeToken(token: string): void {
