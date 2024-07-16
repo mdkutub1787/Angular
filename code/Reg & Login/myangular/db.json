@@ -1,0 +1,228 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Kutub Uddin",
+      "email": "kutub@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3a9d",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "a600",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "e576",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "e289",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "3168",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "6152",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3add",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3824",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "c9c4",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "46e1",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "d6a7",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "f6f2",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "83d1",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "6c52",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "6f19",
+      "name": "Shabab ahmed",
+      "email": "rofik1787@gmail.com",
+      "password": "1234566"
+    },
+    {
+      "id": "00ba",
+      "name": "Shabab ahmed",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "11`43145"
+    },
+    {
+      "id": "8781",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "b0a0",
+      "name": "Shabab ahmed Skip",
+      "email": "Shabab2587@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "18b8",
+      "name": "towhid",
+      "email": "rofik1787@gmail.com",
+      "password": "111111"
+    },
+    {
+      "id": "5ec5",
+      "name": "rabiul",
+      "email": "rabiul1787@gmail.com",
+      "password": "000000"
+    }
+  ],
+  "locations": [
+    {
+      "id": "0",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "55b3",
+      "name": "Chockbazar",
+      "city": "Dhaka",
+      "state": "bd",
+      "photo": "https://logowik.com/java-ve",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "8734",
+      "name": "Mirpur",
+      "city": "Dhaka",
+      "state": "bd",
+      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
+      "availableUnits": "555",
+      "wifi": true,
+      "laundry": true
+    }
+  ],
+  "students": [
+    {
+      "id": "b4fb",
+      "name": "Shabab ahmed Skip",
+      "email": "mdkutuddin1787@gmail.com",
+      "cellNo": "01763",
+      "location": {
+        "id": "55b3",
+        "name": "Azimpur",
+        "city": "Dhaka",
+        "state": "bd",
+        "photo": "https://logowik.com/java-vector-logo-1028.html",
+        "availableUnits": "",
+        "wifi": false,
+        "laundry": false
+      }
+    },
+    {
+      "id": "1456",
+      "name": "towhid 2222",
+      "email": "rofik1787@gmail.com",
+      "cellNo": "0121454333",
+      "location": {
+        "id": "af0a",
+        "name": "Lalbagh",
+        "city": "Dhaka",
+        "state": "bd",
+        "photo": "fgfd",
+        "availableUnits": "6",
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "c3eb",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "cellNo": "01763001787",
+      "location": {
+        "id": "55b3",
+        "name": "Chockbazar",
+        "city": "Dhaka",
+        "state": "bd",
+        "photo": "https://logowik.com/java-ve",
+        "availableUnits": "4",
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "8813",
+      "name": "Skip khan",
+      "email": "Shabab1787@gmail.com",
+      "cellNo": "01763001787",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    }
+  ]
+}
