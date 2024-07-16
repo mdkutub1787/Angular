@@ -1,22 +1,134 @@
 {
-  "locations": [
+  "user": [
     {
-      "id": "af0a",
-      "name": "Lalbagh",
-      "city": "Dhaka",
-      "state": "bd",
-      "photo": "fgfd",
-      "availableUnits": "6",
-      "wifi": true,
-      "laundry": true
+      "id": "1",
+      "name": "Kutub Uddin",
+      "email": "kutub@gmail.com",
+      "password": "123456"
     },
     {
-      "id": "4f15",
-      "name": "lalmatia",
-      "city": "dhaka",
-      "state": "bd",
-      "photo": "https://minhphanjavahome.wordpress.com/2019/04/19/what-is-java/",
-      "availableUnits": "4",
+      "id": "3a9d",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "a600",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "e576",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "e289",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "3168",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "1231435"
+    },
+    {
+      "id": "6152",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3add",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3824",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "c9c4",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "46e1",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "d6a7",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "f6f2",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "83d1",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "6c52",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "6f19",
+      "name": "Shabab ahmed",
+      "email": "rofik1787@gmail.com",
+      "password": "1234566"
+    },
+    {
+      "id": "00ba",
+      "name": "Shabab ahmed",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "11`43145"
+    },
+    {
+      "id": "8781",
+      "name": "Kutub Uddin",
+      "email": "mdkutubuddin1787@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "b0a0",
+      "name": "Shabab ahmed Skip",
+      "email": "Shabab2587@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "18b8",
+      "name": "towhid",
+      "email": "rofik1787@gmail.com",
+      "password": "111111"
+    }
+  ],
+  "locations": [
+    {
+      "id": "0",
+      "name": "Dhanmondi",
+      "city": "Dhaka",
+      "state": "Dhaka",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
+      "availableUnits": 4,
       "wifi": true,
       "laundry": true
     },
