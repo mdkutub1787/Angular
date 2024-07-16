@@ -79,6 +79,16 @@
       "availableUnits": "4444",
       "wifi": true,
       "laundry": false
+    },
+    {
+      "id": "6c5b",
+      "name": "Comillah",
+      "city": "Dhaka",
+      "state": "bd",
+      "photo": "gfiku",
+      "availableUnits": "4",
+      "wifi": true,
+      "laundry": true
     }
   ],
   "students": [
@@ -126,6 +136,22 @@
         "state": "bd",
         "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
         "availableUnits": "4444",
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "6c59",
+      "name": "sanaullah",
+      "email": "sahab787@gmail.com",
+      "cellNo": "0121454333",
+      "location": {
+        "id": "814d",
+        "name": "Azimpur",
+        "city": "dhaka",
+        "state": "bd",
+        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+        "availableUnits": "55",
         "wifi": true,
         "laundry": true
       }
