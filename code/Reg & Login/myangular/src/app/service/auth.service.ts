@@ -38,6 +38,7 @@ export class AuthService {
           const user = users[0];
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
+            this.storeUserProfile(user);
             return { token, user } as AuthResponse;
           } else {
             throw new Error('Invalid password');
@@ -65,6 +66,20 @@ export class AuthService {
 
   getToken(): string | null {
     return localStorage.getItem('token');
+  }
+
+  storeUserProfile(user: UserModel): void {
+    localStorage.setItem('userProfile', JSON.stringify(user));
+  }
+
+  getUserProfileFromStorage(): UserModel | null {
+    const userProfile = localStorage.getItem('userProfile');
+    return userProfile ? JSON.parse(userProfile) : null;
+  }
+
+  removeUserDetails() {
+    localStorage.clear();
+
   }
 
 }

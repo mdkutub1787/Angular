@@ -20,6 +20,7 @@ export class LogoutComponent implements OnInit {
 
   Logout() {
     this.authaservice.logout();
+    this.authaservice.removeUserDetails();
     this.router.navigate(['login']);
 
   }
