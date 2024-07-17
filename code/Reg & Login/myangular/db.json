@@ -119,6 +119,18 @@
       "name": "towhid",
       "email": "rofik1787@gmail.com",
       "password": "111111"
+    },
+    {
+      "id": "5167",
+      "name": "rofik",
+      "email": "rofik1787@gmail.com",
+      "password": "000000"
+    },
+    {
+      "id": "3337",
+      "name": "sanaullah",
+      "email": "sanaullah@gmail.com",
+      "password": "000000"
     }
   ],
   "locations": [
@@ -198,22 +210,6 @@
         "state": "bd",
         "photo": "https://logowik.com/java-ve",
         "availableUnits": "4",
-        "wifi": true,
-        "laundry": true
-      }
-    },
-    {
-      "id": "8813",
-      "name": "Skip khan",
-      "email": "Shabab1787@gmail.com",
-      "cellNo": "01763001787",
-      "location": {
-        "id": "0",
-        "name": "Dhanmondi",
-        "city": "Dhaka",
-        "state": "Dhaka",
-        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s",
-        "availableUnits": 4,
         "wifi": true,
         "laundry": true
       }

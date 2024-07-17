@@ -14,6 +14,8 @@ import { UpdatestudentComponent } from './student/updatestudent/updatestudent.co
 import { RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -29,6 +31,8 @@ import { LoginComponent } from './login/login.component';
     UpdatestudentComponent,
     RegistrationComponent,
     LoginComponent,
+    HomeComponent,
+    LogoutComponent,
 
 
   ],
