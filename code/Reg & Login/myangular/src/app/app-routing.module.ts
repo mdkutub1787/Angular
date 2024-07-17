@@ -10,8 +10,6 @@ import { UpdatestudentComponent } from './student/updatestudent/updatestudent.co
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 
-
-
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
   { path: 'location', component: LocationComponent },
@@ -22,7 +20,6 @@ const routes: Routes = [
   { path: 'updateStudent/:id', component: UpdatestudentComponent },
   { path: 'reg', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
- 
 
 
 ];

@@ -1,14 +1,16 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { UserModel } from '../model/user.model';
-import { AuthResponse } from '../model/auth-response';
-import { catchError, map, Observable } from 'rxjs';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { UserModel } from "../model/user.model";
+import { AuthResponse } from "../model/auth-response";
+import { catchError, map, Observable } from "rxjs";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private baseUrl: string = "http://localhost:3000/user";
+
 
   constructor(private http: HttpClient) { }
 
