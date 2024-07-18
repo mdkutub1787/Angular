@@ -4,32 +4,14 @@
       "id": "1",
       "name": "Kutub Uddin",
       "email": "kutub@gmail.com",
-      "password": "123456"
+      "password": "000000",
+      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg "
     },
     {
-      "id": "42ad",
+      "id": "b362",
       "name": "Kutub Uddin",
       "email": "mdkutubuddin1787@gmail.com",
-      "password": "000000"
-    },
-    {
-      "id": "45ed",
-      "name": "towhid",
-      "email": "ygyhf8u@uhuei.gdyfg",
-      "password": "45154854"
-    },
-    {
-      "id": "b573",
-      "name": "towhid",
-      "email": "ftfsf@huhg.tyg",
-      "password": "8748748",
-      "photo": "itfgyik"
-    },
-    {
-      "id": "9dd0",
-      "name": "towhid",
-      "email": "hgbuyhed8g@hfuhg.com",
-      "password": "5448584",
+      "password": "000000",
       "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg"
     }
   ],

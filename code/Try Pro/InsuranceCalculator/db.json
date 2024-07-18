@@ -1,0 +1,34 @@
+{
+  "policies": [
+    {
+      "id": "1",
+      "policyNumber": 1,
+      "bankName": "Islami Bank PLC",
+      "branchName": "Kushtia Branch ",
+      "shopName": " M/S Khan Store ",
+      "propiderName": "Md Kutub Uddin",
+      "address": "Kumarkali,Kushtia",
+      "sumInsured": 50000000
+    },
+    {
+      "id": "2",
+      "policyNumber": 2,
+      "bankName": "Brack Bank PLC",
+      "branchName": "Naogaon Branch ",
+      "shopName": " M/S Towhid Store ",
+      "propiderName": "Md Towhid Alam",
+      "address": "Kumarkali,Kushtia",
+      "sumInsured": 500000
+    },
+    {
+      "id": "9a3c",
+      "policyNumber": 10,
+      "bankName": "Shahjalal  Bank PLC",
+      "branchName": "Dhaka  Branch",
+      "shopName": "M/S Raju Food store",
+      "propiderName": "Raju Ahmed",
+      "address": "Lalbagh,Dhaka",
+      "sumInsured": 50000000
+    }
+  ]
+}

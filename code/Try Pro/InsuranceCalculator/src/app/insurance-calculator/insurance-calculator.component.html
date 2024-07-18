@@ -1,0 +1,41 @@
+<div class="container">
+
+    <table class="table table-striped">
+        <tr>
+            <th> policy Number </th>
+            <th>Bank Name</th>
+            <th> Branch Name</th>
+            <th> Shop Name</th>
+            <th> Propider Name </th>
+            <th>Address</th>
+            <th> Sum Insured </th>
+            <th>Update</th>
+            <th>Delete</th>
+
+          
+        </tr>
+
+        <tr *ngFor="let insurance of insurances |async">
+            <td>{{insurance.policyNumber}}</td>
+            <td>{{insurance.bankName}}</td>
+            <td>{{insurance.branchName}}</td>
+            <td>{{insurance.shopName}}</td>
+            <td>{{insurance.propiderName}}</td>
+            <td>{{insurance.address}}</td>
+            <td>{{insurance.sumInsured}}</td>
+
+            <td>
+                <button class="btn btn-primary" (click)="updateInsurance(insurance.id)">Edit</button>
+
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteInsurance(insurance.id)">Delete</button>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+</div>
