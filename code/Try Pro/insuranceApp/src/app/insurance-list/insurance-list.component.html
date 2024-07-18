@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Insurance Details</h1>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <p><strong>Bill No:</strong> {{insuranceData.billNo}}</p>
+          <p><strong>Date:</strong> {{insuranceData.date}}</p>
+        </div>
+        <div class="mb-3">
+          <h2 class="h4">Insured</h2>
+          <p><strong>Name:</strong> {{insuranceData.insured.name}}</p>
+          <p><strong>Policyholder:</strong> {{insuranceData.insured.policyholder}}</p>
+          <p><strong>Address:</strong> {{insuranceData.insured.address}}</p>
+        </div>
+        <div class="mb-3">
+          <h2 class="h4">Situation</h2>
+          <p><strong>Location:</strong> {{insuranceData.situation.location}}</p>
+          <p><strong>Construction:</strong> {{insuranceData.situation.construction}}</p>
+          <p><strong>Used As:</strong> {{insuranceData.situation.usedAs}}</p>
+          <p><strong>Owner:</strong> {{insuranceData.situation.owner}}</p>
+        </div>
+        <div class="mb-3">
+          <h2 class="h4">Period</h2>
+          <p><strong>From:</strong> {{insuranceData.period.from}}</p>
+          <p><strong>To:</strong> {{insuranceData.period.to}}</p>
+        </div>
+        <div class="mb-3">
+          <h2 class="h4">Premium</h2>
+          <p><strong>Rate:</strong> {{insuranceData.premium.rate}}</p>
+          <p><strong>Fire Premium:</strong> {{insuranceData.premium.firePremium}}</p>
+          <p><strong>VAT:</strong> {{insuranceData.premium.vat}}</p>
+          <p><strong>Gross Premium:</strong> {{insuranceData.premium.grossPremium}}</p>
+        </div>
+        <div>
+          <h2 class="h4">Other Details</h2>
+          <p><strong>Sum Insured:</strong> {{insuranceData.sumInsured}}</p>
+          <p><strong>Stock Insured:</strong> {{insuranceData.stockInsured}}</p>
+          <p><strong>Interest Insured:</strong> {{insuranceData.interestInsured}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
