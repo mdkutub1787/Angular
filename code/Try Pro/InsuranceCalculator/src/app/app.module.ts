@@ -7,6 +7,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { InsuranceCalculatorComponent } from './insurance-calculator/insurance-calculator.component';
 import { CreateinsuranceComponent } from './createinsurance/createinsurance.component';
 import { UpdateinsuranceComponent } from './updateinsurance/updateinsurance.component';
+import { ViewbillComponent } from './bill/viewbill/viewbill.component';
+import { CreatebillComponent } from './bill/createbill/createbill.component';
+import { UpdatebillComponent } from './bill/updatebill/updatebill.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { UpdateinsuranceComponent } from './updateinsurance/updateinsurance.comp
     InsuranceCalculatorComponent,
     CreateinsuranceComponent,
     UpdateinsuranceComponent,
+    ViewbillComponent,
+    CreatebillComponent,
+    UpdatebillComponent,
    
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Insured, Period, Premium, Root, Situation } from '../model/insurance.model';
+import { InsuranceService } from '../service _insurance/insurance.service';
 
 @Component({
   selector: 'app-insurance-list',
@@ -7,23 +8,18 @@ import { Insured, Period, Premium, Root, Situation } from '../model/insurance.mo
   styleUrl: './insurance-list.component.css'
 })
 export class InsuranceListComponent implements OnInit {
-  insuranceData: Root;
+  insuranceBills: Root[] = [];
+  newInsuranceBill: Root =
+    new Root('', '',
+      new Insured('', '', ''), 0, '', '',
+      new Situation('', '', '', ''),
+      new Period('', ''),
+      new Premium(0, 0, 0, 0));
+
+  constructor(private insuranceService: InsuranceService) { }
 
 
-  constructor() {
-    this.insuranceData = new Root(
-      '123456',
-      '2023-07-18',
-      new Insured('John Doe', 'Policyholder Inc.', '123 Main St, Anytown, USA'),
-      100000,
-      'Electronics',
-      'Interest in electronics',
-      new Situation('456 Market St, Anytown, USA', 'Brick', 'Retail', 'John Doe'),
-      new Period('2023-01-01', '2023-12-31'),
-      new Premium(1.5, 1500, 150, 1650)
-    );
-  }
   ngOnInit(): void {
-
+    this.insuranceBills = this.insuranceService.getInsuranceBills();
   }
 }

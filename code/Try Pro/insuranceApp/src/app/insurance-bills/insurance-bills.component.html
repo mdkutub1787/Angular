@@ -15,6 +15,11 @@
                     <input type="date" class="form-control" [(ngModel)]="newInsuranceBill.date" name="date" required>
                 </div>
                 <div class="form-group">
+                    <label> Insured:</label>
+                    <input type="number" class="form-control" [(ngModel)]="newInsuranceBill.insured"
+                        name="insured" required>
+                </div>
+                <div class="form-group">
                     <label>Sum Insured:</label>
                     <input type="number" class="form-control" [(ngModel)]="newInsuranceBill.sumInsured"
                         name="sumInsured" required>
@@ -29,43 +34,25 @@
                     <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.interestInsured"
                         name="interestInsured" required>
                 </div>
+                <div class="form-group">
+                    <label>Situation :</label>
+                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.situation"
+                        name="situation" required>
+                </div>
+                <div class="form-group">
+                    <label>Period :</label>
+                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.period"
+                        name="period" required>
+                </div>
+                <div class="form-group">
+                    <label>Premium :</label>
+                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.premium"
+                        name="premium" required>
+                </div>
                 <!-- Add form fields for Insured, Situation, Period, and Premium here -->
                 <button type="submit" class="btn btn-primary mt-3">Add Bill</button>
             </form>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <h2>Insurance Bills</h2>
-        </div>
-        <div class="card-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Bill No</th>
-                        <th>Date</th>
-                        <th>Sum Insured</th>
-                        <th>Stock Insured</th>
-                        <th>Interest Insured</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let bill of insuranceBills">
-                        <td>{{ bill.billNo }}</td>
-                        <td>{{ bill.date }}</td>
-                        <td>{{ bill.sumInsured }}</td>
-                        <td>{{ bill.stockInsured }}</td>
-                        <td>{{ bill.interestInsured }}</td>
-                        <td>
-                            <button class="btn btn-warning btn-sm" (click)="(bill)">Edit</button>
-                            <button class="btn btn-danger btn-sm"
-                                (click)="deleteInsuranceBill(bill.billNo)">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+    

@@ -4,7 +4,7 @@ export class Policies {
     bankName!: string;
     branchName!: string;
     shopName!: string;
-    propiderName!: string;
+    proprietorName!: string;
     address!: string;
     sumInsured!: number;
   }

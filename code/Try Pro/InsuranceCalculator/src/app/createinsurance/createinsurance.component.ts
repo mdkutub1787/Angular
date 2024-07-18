@@ -31,7 +31,7 @@ export class CreateinsuranceComponent implements OnInit {
       bankName: (['']),
       branchName: (['']),
       shopName: (['']),
-      propiderName: (['']),
+      proprietorName: (['']),
       address: (['']),
       sumInsured: (['']),
 
@@ -43,7 +43,7 @@ export class CreateinsuranceComponent implements OnInit {
     this.insurance.bankName = this.formValue.value.bankName;
     this.insurance.branchName = this.formValue.value.branchName;
     this.insurance.shopName = this.formValue.value.shopName;
-    this.insurance.propiderName = this.formValue.value.propiderName;
+    this.insurance.proprietorName = this.formValue.value.proprietorName;
     this.insurance.address = this.formValue.value.address;
     this.insurance.sumInsured = this.formValue.value.sumInsured;
 
