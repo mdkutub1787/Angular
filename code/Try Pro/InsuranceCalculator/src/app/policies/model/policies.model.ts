@@ -1,7 +1,7 @@
 
 
 export class Policies {
-    id!: number;
+    id!: string;
     policyNumber!: number;
     bankName!: string;
     branchName!: string;

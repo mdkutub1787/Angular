@@ -4,9 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { InsuranceCalculatorComponent } from './insurance-calculator/insurance-calculator.component';
-import { CreateinsuranceComponent } from './createinsurance/createinsurance.component';
-import { UpdateinsuranceComponent } from './updateinsurance/updateinsurance.component';
+import { ViewpoliciesComponent } from './policies/viewpolicies/viewpolicies.component';
+import { CreatepoliciesComponent } from './policies/createpolicies/createpolicies.component';
+import { UpdatepoliciesComponent } from './policies/updatepolicies/updatepolicies.component';
 import { ViewbillComponent } from './bill/viewbill/viewbill.component';
 import { CreatebillComponent } from './bill/createbill/createbill.component';
 import { UpdatebillComponent } from './bill/updatebill/updatebill.component';
@@ -15,9 +15,9 @@ import { UpdatebillComponent } from './bill/updatebill/updatebill.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InsuranceCalculatorComponent,
-    CreateinsuranceComponent,
-    UpdateinsuranceComponent,
+    ViewpoliciesComponent,
+    CreatepoliciesComponent,
+    UpdatepoliciesComponent,
     ViewbillComponent,
     CreatebillComponent,
     UpdatebillComponent,

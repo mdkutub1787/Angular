@@ -8,7 +8,7 @@ export class BillModel {
     grosspremium!: number;
 
     policies!: {
-        id: string;
+        id: number;
         policyNumber: number;
         bankName: string;
         branchName: string;

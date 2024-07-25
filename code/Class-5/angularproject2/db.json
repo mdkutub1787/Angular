@@ -1,159 +1,103 @@
 {
-  "locations": [
+  "user": [
     {
       "id": "1",
-      "name": "Dhaka",
-      "city": "Santa Monica",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
-      "wifi": false,
-      "laundry": true
+      "name": "Kutub Uddin",
+      "email": "kutub@gmail.com",
+      "password": "000000",
+      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg "
     },
     {
-      "id": "2",
-      "name": "Kushtia",
-      "city": "Khulna",
-      "state": "AK",
-      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "814d",
-      "name": "Azimpur",
-      "city": "dhaka",
-      "state": "bd",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": "55",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "56e9",
-      "name": "Dhanmondi",
-      "city": "dhaka",
-      "state": "bd",
-      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
-      "availableUnits": "55",
-      "wifi": true,
-      "laundry": false
-    },
-    {
-      "id": "1a18",
-      "name": "Lalbagh",
-      "city": "dhaka",
-      "state": "bd",
-      "photo": "https://i.postimg.cc/BZVghQt8/download.jpg",
-      "availableUnits": "111",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "5181",
-      "name": "KumarKhali",
-      "city": "Kushtia",
-      "state": "bd",
-      "photo": "https://i.postimg.cc/PqTzLCV7/Kutub.jpg",
-      "availableUnits": "111",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "a4f4",
-      "name": "Khoksha",
-      "city": "Kushtia",
-      "state": "bd",
-      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
-      "availableUnits": "4444",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "08de",
-      "name": "Kolabagan",
-      "city": "Dhaka",
-      "state": "bd",
-      "photo": "gfiku",
-      "availableUnits": "4444",
-      "wifi": true,
-      "laundry": false
-    },
-    {
-      "id": "6c5b",
-      "name": "Comillah",
-      "city": "Dhaka",
-      "state": "bd",
-      "photo": "gfiku",
-      "availableUnits": "4",
-      "wifi": true,
-      "laundry": true
-    }
-  ],
-  "students": [
-    {
-      "id": "8bf7",
-      "name": "Rofik",
-      "email": "rofik1787@gmail.com",
-      "cellNo": "0121454333",
-      "location": {
-        "id": "1",
-        "name": "Dhaka",
-        "city": "Santa Monica",
-        "state": "CA",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": 0,
-        "wifi": false,
-        "laundry": true
-      }
-    },
-    {
-      "id": "61d8",
+      "id": "7c3e",
       "name": "Kutub Uddin",
       "email": "mdkutubuddin1787@gmail.com",
-      "cellNo": "01763001787",
-      "location": {
-        "id": "5181",
-        "name": "KumarKhali",
-        "city": "Kushtia",
-        "state": "bd",
-        "photo": "https://i.postimg.cc/PqTzLCV7/Kutub.jpg",
-        "availableUnits": "111",
-        "wifi": true,
-        "laundry": true
-      }
+      "password": "000000",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
     },
     {
-      "id": "a06a",
-      "name": "sanaullah",
+      "id": "9cb7",
+      "name": "Kutub Uddin",
+      "email": "mdkutuddin1787@gmail.com",
+      "password": "000000",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
+    },
+    {
+      "id": "5294",
+      "name": "Rofikul Islam",
       "email": "rofik1787@gmail.com",
-      "cellNo": "01763001787",
-      "location": {
-        "id": "a4f4",
-        "name": "Khoksha",
-        "city": "Kushtia",
-        "state": "bd",
-        "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg",
-        "availableUnits": "4444",
-        "wifi": true,
-        "laundry": true
-      }
+      "password": "000000",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
+    }
+  ],
+  "policy": [
+    {
+      "id": "0",
+      "billNo": 0,
+      "date": "01-JUL-24",
+      "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
+      "policyholder": "M/s Bulbul Enterprise, Prop: Rokibul Islam",
+      "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
+      "sumInsured": 2200000,
+      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+      "interestInsured": "Fire &/or Lightning only",
+      "usedAs": "Shop-Cum-Godown Only"
     },
     {
-      "id": "6c59",
-      "name": "sanaullah",
-      "email": "sahab787@gmail.com",
-      "cellNo": "0121454333",
-      "location": {
-        "id": "814d",
-        "name": "Azimpur",
-        "city": "dhaka",
-        "state": "bd",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": "55",
-        "wifi": true,
-        "laundry": true
+      "id": "3878",
+      "billNo": 111,
+      "date": "2024-08-01",
+      "bankName": "Brack Bank PLC,dhaka branch",
+      "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+      "address": "Dhanmondi",
+      "sumInsured": 555555,
+      "stockInsured": "Fish",
+      "interestInsured": "Shop only",
+      "usedAs": "Shopiulikik"
+    },
+    {
+      "id": "baa0",
+      "billNo": 2,
+      "date": "2024-07-25",
+      "bankName": "Brack Bank PLC,dhaka branch",
+      "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
+      "address": "lalbagh",
+      "sumInsured": 2000000,
+      "stockInsured": "food",
+      "interestInsured": "Shop only",
+      "usedAs": "Shop"
+    },
+    {
+      "id": "b116",
+      "billNo": 1,
+      "date": "2024-07-23",
+      "bankName": "Brack Bank PLC,dhaka branch",
+      "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
+      "address": "Dhanmondi",
+      "sumInsured": 100,
+      "stockInsured": "food",
+      "interestInsured": "Shop only",
+      "usedAs": "Shopiulikik"
+    }
+  ],
+  "bills": [
+    {
+      "id": "ded4",
+      "fire": 0.21,
+      "rsd": 0.13,
+      "netPremium": 500,
+      "tax": 0.15,
+      "grossPremium": 20000,
+      "policies": {
+        "id": "0",
+        "billNo": 0,
+        "date": "01-JUL-24",
+        "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
+        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+        "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
+        "sumInsured": 2200000,
+        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+        "interestInsured": "Fire &/or Lightning only",
+        "usedAs": "Shop-Cum-Godown Only"
       }
     }
   ]

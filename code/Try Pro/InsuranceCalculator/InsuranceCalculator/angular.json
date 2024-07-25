@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularproject2": {
+    "InsuranceCalculator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angularproject2",
+            "outputPath": "dist/insurance-calculator",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angularproject2:build:production"
+              "buildTarget": "InsuranceCalculator:build:production"
             },
             "development": {
-              "buildTarget": "angularproject2:build:development"
+              "buildTarget": "InsuranceCalculator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -110,6 +110,6 @@
     }
   },
   "cli": {
-    "analytics": "1f8ae937-a101-4235-9c18-c706c1adb026"
+    "analytics": "be7b9184-a636-4e17-9c3b-b7d65638f589"
   }
 }

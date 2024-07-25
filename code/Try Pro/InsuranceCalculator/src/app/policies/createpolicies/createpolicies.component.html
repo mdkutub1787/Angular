@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form [formGroup]="formValue" (ngSubmit)="createPolicies()">
+
+            <div class="mb-3">
+                <label for="policyNumber" class="form-label">Policy Number</label>
+                <input type="number" class="form-control" id="policyNumber" formControlName="policyNumber" placeholder="Enter policy number">
+            </div>
+
+            <div class="mb-3">
+                <label for="bankName" class="form-label">Bank Name</label>
+                <input type="text" class="form-control" id="bankName" formControlName="bankName" placeholder="Enter bank name">
+            </div>
+            <div class="mb-3">
+                <label for="branchName" class="form-label">Branch Name </label>
+                <input type="text" class="form-control" id="branchName" formControlName="branchName" placeholder="Enter branch name">
+            </div>
+            <div class="mb-3">
+                <label for="shopName" class="form-label">Shop Name</label>
+                <input type="text" class="form-control" id="shopName" formControlName="shopName" placeholder="Enter shop name">
+            </div>
+            <div class="mb-3">
+                <label for="proprietorName" class="form-label">Proprietor Name</label>
+                <input type="text" class="form-control" id="proprietorName" formControlName="proprietorName" placeholder="Enter propider name">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Shop Address</label>
+                <input type="text" class="form-control" id="address" formControlName="address" placeholder="Enter shop address">
+            </div>
+            <div class="mb-3">
+                <label for="sumInsured" class="form-label">Sum Insured</label>
+                <input type="number" class="form-control" id="sumInsured" formControlName="sumInsured" placeholder="Enter sum insured">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

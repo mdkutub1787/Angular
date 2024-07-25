@@ -1,4 +1,5 @@
 export class Root {
+    
     billNo: string;
     date: string;
     insured: Insured;
@@ -9,7 +10,10 @@ export class Root {
     period: Period;
     premium: Premium;
 
-    constructor(billNo: string, date: string, insured: Insured, sumInsured: number, stockInsured: string, interestInsured: string, situation: Situation, period: Period, premium: Premium) {
+    constructor(billNo: string, date: string, 
+        insured: Insured, sumInsured: number, stockInsured: string, interestInsured: string, 
+        situation: Situation, period: Period, premium: Premium) {
+            
         this.billNo = billNo;
         this.date = date;
         this.insured = insured;

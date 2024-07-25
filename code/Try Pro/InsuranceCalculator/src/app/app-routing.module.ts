@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InsuranceCalculatorComponent } from './insurance-calculator/insurance-calculator.component';
-import { CreateinsuranceComponent } from './createinsurance/createinsurance.component';
-import { UpdateinsuranceComponent } from './updateinsurance/updateinsurance.component';
+import { ViewpoliciesComponent } from './policies/viewpolicies/viewpolicies.component';
+import { CreatepoliciesComponent } from './policies/createpolicies/createpolicies.component';
+import { UpdatepoliciesComponent } from './policies/updatepolicies/updatepolicies.component';
+import { ViewbillComponent } from './bill/viewbill/viewbill.component';
+import { CreatebillComponent } from './bill/createbill/createbill.component';
+
 
 const routes: Routes = [
-  {path: 'insurance', component:InsuranceCalculatorComponent},
-  {path: 'createinsurance', component:CreateinsuranceComponent},
-  {path: 'updateinsurance/:id', component:UpdateinsuranceComponent},
+  {path: 'viewpolicies', component:ViewpoliciesComponent},
+  {path: 'createpolicies', component:CreatepoliciesComponent},
+  {path: 'updatepolicies/:id', component:UpdatepoliciesComponent},
+  {path: 'viewbill', component:ViewbillComponent},
+  {path: 'createbill', component:CreatebillComponent},
 
 
 ];

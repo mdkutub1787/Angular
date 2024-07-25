@@ -4,6 +4,7 @@
             <h2>Add Insurance Bill</h2>
         </div>
         <div class="card-body">
+
             <form (ngSubmit)="addInsuranceBill()">
                 <div class="form-group">
                     <label>Bill No:</label>
@@ -16,8 +17,8 @@
                 </div>
                 <div class="form-group">
                     <label> Insured:</label>
-                    <input type="number" class="form-control" [(ngModel)]="newInsuranceBill.insured"
-                        name="insured" required>
+                    <input type="number" class="form-control" [(ngModel)]="newInsuranceBill.insured" name="insured"
+                        required>
                 </div>
                 <div class="form-group">
                     <label>Sum Insured:</label>
@@ -36,23 +37,21 @@
                 </div>
                 <div class="form-group">
                     <label>Situation :</label>
-                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.situation"
-                        name="situation" required>
+                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.situation" name="situation"
+                        required>
                 </div>
                 <div class="form-group">
                     <label>Period :</label>
-                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.period"
-                        name="period" required>
+                    <input type="date" class="form-control" [(ngModel)]="newInsuranceBill.period" name="period"
+                        required>
                 </div>
                 <div class="form-group">
                     <label>Premium :</label>
-                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.premium"
-                        name="premium" required>
+                    <input type="text" class="form-control" [(ngModel)]="newInsuranceBill.premium" name="premium"
+                        required>
                 </div>
                 <!-- Add form fields for Insured, Situation, Period, and Premium here -->
                 <button type="submit" class="btn btn-primary mt-3">Add Bill</button>
             </form>
         </div>
     </div>
-
-    

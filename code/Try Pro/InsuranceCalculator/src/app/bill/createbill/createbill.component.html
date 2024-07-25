@@ -1,1 +1,40 @@
-<p>createbill works!</p>
+<div class="container">
+    <h1 class="text-center">Bill Add Form</h1>
+    <form [formGroup]="billForm" (ngSubmit)="createBill()">
+        <div class="mb-3">
+            <label for="fire" class="form-label">Fire Rate</label>
+            <input id="fire" type="number" class="form-control" formControlName="fire" placeholder="Enter fire rate">
+        </div>
+
+        <div class="mb-3">
+            <label for="rsd" class="form-label">R&SD Rate</label>
+            <input id="rsd" type="number" class="form-control" formControlName="rsd" placeholder="Enter rsd rate">
+        </div>
+        <div class="mb-3">
+            <label for="netpremium" class="form-label">Net Premium</label>
+            <input id="netpremium" type="number" class="form-control" formControlName="netpremium"
+                placeholder="Enter netpremium">
+        </div>
+        <div class="mb-3">
+            <label for="tax" class="form-label">Tax Rate</label>
+            <input id="tax" type="number" class="form-control" formControlName="tax" placeholder="Enter tax rate">
+        </div>
+        <div class="mb-3">
+            <label for="grosspremium" class="form-label">Gross Premium</label>
+            <input id="grosspremium" type="number" class="form-control" formControlName="grosspremium"
+                placeholder="Enter grosspremium">
+        </div>
+
+
+        <div class="mb-3" formGroupName="policies">
+           
+            <label for="policies" class="form-label">Account Name:</label>
+            <select id="policies" formControlName="shopName" class="form-select" required>
+                <option value="policies" disabled selected>Select your account</option>
+                <option *ngFor="let loc of policies" [ngValue]="loc.shopName">{{loc.shopName}}</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

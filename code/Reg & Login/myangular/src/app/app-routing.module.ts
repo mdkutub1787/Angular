@@ -17,8 +17,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
   { path: 'location', component: LocationComponent },
-  { path: 'createlocation', component: CreatelocationComponent, canActivate: [AuthGuard] },
-  { path: 'updateLocation/:id', component: UpdatelocationComponent, canActivate: [AuthGuard] },
+  { path: 'createlocation', component: CreatelocationComponent },
+  { path: 'updateLocation/:id', component: UpdatelocationComponent },
   { path: 'viewstudent', component: ViewstudentComponent },
   { path: 'createstudent', component: CreatestudentComponent },
   { path: 'updateStudent/:id', component: UpdatestudentComponent },

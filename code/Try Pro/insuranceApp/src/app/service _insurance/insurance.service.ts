@@ -21,10 +21,10 @@ export class InsuranceService {
     this.insuranceBills = this.insuranceBills.filter(bill => bill.billNo !== billNo);
   }
 
-  updateInsuranceBill(updatedBill: Root): void {
-    const index = this.insuranceBills.findIndex(bill => bill.billNo === updatedBill.billNo);
-    if (index !== -1) {
-      this.insuranceBills[index] = updatedBill;
-    }
-  }
+  // updateInsuranceBill(updatedBill: Root): void {
+  //   const index = this.insuranceBills.findIndex(bill => bill.billNo === updatedBill.billNo);
+  //   if (index !== -1) {
+  //     this.insuranceBills[index] = updatedBill;
+  //   }
+  // }
 }

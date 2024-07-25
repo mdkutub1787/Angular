@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular/core';
 import { Policies } from '../model/insurance.model';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,21 @@ export class InsuranceService {
     return this.http.get(this.baseUrl)
 
   }
+  // bill component in policy all elements load 
+  getAllinsuranceForBill(): Observable<Policies> {
+    return this.http.get<Policies>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError)
+      )
+
+  }
+
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('test'));
+
+  }
+
 
   createInsurance(insurance: Policies): Observable<any> {
     return this.http.post<Policies>(this.baseUrl, insurance)
@@ -37,8 +52,6 @@ export class InsuranceService {
     return this.http.get(this.baseUrl + "/" + id);
 
   }
-
-
 
 
 }

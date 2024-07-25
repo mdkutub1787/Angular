@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form (ngSubmit)="updatePolicies()">
+
+            <div class="mb-3">
+                <label for="policyNumber" class="form-label">Policy Number</label>
+                <input type="number" class="form-control" id="policyNumber" name="policyNumber" placeholder="Enter policy number" [(ngModel)]="policies.policyNumber">
+            </div>
+
+            <div class="mb-3">
+                <label for="bankName" class="form-label">Bank Name</label>
+                <input type="text" class="form-control" id="bankName" name="bankName" placeholder="Enter bank name"  [(ngModel)]="policies.bankName">
+            </div>
+            <div class="mb-3">
+                <label for="branchName" class="form-label">Branch Name </label>
+                <input type="text" class="form-control" id="branchName" name="branchName" placeholder="Enter branch name"  [(ngModel)]="policies.branchName">
+            </div>
+            <div class="mb-3">
+                <label for="shopName" class="form-label">Account Name</label>
+                <input type="text" class="form-control" id="shopName" name="shopName" placeholder="Enter shop name"  [(ngModel)]="policies.shopName">
+            </div>
+            <div class="mb-3">
+                <label for="proprietorName" class="form-label">Proprietor Name </label>
+                <input type="text" class="form-control" id="proprietorName" name="proprietorName" placeholder="Enter proprietor name"  [(ngModel)]="policies.proprietorName">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Shop Address</label>
+                <input type="text" class="form-control" id="address" name="address" name="Enter shop address"  [(ngModel)]="policies.address">
+            </div>
+            <div class="mb-3">
+                <label for="sumInsured" class="form-label">Sum Insured</label>
+                <input type="number" class="form-control" id="sumInsured" name="sumInsured" placeholder="Enter sum insured"  [(ngModel)]="policies.sumInsured">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+
+    
+</body>
+
+</html>

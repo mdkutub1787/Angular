@@ -1,0 +1,35 @@
+{
+  "policies": [
+    {
+      "id": "1",
+      "policyNumber": 1,
+      "bankName": "Islami Bank PLC",
+      "branchName": "Kushtia Branch ",
+      "shopName": " M/S Khan Store ",
+      "proprietorName": "Md Kutub Uddin",
+      "address": "Kumarkali,Kushtia",
+      "sumInsured": 50000000
+    }
+  ],
+   "bill": [
+    {
+      "fire":1.2,
+      "rsd": 1.3,
+      "netpremium": 500,
+      "tax": 1.5,
+      "grosspremium": 500,
+      
+      "policies": {
+        "id": "1",
+        "policyNumber": 1,
+        "bankName": "Islami Bank PLC",
+        "branchName": "Kushtia Branch ",
+        "shopName": " M/S Khan Store ",
+        "proprietorName": "Md Kutub Uddin",
+        "address": "Kumarkali,Kushtia",
+        "sumInsured": 50000000
+      }
+      
+    }
+  ]
+}
