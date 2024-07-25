@@ -26,65 +26,6 @@
         "firePremium": 4620,
         "vat": 693,
         "grossPremium": 5313
-      },
-      "id": "db1a"
-    },
-    {
-      "id": "52ee",
-      "billNo": "12",
-      "date": "2024-07-11",
-      "insured": {
-        "name": "islami bank dhaka",
-        "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
-        "address": "dhaka"
-      },
-      "sumInsured": 5200,
-      "stockInsured": "food",
-      "interestInsured": "Shop only",
-      "situation": {
-        "location": "dhaka",
-        "construction": "dfggf",
-        "usedAs": "Shopiulikik",
-        "owner": "fggfgf"
-      },
-      "period": {
-        "from": "2024-07-18",
-        "to": "2024-08-02"
-      },
-      "premium": {
-        "rate": 0.222,
-        "firePremium": 2000,
-        "vat": 0.15,
-        "grossPremium": 10000
-      }
-    },
-    {
-      "id": "14c7",
-      "billNo": "111",
-      "date": "2024-07-03",
-      "insured": {
-        "name": "islami bank dhaka",
-        "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
-        "address": "dhaka"
-      },
-      "sumInsured": 5555,
-      "stockInsured": "jut only",
-      "interestInsured": "Shop only",
-      "situation": {
-        "location": "dhaka",
-        "construction": "dfggf",
-        "usedAs": "Shopiulikik",
-        "owner": "fggfgf"
-      },
-      "period": {
-        "from": "2024-07-27",
-        "to": "2024-08-01"
-      },
-      "premium": {
-        "rate": 20,
-        "firePremium": 555,
-        "vat": 21,
-        "grossPremium": 50000
       }
     }
   ]

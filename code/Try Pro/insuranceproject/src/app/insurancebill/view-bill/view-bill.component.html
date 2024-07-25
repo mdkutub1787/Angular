@@ -1,10 +1,11 @@
-<div *ngIf="bill" class="container mt-4">
-    <h1 class="mb-4">Fire Premium Bill</h1>
-  
+<div id="print-section">
+  <div #billContent *ngIf="bill" class="container mt-4">
+    <h1 class="mb-4 text-center">Fire Premium Bill</h1>
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
-          <th scope="col" colspan="2">Bill Information</th>
+          <th scope="col" colspan="2" class="text-center">Bill Information</th>
         </tr>
       </thead>
       <tbody>
@@ -18,7 +19,7 @@
         </tr>
       </tbody>
     </table>
-  
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
@@ -40,7 +41,7 @@
         </tr>
       </tbody>
     </table>
-  
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
@@ -62,7 +63,7 @@
         </tr>
       </tbody>
     </table>
-  
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
@@ -88,7 +89,7 @@
         </tr>
       </tbody>
     </table>
-  
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
@@ -106,7 +107,7 @@
         </tr>
       </tbody>
     </table>
-  
+
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
@@ -131,5 +132,18 @@
           <td>{{ bill.premium.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
         </tr>
       </tbody>
+
     </table>
+
+    <button printSectionId="print-section" ngxPrint class="btn btn-success">Download PDF </button>
   </div>
+
+</div>
+
+<!-- <tbody>
+  <tr>
+    <td><button type="submit" class="btn btn-warning">Update</button></td>
+    <td><button type="submit" class="btn btn-danger">Delete</button></td>
+  </tr>
+</tbody> -->
+

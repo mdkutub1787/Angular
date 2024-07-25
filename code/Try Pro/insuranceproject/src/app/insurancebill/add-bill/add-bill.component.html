@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <form [formGroup]="billForm" (ngSubmit)="addBill()">
-    <h1 class="mb-4">Add Fire Premium Bill</h1>
+    <h1 class="mb-4 text-center">Add Fire Premium Bill</h1>
 
     <div class="form-group">
       <label for="billNo">Bill No:</label>
@@ -119,13 +119,13 @@
 
 
 
-<div *ngIf="billData" class="container mt-4">
-  <h1 class="mb-4 text-center">Create Fire Premium Bill</h1>
+<!-- <div *ngIf="billData" class="container mt-4">
+  <h1 class="mb-4 text-center">Fire Premium Bill</h1>
 
   <table class="table table-bordered">
     <thead class="thead-light">
       <tr>
-        <th scope="col" colspan="2" class="text-center">Bill Information</th>
+        <th scope="col" colspan="2">Bill Information</th>
       </tr>
     </thead>
     <tbody>
@@ -148,7 +148,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong> Insured Name:</strong></td>
+        <td><strong>Name:</strong></td>
         <td>{{ billData.insured.name }}</td>
       </tr>
       <tr>
@@ -156,7 +156,7 @@
         <td>{{ billData.insured.policyholder }}</td>
       </tr>
       <tr>
-        <td><strong>Insured Address:</strong></td>
+        <td><strong>Address:</strong></td>
         <td>{{ billData.insured.address }}</td>
       </tr>
     </tbody>
@@ -170,15 +170,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Stock Insured :</strong></td>
+        <td><strong>Stock Insured:</strong></td>
         <td>{{ billData.stockInsured }}</td>
       </tr>
       <tr>
-        <td><strong>Sum Insured :</strong></td>
+        <td><strong>Sum Insured:</strong></td>
         <td>{{ billData.sumInsured | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td><strong>Interest Insured :</strong></td>
+        <td><strong>Interest Insured:</strong></td>
         <td>{{ billData.interestInsured }}</td>
       </tr>
     </tbody>
@@ -192,19 +192,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Location :</strong></td>
+        <td><strong>Location:</strong></td>
         <td>{{ billData.situation.location }}</td>
       </tr>
       <tr>
-        <td><strong>Construction :</strong></td>
+        <td><strong>Construction:</strong></td>
         <td>{{ billData.situation.construction }}</td>
       </tr>
       <tr>
-        <td><strong>Used As :</strong></td>
+        <td><strong>Used As:</strong></td>
         <td>{{ billData.situation.usedAs }}</td>
       </tr>
       <tr>
-        <td><strong>Owner :</strong></td>
+        <td><strong>Owner:</strong></td>
         <td>{{ billData.situation.owner }}</td>
       </tr>
     </tbody>
@@ -218,11 +218,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Period Form:</strong></td>
+        <td><strong>From:</strong></td>
         <td>{{ billData.period.from }}</td>
       </tr>
       <tr>
-        <td><strong>Period To:</strong></td>
+        <td><strong>To:</strong></td>
         <td>{{ billData.period.to }}</td>
       </tr>
     </tbody>
@@ -236,21 +236,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>Rate % :</strong></td>
+        <td><strong>Rate:</strong></td>
         <td>{{ billData.premium.rate }}%</td>
       </tr>
       <tr>
-        <td><strong>Net Premium:</strong></td>
+        <td><strong>Fire Premium:</strong></td>
         <td>{{ billData.premium.firePremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td><strong>Vat %:</strong></td>
+        <td><strong>VAT:</strong></td>
         <td>{{ billData.premium.vat | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td><strong>Gross Premium :</strong></td>
+        <td><strong>Gross Premium:</strong></td>
         <td>{{ billData.premium.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
     </tbody>
   </table>
-</div>
+</div> -->

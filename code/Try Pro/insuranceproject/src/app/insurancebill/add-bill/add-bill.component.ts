@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { InsuranceService } from '../../service/insurance.service';
 import { Router } from '@angular/router';
 
 
@@ -50,7 +49,7 @@ export class AddBillComponent {
     if (this.billForm.valid) {
       this.billData = this.billForm.value;
       this.submitted = true;
-      
+      this.router.navigate(['/getBill']);
 
     }
   }

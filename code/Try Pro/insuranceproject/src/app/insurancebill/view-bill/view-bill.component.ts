@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Insured, Period, Premium, Root, Situation } from '../../model/bill.model';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-view-bill',
@@ -36,4 +38,6 @@ export class ViewBillComponent implements OnInit{
   ngOnInit(): void {
 
   }
+
+  
 }
