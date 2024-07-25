@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { InsuranceService } from '../../service/insurance.service';
 import { Root } from '../../model/bill.model';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-bill',
@@ -10,8 +11,11 @@ import { Root } from '../../model/bill.model';
 })
 export class AddBillComponent  {
   billForm!: FormGroup;
+  submitted = false;
+  billData: any;
+  router:Router
 
-  constructor(private fb: FormBuilder, private insuranceService: InsuranceService) {
+  constructor(private fb: FormBuilder) {
     this.billForm = this.fb.group({
       billNo: [''],
       date: [''],
@@ -20,8 +24,8 @@ export class AddBillComponent  {
         policyholder: [''],
         address: ['']
       }),
-      sumInsured: [0],
       stockInsured: [''],
+      sumInsured: [''],
       interestInsured: [''],
       situation: this.fb.group({
         location: [''],
@@ -34,19 +38,19 @@ export class AddBillComponent  {
         to: ['']
       }),
       premium: this.fb.group({
-        rate: [0],
-        firePremium: [0],
-        vat: [0],
-        grossPremium: [0]
+        rate: [''],
+        firePremium: [''],
+        vat: [''],
+        grossPremium: ['']
       })
     });
   }
 
-
-  addbill(): void {
-    const bill: Root = this.billForm.value;
-    this.insuranceService.addBill(bill).subscribe(() => {
-      this.billForm.reset();
-    });
+  addBill() {
+    if (this.billForm.valid) {
+      this.billData = this.billForm.value;
+      this.submitted = true;
+      
+    }
   }
 }

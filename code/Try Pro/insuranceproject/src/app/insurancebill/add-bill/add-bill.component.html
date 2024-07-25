@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <form [formGroup]="billForm" (ngSubmit)="addbill()">
+  <form [formGroup]="billForm" (ngSubmit)="addBill()">
     <h1 class="mb-4">Add Fire Premium Bill</h1>
 
     <div class="form-group">
@@ -114,4 +114,90 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
+
+<div *ngIf="submitted">
+  <h2 class="mt-4">Bill Details</h2>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bill No</td>
+        <td>{{ billData.billNo }}</td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td>{{ billData.date }}</td>
+      </tr>
+      <tr>
+        <td>Insured Name</td>
+        <td>{{ billData.insured.name }}</td>
+      </tr>
+      <tr>
+        <td>Policyholder</td>
+        <td>{{ billData.insured.policyholder }}</td>
+      </tr>
+      <tr>
+        <td>Insured Address</td>
+        <td>{{ billData.insured.address }}</td>
+      </tr>
+      <tr>
+        <td>Stock Insured</td>
+        <td>{{ billData.stockInsured }}</td>
+      </tr>
+      <tr>
+        <td>Sum Insured</td>
+        <td>{{ billData.sumInsured }}</td>
+      </tr>
+      <tr>
+        <td>Interest Insured</td>
+        <td>{{ billData.interestInsured }}</td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>{{ billData.situation.location }}</td>
+      </tr>
+      <tr>
+        <td>Construction</td>
+        <td>{{ billData.situation.construction }}</td>
+      </tr>
+      <tr>
+        <td>Used As</td>
+        <td>{{ billData.situation.usedAs }}</td>
+      </tr>
+      <tr>
+        <td>Owner</td>
+        <td>{{ billData.situation.owner }}</td>
+      </tr>
+      <tr>
+        <td>Period From</td>
+        <td>{{ billData.period.from }}</td>
+      </tr>
+      <tr>
+        <td>Period To</td>
+        <td>{{ billData.period.to }}</td>
+      </tr>
+      <tr>
+        <td>Rate</td>
+        <td>{{ billData.premium.rate }}</td>
+      </tr>
+      <tr>
+        <td>Fire Premium</td>
+        <td>{{ billData.premium.firePremium }}</td>
+      </tr>
+      <tr>
+        <td>VAT</td>
+        <td>{{ billData.premium.vat }}</td>
+      </tr>
+      <tr>
+        <td>Gross Premium</td>
+        <td>{{ billData.premium.grossPremium }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

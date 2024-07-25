@@ -27,94 +27,7 @@
         "vat": 693,
         "grossPremium": 5313
       },
-      "id": "a04e"
-    },
-    {
-      "id": "050b",
-      "billNo": "",
-      "date": "",
-      "insured": {
-        "name": "",
-        "policyholder": "",
-        "address": ""
-      },
-      "sumInsured": 0,
-      "stockInsured": "",
-      "interestInsured": "",
-      "situation": {
-        "location": "",
-        "construction": "",
-        "usedAs": "",
-        "owner": ""
-      },
-      "period": {
-        "from": "",
-        "to": ""
-      },
-      "premium": {
-        "rate": 0,
-        "firePremium": 0,
-        "vat": 0,
-        "grossPremium": 0
-      }
-    },
-    {
-      "id": "0740",
-      "billNo": "11",
-      "date": "2024-07-10",
-      "insured": {
-        "name": "",
-        "policyholder": "",
-        "address": ""
-      },
-      "sumInsured": 5000,
-      "stockInsured": "jut only",
-      "interestInsured": "Shop only",
-      "situation": {
-        "location": "",
-        "construction": "",
-        "usedAs": "",
-        "owner": ""
-      },
-      "period": {
-        "from": "",
-        "to": ""
-      },
-      "premium": {
-        "rate": 0,
-        "firePremium": 0,
-        "vat": 0,
-        "grossPremium": 0
-      }
-    },
-    {
-      "id": "8bbe",
-      "billNo": "",
-      "date": "",
-      "insured": {
-        "name": "",
-        "policyholder": "",
-        "address": ""
-      },
-      "sumInsured": 0,
-      "stockInsured": "",
-      "interestInsured": "",
-      "situation": {
-        "location": "",
-        "construction": "",
-        "usedAs": "",
-        "owner": ""
-      },
-      "period": {
-        "from": "",
-        "to": ""
-      },
-      "premium": {
-        "rate": 0,
-        "firePremium": 0,
-        "vat": 0,
-        "grossPremium": 0
-      }
+      "id": "db1a"
     },
     {
       "id": "52ee",
@@ -146,235 +59,32 @@
       }
     },
     {
-      "id": "2dc5",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "a6d2",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "4e29",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "4500",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "6468",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "c5a3",
-      "billNo": "",
-      "date": "",
-      "insured": {
-        "name": "",
-        "policyholder": "",
-        "address": ""
-      },
-      "sumInsured": 0,
-      "stockInsured": "",
-      "interestInsured": "",
-      "situation": {
-        "location": "",
-        "construction": "",
-        "usedAs": "",
-        "owner": ""
-      },
-      "period": {
-        "from": "",
-        "to": ""
-      },
-      "premium": {
-        "rate": 0,
-        "firePremium": 0,
-        "vat": 0,
-        "grossPremium": 0
-      }
-    },
-    {
-      "id": "f166",
-      "billNo": null,
-      "date": null,
-      "insured": {
-        "name": null,
-        "policyholder": null,
-        "address": null
-      },
-      "sumInsured": null,
-      "stockInsured": null,
-      "interestInsured": null,
-      "situation": {
-        "location": null,
-        "construction": null,
-        "usedAs": null,
-        "owner": null
-      },
-      "period": {
-        "from": null,
-        "to": null
-      },
-      "premium": {
-        "rate": null,
-        "firePremium": null,
-        "vat": null,
-        "grossPremium": null
-      }
-    },
-    {
-      "id": "095b",
+      "id": "14c7",
       "billNo": "111",
-      "date": "2024-07-18",
+      "date": "2024-07-03",
       "insured": {
         "name": "islami bank dhaka",
-        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
-        "address": "Chapay"
+        "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
+        "address": "dhaka"
       },
-      "sumInsured": 555,
-      "stockInsured": "kljghj",
+      "sumInsured": 5555,
+      "stockInsured": "jut only",
       "interestInsured": "Shop only",
       "situation": {
         "location": "dhaka",
         "construction": "dfggf",
-        "usedAs": "vjhjhuhjkh",
+        "usedAs": "Shopiulikik",
         "owner": "fggfgf"
       },
       "period": {
         "from": "2024-07-27",
-        "to": "2024-07-06"
+        "to": "2024-08-01"
       },
       "premium": {
-        "rate": 55,
-        "firePremium": 55,
-        "vat": 22,
-        "grossPremium": 111
+        "rate": 20,
+        "firePremium": 555,
+        "vat": 21,
+        "grossPremium": 50000
       }
     }
   ]
