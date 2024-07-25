@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="text-center">Bill Update Form</h1>
+    <form [formGroup]="billForm" (ngSubmit)="updateBill()">
+        <div class="mb-3">
+            <label for="fire" class="form-label">Fire Rate</label>
+            <input id="fire" type="number" class="form-control" formControlName="fire" placeholder="Enter fire rate">
+        </div>
+
+        <div class="mb-3">
+            <label for="rsd" class="form-label">R&SD Rate</label>
+            <input id="rsd" type="number" class="form-control" formControlName="rsd" placeholder="Enter your rsd rate">
+        </div>
+
+        <div class="mb-3">
+            <label for="netPremium" class="form-label">Net Premium</label>
+            <input id="netPremium" type="number" class="form-control" formControlName="netPremium"
+                placeholder="Enter your netPremium">
+        </div>
+        <div class="mb-3">
+            <label for="tax" class="form-label">Tax Rate</label>
+            <input id="tax" type="number" class="form-control" formControlName="tax" placeholder="Enter your tax rate">
+        </div>
+        <div class="mb-3">
+            <label for="grossPremium" class="form-label">Gross Premium</label>
+            <input id="grossPremium" type="number" class="form-control" formControlName="grossPremium"
+                placeholder="Enter your grossPremium">
+        </div>
+
+        <div class="mb-3" formGroupName="policies">
+            <div class="invalid-feedback">Please select a policies</div>
+            <label for="policies" class="form-label">Policies</label>
+            <select id="policies" formControlName="policyholder" class="form-select" required>
+                <option value="policies" disabled selected>Select your policies</option>
+                <option *ngFor="let loc of policies" [ngValue]="loc.policyholder">{{loc.policyholder}}</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

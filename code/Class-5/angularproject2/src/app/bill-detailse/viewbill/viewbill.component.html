@@ -1,0 +1,44 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Policy Holder</th>
+                <th>Sum Insured</th>
+                <th>Fire Rate</th>
+                <th>R&SD Rate</th>
+                <th>Net Premium</th>
+                <th>Tax Rate</th>
+                <th>Gross Premium</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let bil of bills |async">
+                <td>{{bil.policies.policyholder}}</td>
+                <td>{{bil.policies.sumInsured}}</td>
+                <td>{{bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd}}</td>
+                <td>{{bil.policies.sumInsured*bil.rsd}}</td>
+                <td>{{bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd+(bil.policies.sumInsured*bil.rsd)}}</td>
+                <td>{{(bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)*bil.tax}}</td>
+                <td>{{(bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)+((bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)*bil.tax)}}
+                </td>
+
+
+                <td>
+                    <button class="btn btn-warning" (click)="editBill(bil)">Edit</button>
+
+                </td>
+                <td>
+
+                    <button class="btn btn-danger" (click)="deleteBill(bil.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+

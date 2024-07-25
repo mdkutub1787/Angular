@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="text-center">Policy Add Form</h1>
+    <form [formGroup]="formValue" (ngSubmit)="createPolicy()">
+
+        <div class="mb-3">
+            <label for="billNo" class="form-label">Bill No </label>
+            <input type="number" class="form-control" id="billNo" formControlName="billNo" placeholder="Enter bill No">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date </label>
+            <input type="date" class="form-control" id="date" formControlName="date" placeholder="Enter date">
+        </div>
+        <div class="mb-3">
+            <label for="bankName" class="form-label">Bank Name </label>
+            <input type="text" class="form-control" id="bankName" formControlName="bankName" placeholder="Enter bank name">
+        </div>
+        <div class="mb-3">
+            <label for="policyholder" class="form-label">Policy Holder </label>
+            <input type="text" class="form-control" id="policyholder" formControlName="policyholder" placeholder="Enter policyholder name ">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address </label>
+            <input type="text" class="form-control" id="address" formControlName="address" placeholder="Enter address name">
+        </div>
+        <div class="mb-3">
+            <label for="sumInsured" class="form-label">Sum Insured</label>
+            <input type="number" class="form-control" id="sumInsured" formControlName="sumInsured" placeholder="Enter sumInsured">
+        </div>
+        
+        <div class="mb-3">
+            <label for="stockInsured" class="form-label">Stock Insured </label>
+            <input type="text" class="form-control" id="stockInsured" formControlName="stockInsured" placeholder="Enter stockInsured name">
+        </div>
+        <div class="mb-3">
+            <label for="interestInsured" class="form-label">Interet</label>
+            <input type="text" class="form-control" id="interestInsured" formControlName="interestInsured" placeholder="Enter binterestInsured">
+        </div>
+        <div class="mb-3">
+            <label for="usedAs" class="form-label">Used As</label>
+            <input type="text" class="form-control" id="usedAs" formControlName="usedAs" placeholder="Enter usedAs">
+        </div>
+      
+       
+
+        <button type="submit" class="btn btn-outline-success" >Submit</button>
+    </form>
+</div>
