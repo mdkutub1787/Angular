@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { InsuranceService } from '../../service/insurance.service';
-import { Root } from '../../model/bill.model';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-bill',
   templateUrl: './add-bill.component.html',
   styleUrl: './add-bill.component.css'
 })
-export class AddBillComponent  {
+export class AddBillComponent {
   billForm!: FormGroup;
   submitted = false;
   billData: any;
-  router:Router
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder, private router: Router) {
     this.billForm = this.fb.group({
       billNo: [''],
       date: [''],
@@ -51,6 +51,7 @@ export class AddBillComponent  {
       this.billData = this.billForm.value;
       this.submitted = true;
       
+
     }
   }
 }

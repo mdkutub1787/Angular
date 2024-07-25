@@ -116,87 +116,140 @@
   </form>
 </div>
 
-<div *ngIf="submitted">
-  <h2 class="mt-4">Bill Details</h2>
-  <table class="table table-bordered mt-3">
-    <thead>
+
+
+
+<div *ngIf="billData" class="container mt-4">
+  <h1 class="mb-4 text-center">Create Fire Premium Bill</h1>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <th>Field</th>
-        <th>Value</th>
+        <th scope="col" colspan="2" class="text-center">Bill Information</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Bill No</td>
+        <td><strong>Bill No:</strong></td>
         <td>{{ billData.billNo }}</td>
       </tr>
       <tr>
-        <td>Date</td>
+        <td><strong>Date:</strong></td>
         <td>{{ billData.date }}</td>
       </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <td>Insured Name</td>
+        <th scope="col" colspan="2">Insured Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong> Insured Name:</strong></td>
         <td>{{ billData.insured.name }}</td>
       </tr>
       <tr>
-        <td>Policyholder</td>
+        <td><strong>Policyholder:</strong></td>
         <td>{{ billData.insured.policyholder }}</td>
       </tr>
       <tr>
-        <td>Insured Address</td>
+        <td><strong>Insured Address:</strong></td>
         <td>{{ billData.insured.address }}</td>
       </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <td>Stock Insured</td>
+        <th scope="col" colspan="2">Segregation of The Sum Insured</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Stock Insured :</strong></td>
         <td>{{ billData.stockInsured }}</td>
       </tr>
       <tr>
-        <td>Sum Insured</td>
-        <td>{{ billData.sumInsured }}</td>
+        <td><strong>Sum Insured :</strong></td>
+        <td>{{ billData.sumInsured | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td>Interest Insured</td>
+        <td><strong>Interest Insured :</strong></td>
         <td>{{ billData.interestInsured }}</td>
       </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <td>Location</td>
+        <th scope="col" colspan="2">Situation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Location :</strong></td>
         <td>{{ billData.situation.location }}</td>
       </tr>
       <tr>
-        <td>Construction</td>
+        <td><strong>Construction :</strong></td>
         <td>{{ billData.situation.construction }}</td>
       </tr>
       <tr>
-        <td>Used As</td>
+        <td><strong>Used As :</strong></td>
         <td>{{ billData.situation.usedAs }}</td>
       </tr>
       <tr>
-        <td>Owner</td>
+        <td><strong>Owner :</strong></td>
         <td>{{ billData.situation.owner }}</td>
       </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <td>Period From</td>
+        <th scope="col" colspan="2">Period</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Period Form:</strong></td>
         <td>{{ billData.period.from }}</td>
       </tr>
       <tr>
-        <td>Period To</td>
+        <td><strong>Period To:</strong></td>
         <td>{{ billData.period.to }}</td>
       </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <td>Rate</td>
-        <td>{{ billData.premium.rate }}</td>
+        <th scope="col" colspan="2">Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Rate % :</strong></td>
+        <td>{{ billData.premium.rate }}%</td>
       </tr>
       <tr>
-        <td>Fire Premium</td>
-        <td>{{ billData.premium.firePremium }}</td>
+        <td><strong>Net Premium:</strong></td>
+        <td>{{ billData.premium.firePremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td>VAT</td>
-        <td>{{ billData.premium.vat }}</td>
+        <td><strong>Vat %:</strong></td>
+        <td>{{ billData.premium.vat | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
       <tr>
-        <td>Gross Premium</td>
-        <td>{{ billData.premium.grossPremium }}</td>
+        <td><strong>Gross Premium :</strong></td>
+        <td>{{ billData.premium.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
       </tr>
     </tbody>
   </table>
