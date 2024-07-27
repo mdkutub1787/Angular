@@ -27,6 +27,13 @@
       "email": "rofik1787@gmail.com",
       "password": "000000",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
+    },
+    {
+      "id": "6a79",
+      "name": "Shabab ahmed Skip",
+      "email": "sanaullah@gmail.com",
+      "password": "000000",
+      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg"
     }
   ],
   "policy": [
