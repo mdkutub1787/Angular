@@ -30,9 +30,9 @@ export class AddbillComponent implements OnInit {
     this.billForm = this.formBuilder.group({
       fire: [''],
       rsd: [''],
-      netPremium: [''],
+      netPremium: [{ value: '', disabled: true }], // Disable to prevent manual editing
       tax: [''],
-      grossPremium: [''],
+      grossPremium: [{ value: '', disabled: true }], // Disable to prevent manual editing
       policies: this.formBuilder.group({
         id: [undefined],
         billNo: [undefined],
@@ -52,8 +52,14 @@ export class AddbillComponent implements OnInit {
         const selectedPolicy = this.policies.find(policy => policy.policyholder === policyholder);
         if (selectedPolicy) {
           this.billForm.get('policies')?.patchValue(selectedPolicy);
+          this.calculatePremiums(); // Recalculate premiums when policyholder changes
         }
       });
+
+    // Recalculate premiums when fire, rsd, or tax values change
+    this.billForm.get('fire')?.valueChanges.subscribe(() => this.calculatePremiums());
+    this.billForm.get('rsd')?.valueChanges.subscribe(() => this.calculatePremiums());
+    this.billForm.get('tax')?.valueChanges.subscribe(() => this.calculatePremiums());
   }
 
   loadPolicies(): void {
@@ -66,6 +72,22 @@ export class AddbillComponent implements OnInit {
           console.error('Error loading policies:', error);
         }
       });
+  }
+
+  calculatePremiums(): void {
+    const formValues = this.billForm.value;
+    const sumInsured = formValues.policies.sumInsured || 0;
+    const fireRate = formValues.fire || 0;
+    const rsdRate = formValues.rsd || 0;
+    const taxRate = formValues.tax || 0;
+
+    const netPremium = (sumInsured * fireRate + sumInsured * rsdRate);
+    const grossPremium = netPremium + (netPremium * taxRate);
+
+    this.billForm.patchValue({
+      netPremium: netPremium,
+      grossPremium: grossPremium
+    }, { emitEvent: false });
   }
 
   createBill(): void {

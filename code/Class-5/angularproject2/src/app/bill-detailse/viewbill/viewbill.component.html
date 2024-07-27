@@ -1,44 +1,55 @@
-<div class="container">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Policy Holder</th>
-                <th>Sum Insured</th>
-                <th>Fire Rate</th>
-                <th>R&SD Rate</th>
-                <th>Net Premium</th>
-                <th>Tax Rate</th>
-                <th>Gross Premium</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr *ngFor="let bil of bills |async">
-                <td>{{bil.policies.policyholder}}</td>
-                <td>{{bil.policies.sumInsured}}</td>
-                <td>{{bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd}}</td>
-                <td>{{bil.policies.sumInsured*bil.rsd}}</td>
-                <td>{{bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd+(bil.policies.sumInsured*bil.rsd)}}</td>
-                <td>{{(bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)*bil.tax}}</td>
-                <td>{{(bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)+((bil.policies.sumInsured*bil.fire+bil.policies.sumInsured*bil.rsd)*bil.tax)}}
-                </td>
-
-
-                <td>
-                    <button class="btn btn-warning" (click)="editBill(bil)">Edit</button>
-
-                </td>
-                <td>
-
-                    <button class="btn btn-danger" (click)="deleteBill(bil.id)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-</div>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <table class="min-w-full divide-y divide-gray-200 bg-white shadow-md rounded-lg">
+            <thead class="bg-gray-100">
+                <tr class="table table-striped">
+                    <th >Policy Holder</th>
+                    <th >Sum Insured</th>
+                    <th >Fire</th>
+                    <th >R&SD</th>
+                    <th >Net Premium</th>
+                    <th >Tax</th>
+                    <th >Gross Premium</th>
+                    <th >Edit</th>
+                    <th >Delete</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                <tr *ngFor="let bil of bills | async">
+                    <td class="px-2 py-2 whitespace-nowrap">{{bil.policies.policyholder}}</td>
+                    <td class="px-2 py-2 whitespace-nowrap">{{bil.policies.sumInsured | currency: 'TK' : 'symbol'}}</td>
+                    <td class="px-2 py-2 whitespace-nowrap">{{bil.policies.sumInsured * bil.fire | currency:'TK':'symbol'}}</td>
+                    <td class="px-2 py-2 whitespace-nowrap">{{bil.policies.sumInsured * bil.rsd | currency:'TK':'symbol'}}</td>
+                    <!-- Calculate Net Premium -->
+                    <td class="px-2 py-2 whitespace-nowrap">
+                        {{(bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) | currency:'TK':'symbol'}}
+                    </td>
+                    <!-- Calculate Tax Amount -->
+                    <td class="px-2 py-2 whitespace-nowrap">
+                        {{(bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax | currency:'TK':'symbol'}}
+                    </td>
+                    <!-- Calculate Gross Premium -->
+                    <td class="px-2 py-2 whitespace-nowrap">
+                        {{(bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) + ((bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax) | currency:'TK':'symbol'}}
+                    </td>
+                    <td class="px-2 py-2 whitespace-nowrap">
+                        <button class="btn-edit px-3 py-2 rounded hover:bg-yellow-600" (click)="editBill(bil)">Edit</button>
+                    </td>
+                    <td class="px-2 py-2 whitespace-nowrap">
+                        <button class="btn-delete px-2 py-2 rounded hover:bg-red-600" (click)="deleteBill(bil.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -3,7 +3,7 @@ import { PolicyService } from '../../service/policy.service';
 import { BillService } from '../../service/bill.service';
 import { Router } from '@angular/router';
 import { BillModel } from '../../model/bill.model';
-import { forkJoin } from 'rxjs';
+
 
 @Component({
   selector: 'app-viewbill',
@@ -20,37 +20,6 @@ export class ViewbillComponent implements OnInit {
     private router: Router
   ) { }
 
-
-  // ngOnInit(): void {
-  //   this.loadData();
-  // }
-
-  // loadData(): void {
-  //   forkJoin({
-  //     policyes: this.policiesService.viewAllPolicyForBill(),
-  //     bills: this.billService.viewAllBill()
-  //   }).subscribe({
-  //     next: ({ policyes, bills }) => {
-  //       this.policyes = policyes;
-  //       this.bills = bills;
-  //     },
-  //     error: err => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
-
-  // deleteBill(billId: string): void {
-  //   this.billService.deleteBill(billId)
-  //   .subscribe({
-  //     next: res => {
-  //       this.loadData(); // Refresh the list after deletion
-  //     },
-  //     error: err => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
 
 
   ngOnInit(): void {
