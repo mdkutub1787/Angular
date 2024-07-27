@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Update Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-center text-2xl font-bold mb-4">Bill Update Form</h1>
+        <form [formGroup]="billForm" (ngSubmit)="updateBill()">
+            <div class="mb-3" formGroupName="policies">
+                <label for="policyholder" class="form-label">Policy Holder</label>
+                <select id="policyholder" formControlName="policyholder" class="form-select" required>
+                    <option value="" disabled>Select your policy holder</option>
+                    <option *ngFor="let pol of policies" [ngValue]="pol.policyholder">{{pol.policyholder}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3" formGroupName="policies">
+                <label for="sumInsured" class="form-label">Sum Insured</label>
+                <select id="sumInsured" formControlName="sumInsured" class="form-select" required>
+                    <option value="" disabled>Select sum insured</option>
+                    <option *ngFor="let pol of policies" [ngValue]="pol.sumInsured">{{pol.sumInsured}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3" formGroupName="policies">
+                <label for="address" class="form-label">Address</label>
+                <select id="address" formControlName="address" class="form-select" required>
+                    <option value="" disabled>Select your address</option>
+                    <option *ngFor="let pol of policies" [ngValue]="pol.address">{{pol.address}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="fire" class="form-label">Fire Rate</label>
+                <input id="fire" type="number" class="form-control" formControlName="fire" placeholder="Enter fire rate">
+            </div>
+
+            <div class="mb-3">
+                <label for="rsd" class="form-label">R&SD Rate</label>
+                <input id="rsd" type="number" class="form-control" formControlName="rsd" placeholder="Enter your rsd rate">
+            </div>
+
+            <div class="mb-3">
+                <label for="netPremium" class="form-label">Net Premium</label>
+                <input id="netPremium" type="number" class="form-control" formControlName="netPremium"
+                    placeholder="Net Premium" [value]="billForm.get('netPremium')?.value" readonly>
+            </div>
+            
+            <div class="mb-3">
+                <label for="tax" class="form-label">Tax Rate</label>
+                <input id="tax" type="number" class="form-control" formControlName="tax" placeholder="Enter your tax rate">
+            </div>
+            
+            <div class="mb-3">
+                <label for="grossPremium" class="form-label">Gross Premium</label>
+                <input id="grossPremium" type="number" class="form-control" formControlName="grossPremium"
+                    placeholder="Gross Premium" [value]="billForm.get('grossPremium')?.value" readonly>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
