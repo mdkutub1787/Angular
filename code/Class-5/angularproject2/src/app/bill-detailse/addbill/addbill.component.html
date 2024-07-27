@@ -19,6 +19,15 @@
             </select>
         </div>
 
+        <div class="mb-3" formGroupName="policies">
+            <div class="invalid-feedback">Please select a policies</div>
+            <label for="policies" class="form-label">Address</label>
+            <select id="policies" formControlName="address" class="form-select" required>
+                <option value="policies" disabled selected>Select your policies</option>
+                <option *ngFor="let pol of policies" [ngValue]="pol.address">{{pol.address}}</option>
+            </select>
+        </div>
+
         <div class="mb-3">
             <label for="fire" class="form-label">Fire Rate</label>
             <input id="fire" type="number" class="form-control" formControlName="fire" placeholder="Enter fire rate">

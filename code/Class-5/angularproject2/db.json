@@ -53,30 +53,6 @@
       "stockInsured": "Fish",
       "interestInsured": "Shop only",
       "usedAs": "Shopiulikik"
-    },
-    {
-      "id": "baa0",
-      "billNo": 2,
-      "date": "2024-07-25",
-      "bankName": "Brack Bank PLC,dhaka branch",
-      "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
-      "address": "lalbagh",
-      "sumInsured": 2000000,
-      "stockInsured": "food",
-      "interestInsured": "Shop only",
-      "usedAs": "Shop"
-    },
-    {
-      "id": "b116",
-      "billNo": 1,
-      "date": "2024-07-23",
-      "bankName": "Brack Bank PLC,dhaka branch",
-      "policyholder": "M/s Raju Food Corner , prop: Md. Raju Chowdhury  ",
-      "address": "Dhanmondi",
-      "sumInsured": 100,
-      "stockInsured": "food",
-      "interestInsured": "Shop only",
-      "usedAs": "Shopiulikik"
     }
   ],
   "bills": [
@@ -92,12 +68,32 @@
         "billNo": 0,
         "date": "01-JUL-24",
         "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
-        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+        "policyholder": "M/s Bulbul Enterprise, Prop: Rokibul Islam",
         "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
         "sumInsured": 2200000,
         "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
         "interestInsured": "Fire &/or Lightning only",
         "usedAs": "Shop-Cum-Godown Only"
+      }
+    },
+    {
+      "id": "82c3",
+      "fire": 10,
+      "rsd": 10,
+      "netPremium": 100000,
+      "tax": 10,
+      "grossPremium": 50000000,
+      "policies": {
+        "id": "3878",
+        "billNo": 111,
+        "date": "2024-08-01",
+        "bankName": "Brack Bank PLC,dhaka branch",
+        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+        "address": "Dhanmondi",
+        "sumInsured": 555555,
+        "stockInsured": "Fish",
+        "interestInsured": "Shop only",
+        "usedAs": "Shopiulikik"
       }
     }
   ]
