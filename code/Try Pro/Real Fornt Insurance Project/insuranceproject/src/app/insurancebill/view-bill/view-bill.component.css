@@ -1,0 +1,58 @@
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    
+    #print-section, #print-section * {
+      visibility: visible;
+    }
+    
+    #print-section {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    
+    .table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+    }
+    
+    .table-bordered {
+      border: 1px solid #dee2e6;
+    }
+    
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #dee2e6;
+    }
+    
+    .thead-light th {
+      background-color: #f8f9fa;
+      border-color: #dee2e6;
+    }
+    
+    .text-center {
+      text-align: center !important;
+    }
+    
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    .mt-4, .my-4 {
+      margin-top: 1.5rem !important;
+    }
+    
+    .mb-4, .my-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  }
+  

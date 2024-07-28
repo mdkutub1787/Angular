@@ -1,0 +1,32 @@
+{
+  "bills": [
+    {
+      "billNo": "0178",
+      "date": "01-JUL-24",
+      "insured": {
+        "name": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
+        "policyholder": "M's. Bulbul Enterprise, Prop: Rokibul Islam",
+        "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI"
+      },
+      "sumInsured": 2200000,
+      "stockInsured": "Stock Of Onion, Garlic & Seasonal Crops (Without Jute) Only.",
+      "interestInsured": "Fire &/or Lightning only",
+      "situation": {
+        "location": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
+        "construction": "2nd Class",
+        "usedAs": "Shop-Cum-Godown Only",
+        "owner": "The Insured."
+      },
+      "period": {
+        "from": "28-JUL-24",
+        "to": "28-JUL-25"
+      },
+      "premium": {
+        "rate": 0.21,
+        "firePremium": 4620,
+        "vat": 693,
+        "grossPremium": 5313
+      }
+    }
+  ]
+}

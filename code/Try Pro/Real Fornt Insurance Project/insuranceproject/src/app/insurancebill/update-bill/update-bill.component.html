@@ -1,0 +1,135 @@
+<div id="print-section">
+    <div #billContent *ngIf="bill" class="container mt-4">
+      <h1 class="mb-4 text-center">Fire Premium Bill</h1>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Bill Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bill No:</strong> {{ bill.billNo }} </td>
+            <td> <strong>Date:</strong> {{ bill.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2">Insured Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Name:</strong></td>
+            <td>{{ bill.insured.name }}</td>
+          </tr>
+          <tr>
+            <td><strong>Policyholder:</strong></td>
+            <td>{{ bill.insured.policyholder }}</td>
+          </tr>
+          <tr>
+            <td><strong>Address:</strong></td>
+            <td>{{ bill.insured.address }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2">Segregation of The Sum Insured</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Stock Insured:</strong></td>
+            <td>{{ bill.stockInsured }}</td>
+          </tr>
+          <tr>
+            <td><strong>Sum Insured:</strong></td>
+            <td>{{ bill.sumInsured | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr>
+            <td><strong>Interest Insured:</strong></td>
+            <td>{{ bill.interestInsured }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2">Situation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Location:</strong></td>
+            <td>{{ bill.situation.location }}</td>
+          </tr>
+          <tr>
+            <td><strong>Construction:</strong></td>
+            <td>{{ bill.situation.construction }}</td>
+          </tr>
+          <tr>
+            <td><strong>Used As:</strong></td>
+            <td>{{ bill.situation.usedAs }}</td>
+          </tr>
+          <tr>
+            <td><strong>Owner:</strong></td>
+            <td>{{ bill.situation.owner }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2">Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Period From:</strong> {{ bill.period.from }}</td>
+            <td> <strong>Period To:</strong> {{ bill.period.to }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rate:</strong></td>
+            <td>{{ bill.premium.rate }}%</td>
+          </tr>
+          <tr>
+            <td><strong>Fire Premium:</strong></td>
+            <td>{{ bill.premium.firePremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr>
+            <td><strong>VAT:</strong></td>
+            <td>{{ bill.premium.vat | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr>
+            <td><strong>Gross Premium:</strong></td>
+            <td>{{ bill.premium.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+        </tbody>
+  
+      </table>
+  
+  
+    </div>
+  
+  </div>
+  <button printSectionId="print-section" ngxPrint class="btn btn-success m-4">Download PDF </button>
+  
