@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularproject2": {
+    "insurancemanagemanet": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angularproject2",
+            "outputPath": "dist/insurancemanagemanet",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,7 +37,6 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -76,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angularproject2:build:production"
+              "buildTarget": "insurancemanagemanet:build:production"
             },
             "development": {
-              "buildTarget": "angularproject2:build:development"
+              "buildTarget": "insurancemanagemanet:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,7 +101,6 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -112,6 +110,6 @@
     }
   },
   "cli": {
-    "analytics": "1f8ae937-a101-4235-9c18-c706c1adb026"
+    "analytics": "183fd78f-0e63-4147-a8d5-47a056e08dc4"
   }
 }

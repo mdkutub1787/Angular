@@ -1,0 +1,41 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .table-bordered {
+    border: 2px solid #dee2e6;
+  }
+  
+  .thead-light th {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+  }
+  

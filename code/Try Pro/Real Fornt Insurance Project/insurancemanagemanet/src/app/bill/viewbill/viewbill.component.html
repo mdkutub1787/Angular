@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid #656262 !important;
+        }
+
+        .table-bordered td + td {
+            border-left: 2px solid #000 !important;
+        }
+
+        .printbtn,
+        .button-group .btn {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        #print-section {
+            padding: 20px;
+            border: 2px solid #656262;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .thead-light {
+            background-color: #f8f9fa;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5" id="print-section">
+        <div class="receipt">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Bill Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Bill No:</strong> {{ bil.billNo }} </td>
+                        <td><strong>Date:</strong> {{ bil.date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Insured Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Bank Name:</strong> {{ bil.bankName }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Policyholder:</strong> {{ bil.policyholder }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Address:</strong> {{ bil.address }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Segregation of The Sum Insured</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Stock Insured:</strong> {{ bil.stockInsured }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Sum Insured:</strong> {{ bil.sumInsured | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Interest Insured:</strong> {{ bil.interestInsured }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Situation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Location:</strong> {{ bil.location }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Construction:</strong> {{ bil.construction }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Used As:</strong> {{ bil.usedAs }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Owner:</strong> {{ bil.owner }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Period From:</strong> {{ bil.from }}</td>
+                        <td><strong>Period To:</strong> {{ bil.to }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" class="text-center">Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Rate:</strong> {{ bil.rate }}%</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>R&SD:</strong> {{ bil.rsd }}%</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Fire Premium:</strong> {{ bil.netPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>VAT:</strong> {{ bil.vat | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+                    </tr>
+                    <tr *ngFor="let bil of bills | async">
+                        <td><strong>Gross Premium:</strong> {{ bil.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button printSectionId="print-section" ngxPrint class="btn btn-primary printbtn">Print</button>
+    <div class="button-group">
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

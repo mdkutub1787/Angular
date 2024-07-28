@@ -150,6 +150,26 @@
       },
       "netPremium": 15000,
       "grossPremium": 18000
+    },
+    {
+      "id": "a94a",
+      "fire": 0.15,
+      "rsd": 0.05,
+      "tax": 0.1,
+      "policies": {
+        "id": "0",
+        "billNo": 1,
+        "date": "2024-07-24",
+        "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
+        "policyholder": "M/s Bulbul Enterprise, Prop: Rokibul Islam",
+        "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
+        "sumInsured": 2000000,
+        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+        "interestInsured": "Fire &/or Lightning only",
+        "usedAs": "Shop-Cum-Godown Only"
+      },
+      "netPremium": 400000,
+      "grossPremium": 440000
     }
   ]
 }
