@@ -15,6 +15,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 
@@ -48,7 +49,8 @@ import { LogoutComponent } from './logout/logout.component';
     // provideClientHydration(),
     provideHttpClient(
       withFetch(),
-    )
+    ),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
