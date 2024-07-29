@@ -11,15 +11,19 @@ import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AuthGuard } from './guard/authguard.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { ViewrecieptComponent } from './reciept/viewreciept/viewreciept.component';
+import { CreaterecieptComponent } from './reciept/createreciept/createreciept.component';
 
 
 const routes: Routes = [
   { path: "viewpolicy", component: ViewpolicyComponent },
-  { path: "createpolicy", component: AddpolicyComponent, canActivate: [AuthGuard] },
+  { path: "addpolicy", component: AddpolicyComponent },
   { path: "updatepolicy/:id", component: UpdatepolicyComponent, canActivate: [AuthGuard] },
   { path: "viewbill", component: ViewbillComponent, canActivate: [AuthGuard] },
   { path: "addbill", component: AddbillComponent, canActivate: [AuthGuard] },
-  { path: "updatebill/:id", component: UpdatebillComponent, },
+  { path: "updatebill/:id", component: UpdatebillComponent},
+  { path: "viewreceipt", component: ViewrecieptComponent },
+  { path: "createrecipt", component: CreaterecieptComponent },
   { path: "registration", component: RegistrationComponent },
   { path: "login", component: LoginComponent },
   { path: "logout", component: LogoutComponent },

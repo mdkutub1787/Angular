@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { BillModel } from '../model/bill.model';
 
 @Injectable({
@@ -16,6 +16,21 @@ export class BillService {
 
   viewAllBill(): Observable<any> {
     return this.http.get(this.baseUrl);
+  }
+
+  getAllBillForReciept(): Observable<BillModel[]> {
+
+    return this.http.get<BillModel[]>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError)
+      )
+
+  }
+
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('test'));
+
   }
 
   createBill(bills: BillModel): Observable<BillModel> {

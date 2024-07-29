@@ -1,0 +1,31 @@
+<!-- src/app/components/createreceipt/createreceipt.component.html -->
+<form [formGroup]="receiptForm" (ngSubmit)="createReceipt()">
+    <div>
+      <label for="id">Receipt ID:</label>
+      <input id="id" formControlName="id" type="text">
+    </div>
+  
+    <div>
+      <label for="totalPremium">Total Premium:</label>
+      <input id="totalPremium" formControlName="totalPremium" type="number">
+    </div>
+  
+    <div formGroupName="bill">
+      <div formGroupName="policies">
+        <div>
+          <label for="policyholder">Policyholder:</label>
+          <select id="policyholder" formControlName="policyholder">
+            <option *ngFor="let policy of policies" [value]="policy.policyholder">{{ policy.policyholder }}</option>
+          </select>
+        </div>
+  
+        <div>
+          <label for="bankName">Bank Name:</label>
+          <input id="bankName" formControlName="bankName" type="text">
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit">Create Receipt</button>
+  </form>
+  

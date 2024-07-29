@@ -171,5 +171,54 @@
       "netPremium": 400000,
       "grossPremium": 440000
     }
+  ],
+  "reciept": [
+    {
+      "id": "1",
+      "totalPremium": 500000,
+      "bill": {
+        "id": "ded4",
+        "fire": 0.2,
+        "rsd": 0.2,
+        "netPremium": 500,
+        "tax": 0.15,
+        "grossPremium": 20000,
+        "policies": {
+          "id": "0",
+          "billNo": 0,
+          "date": "01-JUL-24",
+          "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
+          "policyholder": "M/s Bulbul Enterprise, Prop: Rokibul Islam",
+          "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
+          "sumInsured": 2200000,
+          "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+          "interestInsured": "Fire &/or Lightning only",
+          "usedAs": "Shop-Cum-Godown Only"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "totalPremium": 500000,
+      "bill": {
+        "fire": 0,
+        "rsd": 0,
+        "netPremium": 0,
+        "tax": 0,
+        "grossPremium": 0,
+        "policies": {
+          "id": null,
+          "billNo": null,
+          "date": null,
+          "bankName": "Brack Bank PLC,dhaka branch",
+          "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+          "address": null,
+          "sumInsured": null,
+          "stockInsured": null,
+          "interestInsured": null,
+          "usedAs": null
+        }
+      }
+    }
   ]
 }

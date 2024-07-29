@@ -1,0 +1,28 @@
+/* src/app/components/createreceipt/createreceipt.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
