@@ -1,0 +1,20 @@
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #656262 !important;
+}
+.printbtn, .button-group .btn {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+#print-section {
+    padding: 30px;
+    border: 2px solid #656262;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+.thead-light {
+    background-color: #f8f9fa;
+}
+.text-center {
+    text-align: center;
+}

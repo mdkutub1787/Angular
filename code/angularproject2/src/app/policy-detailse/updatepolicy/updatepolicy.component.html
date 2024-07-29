@@ -1,0 +1,56 @@
+<div class="container">
+    <h1 class="text-center">Policy Update Form</h1>
+    <form (ngSubmit)="updatePolicy()">
+
+        <div class="mb-3">
+            <label for="billNo" class="form-label">Bill No </label>
+            <input type="number" class="form-control" id="billNo" name="billNo" placeholder="Enter bill No"
+                [(ngModel)]="policy.billNo">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date </label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="Enter date"
+                [(ngModel)]="policy.date">
+        </div>
+        <div class="mb-3">
+            <label for="bankName" class="form-label">Bank Name </label>
+            <input type="text" class="form-control" id="bankName" name="bankName"
+                placeholder="Enter bank name" [(ngModel)]="policy.bankName">
+        </div>
+        <div class="mb-3">
+            <label for="policyholder" class="form-label">Policy Holder </label>
+            <input type="text" class="form-control" id="policyholder" name="policyholder"
+                placeholder="Enter policyholder name " [(ngModel)]="policy.policyholder">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address </label>
+            <input type="text" class="form-control" id="address" name="address"
+                placeholder="Enter address name" [(ngModel)]="policy.address">
+        </div>
+        <div class="mb-3">
+            <label for="sumInsured" class="form-label">Sum Insured</label>
+            <input type="number" class="form-control" id="sumInsured" name="sumInsured"
+                placeholder="Enter sumInsured" [(ngModel)]="policy.sumInsured">
+        </div>
+
+        <div class="mb-3">
+            <label for="stockInsured" class="form-label">Stock Insured </label>
+            <input type="text" class="form-control" id="stockInsured" name="stockInsured"
+                placeholder="Enter stockInsured name" [(ngModel)]="policy.stockInsured">
+        </div>
+        <div class="mb-3">
+            <label for="interestInsured" class="form-label">Interet</label>
+            <input type="text" class="form-control" id="interestInsured" name="interestInsured"
+                placeholder="Enter interestInsured" [(ngModel)]="policy.interestInsured">
+        </div>
+        <div class="mb-3">
+            <label for="usedAs" class="form-label">Used As</label>
+            <input type="text" class="form-control" id="usedAs" name="usedAs" placeholder="Enter usedAs"
+                [(ngModel)]="policy.usedAs">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+</div>

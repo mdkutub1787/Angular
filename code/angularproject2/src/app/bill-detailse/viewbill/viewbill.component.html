@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for table rows */
+        .table-container {
+            margin-top: 30px;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .table td button {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="table-container">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Policy Holder</th>
+                        <th>Sum Insured</th>
+                        <th>Fire</th>
+                        <th>R&SD</th>
+                        <th>Net Premium</th>
+                        <th>TAX</th>
+                        <th>Gross Premium</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let bil of bills | async">
+                        <td>{{ bil.policies.policyholder }}</td>
+                        <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
+                        <td>{{ bil.policies.sumInsured * bil.fire | currency:'TK':'symbol' }}</td>
+                        <td>{{ bil.policies.sumInsured * bil.rsd | currency:'TK':'symbol' }}</td>
+                        <td>
+                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) | currency:'TK':'symbol' }}
+                        </td>
+                        <td>
+                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax | currency:'TK':'symbol' }}
+                        </td>
+                        <td>
+                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) + ((bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax) | currency:'TK':'symbol' }}
+                        </td>
+                        <td>
+                            <button class="btn btn-warning" (click)="editBill(bil)">Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="deleteBill(bil.id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

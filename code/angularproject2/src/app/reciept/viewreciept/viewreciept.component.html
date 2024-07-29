@@ -1,0 +1,129 @@
+<!-- src/app/components/createreceipt/createreceipt.component.html -->
+<div class="container mt-5" id="print-section">
+    <div class="receipt">
+      <!-- Bill Information Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Bill Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Bill No:</strong> {{ receipt.bill.policies.billNo }} </td>
+            <td><strong>Date:</strong> {{ receipt.bill.policies.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Insured Details Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Insured Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Bank Name:</strong> {{ receipt.bill.policies.bankName }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Policyholder:</strong> {{ receipt.bill.policies.policyholder }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Address:</strong> {{ receipt.bill.policies.address }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Segregation of The Sum Insured Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Segregation of The Sum Insured</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Stock Insured:</strong> {{ receipt.bill.policies.stockInsured }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Sum Insured:</strong> {{ receipt.bill.policies.sumInsured | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Interest Insured:</strong> {{ receipt.bill.policies.interestInsured }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Situation Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Situation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Location:</strong> {{ receipt.bill.policies.location }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Construction:</strong> {{ receipt.bill.policies.construction }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Used As:</strong> {{ receipt.bill.policies.usedAs }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Owner:</strong> {{ receipt.bill.policies.owner }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Period Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Period From:</strong> {{ receipt.bill.policies.from }}</td>
+            <td><strong>Period To:</strong> {{ receipt.bill.policies.to }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Premium Table -->
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" colspan="2" class="text-center">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Rate:</strong> {{ receipt.bill.rate }}%</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>R&SD:</strong> {{ receipt.bill.rsd }}%</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Fire Premium:</strong> {{ receipt.bill.netPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>VAT:</strong> {{ receipt.bill.tax | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+          <tr *ngFor="let receipt of reciepts | async">
+            <td><strong>Gross Premium:</strong> {{ receipt.bill.grossPremium | currency : 'TK' : 'symbol' : '1.0-0' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Print Button -->
+  <div class="d-flex justify-content-center mt-3">
+    <button printSectionId="print-section" ngxPrint class="btn btn-primary printbtn">Print</button>
+  </div>
+  
