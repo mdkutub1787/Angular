@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../service/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../service/auth-.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserModel } from '../model/user.model';
+
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.css'
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit {
 
   regForm!: FormGroup;
 
@@ -17,14 +18,16 @@ export class RegistrationComponent {
     private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder
+  ) { }
 
-  ) {
+
+  ngOnInit(): void {
     this.regForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
-
-
+      password: ['', Validators.required],
+      photo: ['', Validators.required],
+ 
     })
 
   }
@@ -32,23 +35,23 @@ export class RegistrationComponent {
   onSubmit(): void {
     if (this.regForm.valid) {
       const user: UserModel = this.regForm.value;
-      this.authService.registration(user).subscribe({
-        next: (res) => {
-          console.log('User registered successfully:', res);
-          this.authService.storeToken(res.token);
-          this.router.navigate(['/']); 
-        },
-        error: (err) => {
-          console.error('Error registering user:', err);
-        }
-      });
+      this.authService.registration(user)
+        .subscribe({
+          next: res => {
+            console.log('User registered successfully:', res);
+            this.authService.storeToken(res.token);
+            this.router.navigate(['/'])
+          },
+          error: (err) => {
+            console.error('Error registering user:', err);
+          }
+        });
     }
     else {
       alert("Complte mandatory Field");
     }
+
   }
 
 
 }
-
-

@@ -1,23 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from '../service/auth-.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
   constructor(
     private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder
-  ) {
+  ) { }
 
+  ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [''],
       password: ['']
@@ -31,7 +31,7 @@ export class LoginComponent {
         next: (res) => {
           console.log('User logged in successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/']);
+          this.router.navigate(['userprofile']);
         },
         error: (err) => {
           console.error('Error logging in:', err);
@@ -39,5 +39,6 @@ export class LoginComponent {
       });
     }
   }
+
 
 }
