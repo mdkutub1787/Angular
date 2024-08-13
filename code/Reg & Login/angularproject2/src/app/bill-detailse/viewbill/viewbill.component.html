@@ -48,16 +48,16 @@
                     <tr *ngFor="let bil of bills | async">
                         <td>{{ bil.policies.policyholder }}</td>
                         <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
-                        <td>{{ bil.policies.sumInsured * bil.fire | currency:'TK':'symbol' }}</td>
-                        <td>{{ bil.policies.sumInsured * bil.rsd | currency:'TK':'symbol' }}</td>
+                        <td>{{ bil.policies.sumInsured| currency:'TK':'symbol' }}</td>
+                        <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
                         <td>
-                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) | currency:'TK':'symbol' }}
+                            {{ (bil.policies.sumInsured ) | currency:'TK':'symbol' }}
                         </td>
                         <td>
-                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax | currency:'TK':'symbol' }}
+                          
                         </td>
                         <td>
-                            {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) + ((bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax) | currency:'TK':'symbol' }}
+                            
                         </td>
                         <td>
                             <button class="btn btn-warning" (click)="editBill(bil)">Edit</button>

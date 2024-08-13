@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,10 @@ import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
+import { NgModule } from '@angular/core';
+import { ViewrecieptComponent } from './reciept/viewreciept/viewreciept.component';
+import {NgxPrintModule} from 'ngx-print';
+import { CreaterecieptComponent } from './reciept/createreciept/createreciept.component';
 
 
 
@@ -34,6 +37,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     LoginComponent,
     UserprofileComponent,
     LogoutComponent,
+    ViewrecieptComponent,
+    CreaterecieptComponent,
 
 
   ],
@@ -43,6 +48,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    NgbModule,
+    NgxPrintModule
+
   
   ],
   providers: [

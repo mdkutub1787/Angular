@@ -1,0 +1,46 @@
+<!-- src/app/components/createreceipt/createreceipt.component.html -->
+<form [formGroup]="receiptForm" (ngSubmit)="createReceipt()" class="container mt-5">
+  <div class="mb-3">
+    <label for="id" class="form-label">Receipt ID:</label>
+    <input id="id" formControlName="id" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="totalPremium" class="form-label">Total Premium:</label>
+    <input id="totalPremium" formControlName="totalPremium" type="number" class="form-control">
+  </div>
+
+  <div formGroupName="bill">
+    <div formGroupName="policies">
+      <div class="mb-3">
+        <label for="policyholder" class="form-label">Policyholder:</label>
+        <select id="policyholder" formControlName="policyholder" class="form-select">
+          <option *ngFor="let policy of policies" [value]="policy.policyholder">{{ policy.policyholder }}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="bankName" class="form-label">Bank Name:</label>
+        <input id="bankName" formControlName="bankName" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div formGroupName="bill">
+
+    <div class="mb-3">
+      <label for="netPremium" class="form-label">Net Premium:</label>
+      <select id="netPremium" formControlName="netPremium" class="form-select">
+        <option *ngFor="let policy of bills" [value]="policy.netPremium">{{ policy.netPremium }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="grossPremium" class="form-label">Gross Premium :</label>
+      <input id="grossPremium" formControlName="grossPremium" type="number" class="form-control">
+    </div>
+  </div>
+ 
+
+  <button type="submit" class="btn btn-primary">Create Receipt</button>
+</form>
