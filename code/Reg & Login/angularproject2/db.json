@@ -5,14 +5,17 @@
       "name": "Kutub Uddin",
       "email": "kutub@gmail.com",
       "password": "000000",
-      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg "
+      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg ",
+        "role": "Admin"
     },
     {
-      "id": "7da1",
+      "id": "e2a5",
       "name": "Kutub Uddin",
-      "email": "mdkutuddin1787@gmail.com",
+      "email": "mdkutubuddin1787@gmail.com",
       "password": "000000",
-      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg"
+      "photo": "https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg",
+       "role": "User"
+      
     }
   ],
   "policy": [
@@ -51,18 +54,6 @@
       "stockInsured": "jut only",
       "interestInsured": "Shop only",
       "usedAs": "Shop"
-    },
-    {
-      "id": "913a",
-      "billNo": 5,
-      "date": "2024-08-01",
-      "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
-      "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
-      "address": "lalbagh",
-      "sumInsured": 5000,
-      "stockInsured": "Fish",
-      "interestInsured": "Goodwin",
-      "usedAs": "Shop-Cum-Godown Only"
     }
   ],
   "bills": [
@@ -137,42 +128,6 @@
         "sumInsured": 2000000,
         "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
         "interestInsured": "Fire &/or Lightning only",
-        "usedAs": "Shop-Cum-Godown Only"
-      }
-    },
-    {
-      "id": "09ae",
-      "fire": 10,
-      "rsd": 10,
-      "tax": 10,
-      "policies": {
-        "id": "0",
-        "billNo": 1,
-        "date": "2024-07-24",
-        "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
-        "policyholder": "M/s Bulbul Enterprise, Prop: Rokibul Islam",
-        "address": "Narua Road, Narua Bazar, Baliakandi, RAJBARI",
-        "sumInsured": 2000000,
-        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
-        "interestInsured": "Fire &/or Lightning only",
-        "usedAs": "Shop-Cum-Godown Only"
-      }
-    },
-    {
-      "id": "c9ec",
-      "fire": 10,
-      "rsd": 10,
-      "tax": 10,
-      "policies": {
-        "id": "913a",
-        "billNo": 5,
-        "date": "2024-08-01",
-        "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
-        "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
-        "address": "lalbagh",
-        "sumInsured": 5000,
-        "stockInsured": "Fish",
-        "interestInsured": "Goodwin",
         "usedAs": "Shop-Cum-Godown Only"
       }
     }

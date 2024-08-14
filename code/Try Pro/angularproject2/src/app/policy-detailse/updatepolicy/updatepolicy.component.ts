@@ -57,6 +57,4 @@ export class UpdatepolicyComponent implements OnInit {
 
   }
 
-
-
 }

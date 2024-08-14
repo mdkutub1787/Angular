@@ -20,6 +20,7 @@ import { NgModule } from '@angular/core';
 import { ViewrecieptComponent } from './reciept/viewreciept/viewreciept.component';
 import {NgxPrintModule} from 'ngx-print';
 import { CreaterecieptComponent } from './reciept/createreciept/createreciept.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -39,6 +40,7 @@ import { CreaterecieptComponent } from './reciept/createreciept/createreciept.co
     LogoutComponent,
     ViewrecieptComponent,
     CreaterecieptComponent,
+    NavbarComponent,
 
 
   ],

@@ -5,7 +5,7 @@ export class UserModel {
     email!: string;
     password!: string;
     photo!: string;
-
+    role!: string;
 
 
 }

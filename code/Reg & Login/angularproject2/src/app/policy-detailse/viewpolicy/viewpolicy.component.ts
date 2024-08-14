@@ -18,6 +18,7 @@ export class ViewpolicyComponent implements OnInit {
     private http: HttpClient,
     private router: Router
   ) { }
+  
   ngOnInit(): void {
     this.policyes = this.policyService.viewAllPolicy();
 

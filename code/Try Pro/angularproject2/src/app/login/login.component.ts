@@ -8,21 +8,21 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent   {
   loginForm!: FormGroup;
 
   constructor(
     private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder
-  ) { }
+  ) {
 
-  ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [''],
       password: ['']
     });
   }
+
 
   onSubmit(): void {
     if (this.loginForm.valid) {
@@ -31,7 +31,14 @@ export class LoginComponent implements OnInit {
         next: (res) => {
           console.log('User logged in successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['userprofile']);
+
+          const role=this.authService.getUserRole();
+          
+            this.router.navigate(['/userprofile']);
+
+          
+
+           // Navigate to a protected route after login
         },
         error: (err) => {
           console.error('Error logging in:', err);
@@ -39,6 +46,5 @@ export class LoginComponent implements OnInit {
       });
     }
   }
-
 
 }

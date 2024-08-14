@@ -20,11 +20,12 @@ export class LogoutComponent implements OnInit {
     this.logout();
   }
 
-  logout() {
+  logout(){
     this.authService.logout();
+    this.authService.removeUserDetails();
     this.router.navigate(['login']);
-  }
 
+  }
 
 
 }
