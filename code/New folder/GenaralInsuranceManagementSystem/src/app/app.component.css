@@ -1,0 +1,109 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+/* Shared Color Scheme */
+mat-toolbar,
+.mat-sidenav {
+  background: #536eef; 
+  color: white;
+}
+
+/* Toolbar (Navbar) Styles */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background: #536eef; 
+  color: white;
+}
+
+.toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 16px;
+}
+
+.mat-toolbar a:hover {
+  color: #ffeb3b; /* Hover color */
+  text-decoration: underline; /* Optional underline on hover */
+}
+
+.mat-toolbar .mat-icon {
+  color: white;
+}
+
+/* Sidebar (Sidenav) Styles */
+.mat-sidenav {
+  margin: 0;
+  width: 250px;
+  border-right: none;
+  border-radius: 0;
+  padding: 16px;
+  text-align: center;
+  background: #536eef; /* Same color as the navbar */
+  color: white;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.menu-button .mat-icon {
+  margin-right: 8px;
+  color: white;
+}
+
+.menu-button .button-text {
+  color: white;
+}
+
+.mat-divider {
+  margin: 16px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Content Styles */
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.mat-sidenav-container {
+  height: calc(100vh - 50px);
+}

@@ -1,0 +1,102 @@
+<!-- Add Bill -->
+<div class="container d-flex justify-content-center">
+    <div class="col-md-8 mb-4">
+        <h3 class="text-center text-2xl font-bold mb-4">
+            <mat-icon>note_add</mat-icon>
+            Bill Update Form
+        </h3>
+        <form [formGroup]="billForm" (ngSubmit)="updateBill()">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3" formGroupName="policies">
+                    <label for="policyholder">
+                        <mat-icon>person</mat-icon>
+                        Policy Holder
+                    </label>
+                    <select id="policyholder" formControlName="policyholder" class="form-control" required>
+                        <option value="" disabled>Select your policy holder</option>
+                        <option *ngFor="let pol of policies" [ngValue]="pol.policyholder">{{pol.policyholder}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6 mb-3" formGroupName="policies">
+                    <label for="address">
+                        <mat-icon>location_on</mat-icon>
+                        Address
+                    </label>
+                    <select id="address" formControlName="address" class="form-control" required>
+                        <option value="" disabled>Select your address</option>
+                        <option *ngFor="let pol of policies" [ngValue]="pol.address">{{pol.address}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6 mb-3" formGroupName="policies">
+                    <label for="sumInsured">
+                        <mat-icon>attach_money</mat-icon>
+                        Sum Insured
+                    </label>
+                    <select id="sumInsured" formControlName="sumInsured" class="form-control" required>
+                        <option value="" disabled>Select sum insured</option>
+                        <option *ngFor="let pol of policies" [ngValue]="pol.sumInsured">{{pol.sumInsured}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                    <label for="fire">
+                        <mat-icon>whatshot</mat-icon>
+                        Fire Rate
+                    </label>
+                    <input id="fire" type="number" class="form-control" formControlName="fire"
+                        placeholder="Enter fire rate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="rsd">
+                        <mat-icon>show_chart</mat-icon>
+                        R&SD Rate
+                    </label>
+                    <input id="rsd" type="number" class="form-control" formControlName="rsd"
+                        placeholder="Enter your R&SD rate">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="netPremium">
+                        <mat-icon>monetization_on</mat-icon>
+                        Net Premium
+                    </label>
+                    <input id="netPremium" type="number" class="form-control" formControlName="netPremium"
+                        placeholder="Net Premium" [value]="billForm.get('netPremium')?.value" readonly>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="tax">
+                        <mat-icon>receipt</mat-icon>
+                        Tax Rate
+                    </label>
+                    <input id="tax" type="number" class="form-control" formControlName="tax"
+                        placeholder="Enter your tax rate">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="grossPremium">
+                        <mat-icon>euro_symbol</mat-icon>
+                        Gross Premium
+                    </label>
+                    <input id="grossPremium" type="number" class="form-control" formControlName="grossPremium"
+                        placeholder="Gross Premium" [value]="billForm.get('grossPremium')?.value" readonly>
+                </div>
+            </div>
+
+            <!-- Submit Button with Material Icon -->
+            <button type="submit" class="btn btn-outline-success rounded-pill shadow-sm">
+                <mat-icon class="mat-icon">save</mat-icon>
+                Update
+            </button>
+        </form>
+    </div>
+</div>

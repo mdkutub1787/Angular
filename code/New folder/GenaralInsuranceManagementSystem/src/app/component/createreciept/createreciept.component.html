@@ -1,0 +1,42 @@
+<!-- src/app/components/createreceipt/createreceipt.component.html -->
+<form [formGroup]="receiptForm" (ngSubmit)="createReceipt()" class="container mt-5">
+    <div class="mb-3">
+        <label for="id" class="form-label">
+            <mat-icon>receipt</mat-icon> <!-- Add an icon for the Receipt ID -->
+            Receipt ID:
+        </label>
+        <input id="id" formControlName="id" type="text" class="form-control">
+    </div>
+
+
+
+    <div formGroupName="bill">
+        <div formGroupName="policies">
+            <div class="mb-3">
+                <label for="policyholder" class="form-label">
+                    <mat-icon>person</mat-icon> <!-- Add an icon for Policyholder -->
+                    Policyholder:
+                </label>
+                <select id="policyholder" formControlName="policyholder" class="form-select">
+                    <option *ngFor="let policy of policies" [value]="policy.policyholder">{{ policy.policyholder }}
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="bankName" class="form-label">
+                    <mat-icon>account_balance</mat-icon> <!-- Add an icon for Bank Name -->
+                    Bank Name:
+                </label>
+                <input id="bankName" formControlName="bankName" type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-outline-success rounded-pill shadow-sm">
+        <mat-icon>send</mat-icon>
+        Submit
+    </button>
+</form>

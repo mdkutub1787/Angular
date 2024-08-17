@@ -1,0 +1,96 @@
+<mat-toolbar color="primary">
+  <!-- Dashboard Title -->
+  <span class="toolbar-title">Dashboard</span>
+
+  <!-- Spacer to push the rest to the right -->
+  <span class="spacer"></span>
+
+  <!-- Navigation Links in Toolbar -->
+  <a mat-button routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </a>
+  <a mat-button routerLink="/viewpolicy">
+    <mat-icon>description</mat-icon>
+    <span>Policy</span>
+  </a>
+  <a mat-button routerLink="/viewbill">
+    <mat-icon>receipt</mat-icon>
+    <span>Bill</span>
+  </a>
+  <a mat-button routerLink="/viewreciept">
+    <mat-icon>list_alt</mat-icon>
+    <span>Receipt</span>
+  </a>
+  <a mat-button routerLink="/reg">
+    <mat-icon>app_registration</mat-icon>
+    <span>Registration</span>
+  </a>
+  <a mat-button routerLink="/login">
+    <mat-icon>login</mat-icon>
+    <span>Login</span>
+  </a>
+
+  <!-- User Info Button with Dropdown Menu -->
+  <button mat-icon-button [matMenuTriggerFor]="userMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <a mat-menu-item routerLink="/userprofile">
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </a>
+    <a mat-menu-item routerLink="/logout">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </a>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav="matSidenav"
+    mode="side"
+    opened="true"
+    class="mat-elevation-z8"
+  >
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg"
+      alt="User Admin"
+      style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px;"
+    />
+
+    <h5 class="name">Md Kutub Uddin</h5>
+    <p class="designation">mdkutub150gmail.com</p>
+
+    <mat-divider></mat-divider>
+
+    <!-- Sidenav Navigation Buttons -->
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span class="button-text">Home</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/viewpolicy">
+      <mat-icon>group</mat-icon>
+      <span class="button-text">Policy</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/viewbill">
+      <mat-icon>local_offer</mat-icon>
+      <span class="button-text">Bill</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/viewreciept">
+      <mat-icon>person</mat-icon>
+      <span class="button-text">Receipt</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

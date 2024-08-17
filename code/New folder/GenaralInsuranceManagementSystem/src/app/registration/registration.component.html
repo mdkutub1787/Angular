@@ -1,0 +1,51 @@
+<div class="container">
+    <mat-card class="register-card">
+        <h2 style="font-size: 1.5rem; text-align: center;">Register Form</h2>
+        <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">
+                    <mat-icon>person</mat-icon>
+                    Name
+                </label>
+                <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your name"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    <mat-icon>email</mat-icon>
+                    Email
+                </label>
+                <input type="email" id="email" formControlName="email" class="form-control"
+                    placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <mat-icon>lock</mat-icon>
+                    Password
+                </label>
+                <input type="password" id="password" formControlName="password" class="form-control"
+                    placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">
+                    <mat-icon>photo_camera</mat-icon>
+                    Photo
+                </label>
+                <input type="text" id="photo" formControlName="photo" class="form-control"
+                    placeholder="Enter photo URL">
+            </div>
+            <!-- <div class="form-group">
+                    <label for="role">
+                        <mat-icon>badge</mat-icon>
+                        Role
+                    </label>
+                    <input type="text" id="role" formControlName="role" class="form-control" placeholder="Role" readonly>
+                </div> -->
+            <button mat-raised-button color="primary" type="submit">
+                <mat-icon>how_to_reg</mat-icon>
+                Register
+            </button>
+        </form>
+
+    </mat-card>
+</div>

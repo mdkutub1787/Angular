@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Bills</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Angular Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Angular Material CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@angular/material@14.0.0/prebuilt-themes/indigo-pink.css">
+    <!-- Custom CSS -->
+    <style>
+        .mat-icon {
+            vertical-align: middle; /* Aligns icons with text */
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" (click)="navigateToAddBill()">
+            <mat-icon>add</mat-icon>
+            Create Bill
+        </button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><mat-icon>person</mat-icon> Policy Holder</th>
+                    <th><mat-icon>attach_money</mat-icon> Sum Insured</th>
+                    <th><mat-icon>local_fire_department</mat-icon> Fire</th>
+                    <th><mat-icon>paid</mat-icon> R&SD</th>
+                    <th><mat-icon>monetization_on</mat-icon> Net Premium</th>
+                    <th><mat-icon>taxi_alert</mat-icon> TAX</th>
+                    <th><mat-icon>account_balance_wallet</mat-icon> Gross Premium</th>
+                    <th class="text-center"><mat-icon>build</mat-icon> Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bil of bills | async">
+                    <td>{{ bil.policies.policyholder }}</td>
+                    <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
+                    <td>{{ bil.policies.sumInsured * bil.fire | currency:'TK':'symbol' }}</td>
+                    <td>{{ bil.policies.sumInsured * bil.rsd | currency:'TK':'symbol' }}</td>
+                    <td>
+                        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) | currency:'TK':'symbol' }}
+                    </td>
+                    <td>
+                        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax | currency:'TK':'symbol' }}
+                    </td>
+                    <td>
+                        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) + ((bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax) | currency:'TK':'symbol' }}
+                    </td>
+                    <td>
+                        <button mat-icon-button aria-label="Edit" (click)="editBill(bil)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Delete" (click)="deleteBill(bil.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Angular Material and Angular Core JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@angular/core@14.0.0/bundles/core.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@angular/material@14.0.0/bundles/material.umd.js"></script>
+    </div>
+</body>
+</html>

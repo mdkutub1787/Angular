@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table with Dividers</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Angular Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Angular Material CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@angular/material@14.0.0/prebuilt-themes/indigo-pink.css">
+    <!-- Custom CSS -->
+    <style>
+        .mat-icon {
+            vertical-align: middle;
+            /* Aligns icons with text */
+            margin-right: 4px;
+            /* Space between icon and text */
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .table-wrapper {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            /* Outer border for the entire table */
+            border-radius: 4px;
+            /* Optional: Rounded corners */
+            width: 100%;
+            /* Full width */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow effect */
+        }
+
+        .table-header,
+        .table-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .table-header {
+            font-weight: bold;
+            /* Bold text for headers */
+            background-color: #f9f9f9;
+            /* Light background for header row */
+            border-bottom: 2px solid #ddd;
+            /* Divider below the header */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for header */
+        }
+
+        .table-header-cell,
+        .table-cell {
+            flex: 1;
+            text-align: left;
+            /* Aligns text to the left */
+            padding: 10px;
+            /* Add padding for spacing */
+            border-right: 1px solid #ddd;
+            /* Right border for cells */
+        }
+
+        .table-header-cell:last-child,
+        .table-cell:last-child {
+            border-right: none;
+            /* Remove right border for last cell in row */
+        }
+
+        .table-row {
+            border-bottom: 1px solid #ddd;
+            /* Bottom border for each row */
+        }
+
+        .table-row:hover {
+            background-color: #f1f1f1;
+            /* Background color on hover */
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+            /* Subtle shadow effect on hover */
+        }
+
+        .action-cell {
+            display: flex;
+            justify-content: flex-end;
+            /* Aligns actions to the right */
+            gap: 8px;
+            /* Space between buttons */
+        }
+
+        .mat-icon-button {
+            background-color: #fff;
+            /* Button background */
+            border: 1px solid #ddd;
+            /* Button border */
+            border-radius: 4px;
+            /* Rounded corners */
+            padding: 8px;
+            /* Button padding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Button shadow */
+            transition: background-color 0.3s, box-shadow 0.3s;
+            /* Smooth transition for hover effects */
+        }
+
+        .mat-icon-button:hover {
+            background-color: #f0f0f0;
+            /* Hover background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Darker shadow on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <!-- Action Button Row -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-primary" (click)="navigateToAddPolicy()">
+                        <mat-icon>add</mat-icon>
+                        Create Policy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Wrapper Row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrapper">
+                    <!-- Table Rows -->
+                    <div class="table-row" *ngFor="let pol of policyes | async; let number = index">
+                        <div class="table-cell">
+                            <strong>Bill No:</strong> {{ number + 101 }}<br>
+                            <strong>Date:</strong> {{ pol.date }}<br>
+                            <strong>Bank Name:</strong> {{ pol.bankName }}<br>
+                            <strong>Policy Holder:</strong> {{ pol.policyholder }}<br>
+                            <strong>Address:</strong> {{ pol.address }}<br>
+                            <strong>Stock Insured:</strong> {{ pol.stockInsured }}<br>
+                            <strong>Sum Insured:</strong> {{ pol.sumInsured }}<br>
+                            <strong>Interest Insured:</strong> {{ pol.interestInsured }}<br>
+                            <strong>Coverage:</strong> {{ pol.coverage }}<br>
+                            <strong>Location:</strong> {{ pol.location }}<br>
+                            <strong>Construction:</strong> {{ pol.construction }}<br>
+                            <strong>Owner:</strong> {{ pol.owner }}<br>
+                            <strong>Used As:</strong> {{ pol.usedAs }}<br>
+                            <strong>Period From:</strong> {{ pol.periodFrom }}
+                            <strong> To:</strong> {{ pol.periodTo }}
+                        </div>
+                        <div class="action-cell">
+                            <button mat-icon-button aria-label="Edit policy" (click)="editPolicy(pol.id)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="Delete policy" (click)="deletePolicy(pol.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Angular Material and Angular Core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@angular/core@14.0.0/bundles/core.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@angular/material@14.0.0/bundles/material.umd.js"></script>
+</body>
+
+</html>
