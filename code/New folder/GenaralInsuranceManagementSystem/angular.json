@@ -21,14 +21,13 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/genaral-insurance-management-system",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
-             
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -44,12 +43,7 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -77,6 +71,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "liveReload": true,
+            "publicHost": "localhost:4200",
+            "port": 4200,
+            "host": "localhost",
+            "disableHostCheck": false,
+            "ssl": false
+          },
           "configurations": {
             "production": {
               "buildTarget": "GenaralInsuranceManagementSystem:build:production"
