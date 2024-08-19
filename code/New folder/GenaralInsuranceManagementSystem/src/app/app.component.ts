@@ -4,8 +4,9 @@ import { PolicyService } from './service/policy.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { delay, filter } from 'rxjs/operators';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { untilDestroyed } from '@ngneat/until-destroy';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,6 +28,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
+    // Example Observable Subscription using untilDestroyed
+    // Replace `this.someObservable` with an actual observable from your component or service
     this.observer
       .observe(['(max-width: 800px)'])
       .pipe(delay(1), untilDestroyed(this))

@@ -69,6 +69,7 @@
       "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
       "address": "lalbagh",
       "sumInsured": 50000,
+      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
       "interestInsured": "Cosmetics and Others",
       "coverage": "Fire &/or Lightning only",
       "location": "lalbagh Roard , Lalabagh Dhaka 1203",
@@ -141,15 +142,32 @@
         "periodFrom": "2024-08-02",
         "periodTo": "2025-08-02"
       }
+    },
+    {
+      "id": "fead",
+      "fire": 0.012,
+      "rsd": 0.01,
+      "tax": 0.015,
+      "policies": {
+        "id": "1146",
+        "billNo": "",
+        "date": "2024-08-18",
+        "bankName": "Brack Bank PLC,dhaka branch",
+        "policyholder": "M/s Rizvi agro firm , prop: Rezvi chowdhory  ",
+        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "sumInsured": 800000,
+        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+        "interestInsured": "Cosmetics and Others",
+        "usedAs": "Shop-Cum-Godwon Only"
+      }
     }
   ],
   "reciept": [
     {
       "id": "1",
       "bill": {
-        "id": "ded4",
         "fire": 0.2,
-        "rsd": 0.2,
+        "rsd": 0.13,
         "netPremium": 500,
         "tax": 0.15,
         "grossPremium": 20000,

@@ -4,7 +4,7 @@ export class ReceiptModel {
 
 
     bill!: {
-        "id": string | undefined;
+       
         "fire": number | undefined;
         "rsd": number | undefined;
         "netPremium": number | undefined;
@@ -12,7 +12,7 @@ export class ReceiptModel {
         "grossPremium": number | undefined;
 
         policies: {
-            "id": string | undefined;
+          
             "billNo": number | undefined;
             "date": Date | undefined;
             "bankName": string | undefined;

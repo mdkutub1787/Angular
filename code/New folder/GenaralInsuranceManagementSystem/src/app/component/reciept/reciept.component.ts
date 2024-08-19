@@ -13,7 +13,7 @@ export class RecieptComponent implements OnInit {
 
   policies: any;
   bills: any;
-  reciepts: any;
+  receipts: any;
 
   constructor(
     private policiesService: PolicyService,
@@ -24,7 +24,7 @@ export class RecieptComponent implements OnInit {
 
   ngOnInit(): void {
     this.bills = this.billService.getAllBillForReciept();
-    this.reciepts = this.recieptService.getAllReciept();
+    this.receipts = this.recieptService.getAllReciept();
   }
 
   navigateToAddReciept() {
