@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./policy.component.css']
 })
 export class PolicyComponent implements OnInit {
-  policyes: any;
+  policies: any;
 
 
   constructor(
@@ -22,7 +22,7 @@ export class PolicyComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.policyes = this.policyService.viewAllPolicy();
+    this.policies = this.policyService.viewAllPolicy();
 
   }
 
@@ -31,7 +31,7 @@ export class PolicyComponent implements OnInit {
       .subscribe({
         next: res => {
           console.log(res);
-          this.policyes = this.policyService.viewAllPolicy();
+          this.policies = this.policyService.viewAllPolicy();
           this.router.navigate(['viewpolicy'])
         },
         error: error => {

@@ -15,9 +15,7 @@
     <style>
         .mat-icon {
             vertical-align: middle;
-            /* Aligns icons with text */
             margin-right: 4px;
-            /* Space between icon and text */
         }
 
         .action-buttons {
@@ -30,13 +28,9 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #ddd;
-            /* Outer border for the entire table */
             border-radius: 4px;
-            /* Optional: Rounded corners */
             width: 100%;
-            /* Full width */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow effect */
         }
 
         .table-header,
@@ -47,72 +41,85 @@
 
         .table-header {
             font-weight: bold;
-            /* Bold text for headers */
             background-color: #f9f9f9;
-            /* Light background for header row */
             border-bottom: 2px solid #ddd;
-            /* Divider below the header */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow for header */
         }
 
         .table-header-cell,
         .table-cell {
             flex: 1;
-            text-align: left;
-            /* Aligns text to the left */
             padding: 10px;
-            /* Add padding for spacing */
             border-right: 1px solid #ddd;
-            /* Right border for cells */
         }
 
         .table-header-cell:last-child,
         .table-cell:last-child {
             border-right: none;
-            /* Remove right border for last cell in row */
         }
 
         .table-row {
             border-bottom: 1px solid #ddd;
-            /* Bottom border for each row */
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
         }
 
         .table-row:hover {
-            background-color: #f1f1f1;
-            /* Background color on hover */
-            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-            /* Subtle shadow effect on hover */
+            background-color: #e6f0ff; /* Light blue background */
+            box-shadow: 0 4px 8px rgba(83, 110, 189, 0.3); /* Blue shadow */
+            transform: scale(1.02);
         }
 
         .action-cell {
             display: flex;
             justify-content: flex-end;
-            /* Aligns actions to the right */
             gap: 8px;
-            /* Space between buttons */
         }
 
         .mat-icon-button {
             background-color: #fff;
-            /* Button background */
             border: 1px solid #ddd;
-            /* Button border */
             border-radius: 4px;
-            /* Rounded corners */
             padding: 8px;
-            /* Button padding */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            /* Button shadow */
             transition: background-color 0.3s, box-shadow 0.3s;
-            /* Smooth transition for hover effects */
         }
 
         .mat-icon-button:hover {
             background-color: #f0f0f0;
-            /* Hover background color */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Darker shadow on hover */
+            animation: dance 0.5s ease-in-out;
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 5px;
+            align-items: center; /* Ensure labels and data are vertically aligned */
+        }
+
+        .data-row strong {
+            flex: 0 0 30%;
+            text-align: left;
+            padding-right: 10px;
+            /* Space between label and data */
+        }
+
+        .data-row span {
+            flex: 1;
+            text-align: left;
+            /* Align data to the left */
+        }
+
+        .alin {
+            padding-left: 10px;
         }
     </style>
 </head>
@@ -121,7 +128,7 @@
     <div class="container mt-4">
         <!-- Action Button Row -->
         <div class="row mb-3">
-            <div class="col-12">
+            <div class="col-11">
                 <div class="action-buttons">
                     <button type="button" class="btn btn-primary" (click)="navigateToAddPolicy()">
                         <mat-icon>add</mat-icon>
@@ -133,27 +140,58 @@
 
         <!-- Table Wrapper Row -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-11">
                 <div class="table-wrapper">
                     <!-- Table Rows -->
-                    <div class="table-row" *ngFor="let pol of policyes | async; let number = index">
+                    <div class="table-row" *ngFor="let pol of policies | async; let number = index">
                         <div class="table-cell">
-                            <strong>Bill No:</strong> {{ number + 101 }}<br>
-                            <strong>Date:</strong> {{ pol.date }}<br>
-                            <strong>Bank Name:</strong> {{ pol.bankName }}<br>
-                            <strong>Policy Holder:</strong> {{ pol.policyholder }}<br>
-                            <strong>Address:</strong> {{ pol.address }}<br>
-                            <strong>Stock Insured:</strong> {{ pol.stockInsured }}<br>
-                            <strong>Sum Insured:</strong> {{ pol.sumInsured }}<br>
-                            <strong>Interest Insured:</strong> {{ pol.interestInsured }}<br>
-                            <strong>Coverage:</strong> {{ pol.coverage }}<br>
-                            <strong>Location:</strong> {{ pol.location }}<br>
-                            <strong>Construction:</strong> {{ pol.construction }}<br>
-                            <strong>Owner:</strong> {{ pol.owner }}<br>
-                            <strong>Used As:</strong> {{ pol.usedAs }}<br>
-                            <strong>Period From:</strong> {{ pol.periodFrom }}
-                            <strong> To:</strong> {{ pol.periodTo }}
+                            <div class="data-row alin">
+                                <strong>Bill No:</strong> <span>{{ number + 101 }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Date:</strong> <span>{{ pol.date }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Bank Name:</strong> <span>{{ pol.bankName }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Policy Holder:</strong> <span>{{ pol.policyholder }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Address:</strong> <span>{{ pol.address }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Stock Insured:</strong> <span>{{ pol.stockInsured }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Sum Insured:</strong> <span>{{ pol.sumInsured }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Interest Insured:</strong> <span>{{ pol.interestInsured }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Coverage:</strong> <span>{{ pol.coverage }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Location:</strong> <span>{{ pol.location }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Construction:</strong> <span>{{ pol.construction }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Owner:</strong> <span>{{ pol.owner }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Used As:</strong> <span>{{ pol.usedAs }}</span>
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Period From:</strong> <span>{{ pol.periodFrom }}</span> 
+                            </div>
+                            <div class="data-row alin">
+                                <strong>Period To:</strong> <span>{{ pol.periodTo }}</span> 
+                            </div>
                         </div>
+
                         <div class="action-cell">
                             <button mat-icon-button aria-label="Edit policy" (click)="editPolicy(pol.id)">
                                 <mat-icon>edit</mat-icon>
@@ -167,7 +205,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

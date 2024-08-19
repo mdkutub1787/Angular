@@ -51,11 +51,12 @@
       "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
       "address": "Dhanmondi",
       "sumInsured": 5000,
+      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
       "interestInsured": "Cosmetics and Library",
       "coverage": "Fire &/or Lightning only",
       "location": "Dhaka",
       "construction": "2nd Class",
-      "owner": "The Insurd",
+      "owner": "The Insured",
       "usedAs": "Shop-Cum-Godown Only",
       "periodFrom": "2024-09-01",
       "periodTo": "2025-09-01",
@@ -95,6 +96,24 @@
       "usedAs": "Shop-Cum-Godwon Only",
       "periodFrom": "2024-08-31",
       "periodTo": "2025-08-31"
+    },
+    {
+      "billNo": "",
+      "date": "2024-08-18",
+      "bankName": "Brack Bank PLC,dhaka branch",
+      "policyholder": "M/s Rizvi agro firm , prop: Rezvi chowdhory  ",
+      "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+      "sumInsured": 800000,
+      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+      "interestInsured": "Cosmetics and Others",
+      "coverage": "Fire &/or Lightning only",
+      "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+      "construction": "3rd Class",
+      "owner": "The Insurd",
+      "usedAs": "Shop-Cum-Godwon Only",
+      "periodFrom": "2024-08-28",
+      "periodTo": "2025-08-28",
+      "id": "1146"
     }
   ],
   "bills": [
