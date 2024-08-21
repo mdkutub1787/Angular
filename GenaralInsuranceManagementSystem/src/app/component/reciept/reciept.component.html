@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Receipt</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .table th, .table td {
+            text-align: center;
+        }
+        .btn-primary {
+            float: right;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #004085; /* Darker shade on hover */
+        }
+        .printbtn {
+            transition: background-color 0.3s ease;
+        }
+        .printbtn:hover {
+            background-color: #003366; /* Darker shade on hover */
+        }
+        .table tbody tr:hover {
+            background-color: #f5f5f5; /* Light gray background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <!-- Create Receipt Button -->
+        <button type="button" class="btn btn-primary mb-3" onclick="navigateToAddReceipt()">
+            <i class="fas fa-plus"></i> Create Receipt
+        </button>
+
+        <!-- Print Section -->
+        <div id="print-section">
+            <div class="receipt">
+
+                <!-- Bill Information Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Bill Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Bill No:</strong> {{ receipt.bill.policies.billNo }}</td>
+                            <td><strong>Date:</strong> {{ receipt.bill.policies.date | date }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Insured Details Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Insured Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Bank Name:</strong> {{ receipt.bill.policies.bankName }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Policyholder:</strong> {{ receipt.bill.policies.policyholder }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Address:</strong> {{ receipt.bill.policies.address }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Segregation of The Sum Insured Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Segregation of The Sum Insured</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Stock Insured:</strong> {{ receipt.bill.policies.stockInsured }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Sum Insured:</strong> {{ receipt.bill.policies.sumInsured | currency: 'TK': 'symbol': '1.0-0' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Situation Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Situation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Interest Insured:</strong> {{ receipt.bill.policies.interestInsured }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Coverage:</strong> {{ receipt.bill.policies.coverage }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Location:</strong> {{ receipt.bill.policies.location }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Construction:</strong> {{ receipt.bill.policies.construction }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Owner:</strong> {{ receipt.bill.policies.owner }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Used As:</strong> {{ receipt.bill.policies.usedAs }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Period Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Period From:</strong> {{ receipt.bill.policies.periodFrom | date }}</td>
+                            <td><strong> To:</strong> {{ receipt.bill.policies.periodTo | date }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Premium Table -->
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center">Premium Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Rate:</strong> {{ receipt.bill.fire }}%</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>R&SD:</strong> {{ receipt.bill.rsd }}%</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Fire Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100) | currency: 'TK': 'symbol' }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>VAT:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
+                        </tr>
+                        <tr *ngFor="let receipt of receipts | async">
+                            <td><strong>Gross Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 + receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Print Button -->
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-primary printbtn" onclick="printReceipt()">
+                <i class="fas fa-print"></i> Print
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script>
+        function navigateToAddReceipt() {
+            // Your logic to navigate to add receipt page
+        }
+
+        function printReceipt() {
+            // Your logic to print the receipt section
+            var printSection = document.getElementById('print-section');
+            var printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Print</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(printSection.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    .breadcrumb-item.success a {
+      color: #28a745; /* Green color */
+    }
+
+    .breadcrumb a {
+      color: #007bff; /* Blue color */
+    }
+
+    .card-icon {
+      font-size: 40px;
+    }
+
+    .action-button {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .action-button:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    .policy-card {
+      background-color: #8f1c85; /* Green background */
+      border-color: #c3e6cb; /* Light green border */
+    }
+
+    .bill-card {
+      background-color: #cb3d12; /* Red background */
+      border-color: #c6f5de; /* Light red border */
+    }
+
+    .reciept-card {
+      background-color: #f9e2e2; /* Pink background */
+      border-color: #f5c2c7; /* Light pink border */
+    }
+
+    .product-card {
+      background-color: #d1ecf1; /* Light blue background */
+      border-color: #bee5eb; /* Light blue border */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Breadcrumb Navigation -->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item success" aria-current="page">
+      <a href="/dashboard">Dashboard</a>
+    </li>
+  </ol>
+
+  <!-- Card Layout -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card policy-card">
+          <div class="card-header">
+            <h5 class="card-title">Policy</h5>
+          </div>
+          <div class="card-body text-center">
+            <i class="card-icon fas fa-users"></i>
+          </div>
+          <div class="card-footer text-center">
+            <a href="/viewpolicy" class="btn action-button">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bill-card">
+          <div class="card-header">
+            <h5 class="card-title">Bill</h5>
+          </div>
+          <div class="card-body text-center">
+            <i class="card-icon fas fa-receipt"></i>
+          </div>
+          <div class="card-footer text-center">
+            <a href="/viewbill" class="btn action-button">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card reciept-card">
+          <div class="card-header">
+            <h5 class="card-title">Receipt</h5>
+          </div>
+          <div class="card-body text-center">
+            <i class="card-icon fas fa-list-alt"></i>
+          </div>
+          <div class="card-footer text-center">
+            <a href="/viewreciept" class="btn action-button">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card product-card">
+          <div class="card-header">
+            <h5 class="card-title">Products</h5>
+          </div>
+          <div class="card-body text-center">
+            <i class="card-icon fas fa-tag"></i>
+          </div>
+          <div class="card-footer text-center">
+            <a href="/products" class="btn action-button">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
