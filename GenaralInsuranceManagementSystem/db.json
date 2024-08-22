@@ -164,8 +164,8 @@
     {
       "id": "f481",
       "fire": 10,
-      "rsd": 10,
-      "tax": 10,
+      "rsd": 5,
+      "tax": 5,
       "policies": {
         "id": "0",
         "billNo": 11,
@@ -177,7 +177,9 @@
         "stockInsured": "Cosmatics Product ",
         "interestInsured": "Cosmatics and Others",
         "usedAs": "Shop-Cum-Godwon Only"
-      }
+      },
+      "netPremium": 400000000,
+      "grossPremium": 2400000000
     }
   ],
   "reciept": [
