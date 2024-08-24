@@ -27,7 +27,7 @@ export class ReceiptModel {
             "owner": string | undefined;
             "usedAs": string | undefined;
             "periodFrom": string | undefined;
-            "periodTo": string | undefined;
+            "periodTo": number | undefined;
         }
     }
 }

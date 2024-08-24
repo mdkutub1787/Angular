@@ -162,24 +162,24 @@
       }
     },
     {
-      "id": "f481",
-      "fire": 10,
-      "rsd": 5,
-      "tax": 5,
+      "id": "1104",
+      "fire": 0.01,
+      "rsd": 0.01,
+      "tax": 0.015,
       "policies": {
-        "id": "0",
-        "billNo": 11,
-        "date": "2024-08-01",
-        "bankName": "Brack Bank PLC,dhaka branch",
-        "policyholder": "M/s Raju Food Corner , Prop: Md. Raju Chowdhury  ",
+        "id": null,
+        "billNo": null,
+        "date": null,
+        "bankName": null,
+        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
         "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-        "sumInsured": 20000000,
-        "stockInsured": "Cosmatics Product ",
-        "interestInsured": "Cosmatics and Others",
-        "usedAs": "Shop-Cum-Godwon Only"
+        "sumInsured": 50000,
+        "stockInsured": null,
+        "interestInsured": null,
+        "usedAs": null
       },
-      "netPremium": 400000000,
-      "grossPremium": 2400000000
+      "netPremium": 1000,
+      "grossPremium": 1010
     }
   ],
   "reciept": [
@@ -192,7 +192,7 @@
         "tax": 0.15,
         "grossPremium": 20000,
         "policies": {
-          "billNo": 11,
+          "billNo": 111,
           "date": "2024-08-01",
           "bankName": "Brack Bank PLC,dhaka branch",
           "policyholder": "M/s Raju Food Corner , Prop: Md. Raju Chowdhury  ",
@@ -209,6 +209,7 @@
           "periodTo": "2025-08-02"
         }
       }
+    
     }
   ]
 }

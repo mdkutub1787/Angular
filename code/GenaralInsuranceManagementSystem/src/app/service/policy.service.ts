@@ -64,4 +64,7 @@ export class PolicyService {
     console.error('An error occurred:', error);
     return throwError(() => new Error('Something went wrong; please try again later.'));
   }
+  getAllPolicies(): Observable<PolicyModel[]> {
+    return this.http.get<PolicyModel[]>(this.baseUrl);
+  }
 }

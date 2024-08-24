@@ -4,10 +4,9 @@ import { ReceiptModel } from '../../model/reciept.model';
 import { PolicyModel } from '../../model/policy.model';
 import { RecieptService } from '../../service/reciept.service';
 import { PolicyService } from '../../service/policy.service';
-import { Router } from '@angular/router';
-import { BillModel } from '../../model/bill.model';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BillService } from '../../service/bill.service';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { UntilDestroy } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
@@ -18,33 +17,37 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class CreaterecieptComponent implements OnInit {
 
   receiptForm!: FormGroup;
-  policies: PolicyModel[] = [];
-  bills: BillModel[] = [];
+  policyholders: PolicyModel[] = [];
 
   constructor(
-    private receiptService: RecieptService,
+    private fb: FormBuilder,
     private policyService: PolicyService,
     private billService: BillService,
-    private formBuilder: FormBuilder,
-    private router: Router
-  ) { }
+    private receiptService: RecieptService,
+    private route: ActivatedRoute,
+    private router:Router
+  ) {}
 
   ngOnInit(): void {
-    this.loadPoliciesAndBills();
+    this.initializeForm();
+    this.setFormData();
+    this.loadPolicyholders();
+  }
 
-    this.receiptForm = this.formBuilder.group({
-      id: [''],
-      bill: this.formBuilder.group({
-        fire: [0, Validators.required],
-        rsd: [0, Validators.required],
-        netPremium: [0, Validators.required],
-        tax: [0, Validators.required],
-        grossPremium: [0, Validators.required],
-        policies: this.formBuilder.group({
-          billNo: [undefined, Validators.required],
-          date: [undefined, Validators.required],
-          policyholder: [undefined, Validators.required],
-          bankName: [undefined, Validators.required],
+  private initializeForm(): void {
+    this.receiptForm = this.fb.group({
+      id: ['', Validators.required],
+      bill: this.fb.group({
+        fire: [undefined],
+        rsd: [undefined],
+        netPremium: [undefined],
+        tax: [undefined],
+        grossPremium: [undefined],
+        policies: this.fb.group({
+          billNo: [undefined],
+          date: [undefined],
+          bankName: [undefined],
+          policyholder: [undefined],
           address: [undefined],
           stockInsured: [undefined],
           sumInsured: [undefined],
@@ -55,117 +58,134 @@ export class CreaterecieptComponent implements OnInit {
           owner: [undefined],
           usedAs: [undefined],
           periodFrom: [undefined],
-          periodTo: [undefined]
+          periodTo: [undefined],
         })
       })
     });
 
-    // Subscribe to policyholder value changes
-    this.receiptForm.get('bill.policies.policyholder')?.valueChanges.pipe(untilDestroyed(this)).subscribe(policyholder => {
-      const selectedPolicy = this.policies.find(policy => policy.policyholder === policyholder);
-      if (selectedPolicy) {
-        this.updateFormValuesWithPolicy(selectedPolicy);
-      }
-    });
-
-    this.receiptForm.get('bill.fire')?.valueChanges.pipe(untilDestroyed(this)).subscribe(() => this.calculatePremiums());
-    this.receiptForm.get('bill.rsd')?.valueChanges.pipe(untilDestroyed(this)).subscribe(() => this.calculatePremiums());
-    this.receiptForm.get('bill.tax')?.valueChanges.pipe(untilDestroyed(this)).subscribe(() => this.calculatePremiums());
-  }
-
-  loadPoliciesAndBills(): void {
-    this.policyService.viewAllPolicyForBill().pipe(untilDestroyed(this)).subscribe({
-      next: res => {
-        this.policies = res;
-      },
-      error: error => {
-        console.error('Error loading policies:', error);
-        // Handle the error appropriately here
-      }
-    });
-
-    this.billService.getAllBillForReciept().pipe(untilDestroyed(this)).subscribe({
-      next: res => {
-        this.bills = res;
-      },
-      error: error => {
-        console.error('Error loading bills:', error);
-        // Handle the error appropriately here
-      }
+    this.receiptForm.get('bill.policies.policyholder')?.valueChanges.subscribe(policyholderId => {
+      this.autoFillPolicyData(policyholderId);
     });
   }
 
-  updateFormValuesWithPolicy(policy: PolicyModel): void {
-    this.receiptForm.get('bill.policies')?.patchValue({
-      bankName: policy.bankName,
-      address: policy.address,
-      stockInsured: policy.stockInsured,
-      sumInsured: policy.sumInsured,
-      interestInsured: policy.interestInsured,
-      coverage: policy.coverage,
-      location: policy.location,
-      construction: policy.construction,
-      owner: policy.owner,
-      usedAs: policy.usedAs,
-      periodFrom: policy.periodFrom,
-      periodTo: policy.periodTo
-    }, { emitEvent: false });
-    this.calculatePremiums(); // Calculate premiums after updating the policy values
+  private loadPolicyholders(): void {
+    this.policyService.getAllPolicies().subscribe(policies => {
+      this.policyholders = policies;
+    }, error => {
+      console.error('Error fetching policyholders:', error);
+      alert('Failed to fetch policyholders. Please try again.');
+    });
   }
 
-  calculatePremiums(): void {
-    const formValues = this.receiptForm.get('bill')?.value;
-    const sumInsured = formValues.policies?.sumInsured || 0;
-    const fireRate = formValues.fire || 0;
-    const rsdRate = formValues.rsd || 0;
-    const taxRate = formValues.tax || 0;
+  private autoFillPolicyData(policyholderId: string): void {
+    const selectedPolicy = this.policyholders.find(policy => policy.id === policyholderId);
+    if (selectedPolicy) {
+      this.receiptForm.patchValue({
+        bill: {
+          policies: {
+            billNo: selectedPolicy.billNo,
+            date: selectedPolicy.date,
+            bankName: selectedPolicy.bankName,
+            address: selectedPolicy.address,
+            stockInsured: selectedPolicy.stockInsured,
+            sumInsured: selectedPolicy.sumInsured,
+            interestInsured: selectedPolicy.interestInsured,
+            coverage: selectedPolicy.coverage,
+            location: selectedPolicy.location,
+            construction: selectedPolicy.construction,
+            owner: selectedPolicy.owner,
+            usedAs: selectedPolicy.usedAs,
+            periodFrom: selectedPolicy.periodFrom,
+            periodTo: selectedPolicy.periodTo,
+          }
+        }
+      });
+    }
+  }
 
-    const netPremium = (sumInsured * fireRate + sumInsured * rsdRate);
-    const grossPremium = netPremium + (netPremium * taxRate / 100);
+  private setFormData(): void {
+    const billId = this.route.snapshot.paramMap.get('billId');
+    const policyId = this.route.snapshot.paramMap.get('policyId');
 
-    this.receiptForm.get('bill')?.patchValue({
-      netPremium: netPremium,
-      grossPremium: grossPremium
-    }, { emitEvent: false });
+    if (billId) {
+      this.billService.getByBillId(billId).subscribe(billData => {
+        this.receiptForm.patchValue({
+          bill: {
+            fire: billData.fire,
+            rsd: billData.rsd,
+            netPremium: billData.netPremium,
+            tax: billData.tax,
+            grossPremium: billData.grossPremium,
+            policies: {
+              billNo: billData.policies.billNo,
+              date: billData.policies.date,
+              bankName: billData.policies.bankName,
+              policyholder: billData.policies.policyholder,
+              address: billData.policies.address,
+              stockInsured: billData.policies.stockInsured,
+              sumInsured: billData.policies.sumInsured,
+              interestInsured: billData.policies.interestInsured,
+              coverage: billData.policies.coverage,
+              location: billData.policies.location,
+              construction: billData.policies.construction,
+              owner: billData.policies.owner,
+              usedAs: billData.policies.usedAs,
+              periodFrom: billData.policies.periodFrom,
+              periodTo: billData.policies.periodTo,
+            }
+          }
+        });
+      }, error => {
+        console.error('Error fetching bill data:', error);
+        alert('Failed to fetch bill data. Please try again.');
+      });
+    }
+
+    if (policyId) {
+      this.policyService.getByPolicyId(policyId).subscribe(policyData => {
+        this.receiptForm.patchValue({
+          bill: {
+            policies: {
+              billNo: policyData.billNo,
+              date: policyData.date,
+              bankName: policyData.bankName,
+              policyholder: policyData.policyholder,
+              address: policyData.address,
+              stockInsured: policyData.stockInsured,
+              sumInsured: policyData.sumInsured,
+              interestInsured: policyData.interestInsured,
+              coverage: policyData.coverage,
+              location: policyData.location,
+              construction: policyData.construction,
+              owner: policyData.owner,
+              usedAs: policyData.usedAs,
+              periodFrom: policyData.periodFrom,
+              periodTo: policyData.periodTo,
+            }
+          }
+        });
+      }, error => {
+        console.error('Error fetching policy data:', error);
+        alert('Failed to fetch policy data. Please try again.');
+      });
+    }
   }
 
   createReceipt(): void {
     if (this.receiptForm.valid) {
-      const formValues = this.receiptForm.value;
-      const receipt: ReceiptModel = {
-        id: formValues.id,
-        bill: formValues.bill
-      };
-  
-      this.receiptService.createReceipt(receipt).pipe(untilDestroyed(this)).subscribe({
-        next: res => {
+      const receiptData: ReceiptModel = this.receiptForm.value;
+      this.receiptService.createReciept(receiptData).subscribe(
+        response => {
           this.receiptForm.reset();
-          this.router.navigate(['/viewreceipt']);
+          this.router.navigate(['viewreciept']);
         },
-        error: error => {
+        error => {
           console.error('Error creating receipt:', error);
-          // Handle the error appropriately here
+          alert('Failed to create receipt. Please try again.');
         }
-      });
+      );
     } else {
-      this.displayFormErrors(); // Custom method to display errors
-      console.warn('Form is invalid');
+      alert('Please fill in all required fields.');
     }
   }
-  
-  displayFormErrors(): void {
-    Object.keys(this.receiptForm.controls).forEach(key => {
-      const control = this.receiptForm.get(key);
-      if (control instanceof FormGroup) {
-        Object.keys(control.controls).forEach(subKey => {
-          const subControl = control.get(subKey);
-          if (subControl && subControl.invalid) {
-            console.error(`Field ${subKey} is invalid`);
-          }
-        });
-      } else if (control && control.invalid) {
-        console.error(`Field ${key} is invalid`);
-      }
-    });
-  }
-}  
+}

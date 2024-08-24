@@ -16,7 +16,7 @@ export class RecieptService {
     return this.http.get(this.baseUrl)
   }
 
-  createReceipt(reciept: ReceiptModel): Observable<ReceiptModel> {
+  createReciept(reciept: ReceiptModel): Observable<ReceiptModel> {
     return this.http.post<ReceiptModel>(this.baseUrl, reciept);
   }
 }

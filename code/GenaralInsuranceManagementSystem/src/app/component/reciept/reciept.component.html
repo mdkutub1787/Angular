@@ -67,7 +67,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Bill No:</strong> {{ receipt.bill.policies.billNo }}</td>
               <td><strong>Date:</strong> {{ receipt.bill.policies.date | date }}</td>
             </tr>
@@ -82,13 +82,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Bank Name:</strong> {{ receipt.bill.policies.bankName }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts">
               <td><strong>Policyholder:</strong> {{ receipt.bill.policies.policyholder }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Address:</strong> {{ receipt.bill.policies.address }}</td>
             </tr>
           </tbody>
@@ -102,10 +102,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Stock Insured:</strong> {{ receipt.bill.policies.stockInsured }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Sum Insured:</strong> {{ receipt.bill.policies.sumInsured | currency: 'TK': 'symbol': '1.0-0' }}</td>
             </tr>
           </tbody>
@@ -119,22 +119,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Interest Insured:</strong> {{ receipt.bill.policies.interestInsured }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Coverage:</strong> {{ receipt.bill.policies.coverage }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Location:</strong> {{ receipt.bill.policies.location }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Construction:</strong> {{ receipt.bill.policies.construction }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Owner:</strong> {{ receipt.bill.policies.owner }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Used As:</strong> {{ receipt.bill.policies.usedAs }}</td>
             </tr>
           </tbody>
@@ -148,7 +148,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Period From:</strong> {{ receipt.bill.policies.periodFrom | date }}</td>
               <td><strong> To:</strong> {{ receipt.bill.policies.periodTo | date }}</td>
             </tr>
@@ -163,19 +163,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Rate:</strong> {{ receipt.bill.fire }}%</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>R&SD:</strong> {{ receipt.bill.rsd }}%</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Fire Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100) | currency: 'TK': 'symbol' }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>VAT:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
             </tr>
-            <tr *ngFor="let receipt of receipts | async">
+            <tr *ngFor="let receipt of receipts ">
               <td><strong>Gross Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 + receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
             </tr>
           </tbody>
