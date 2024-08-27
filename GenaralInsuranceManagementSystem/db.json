@@ -81,24 +81,6 @@
       "id": "73d5"
     },
     {
-      "id": "d888",
-      "billNo": "",
-      "date": "2024-08-17",
-      "bankName": "Brack Bank PLC,dhaka branch",
-      "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
-      "address": "Dhanmondi",
-      "sumInsured": 2000000000,
-      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
-      "interestInsured": "Cosmatics and Libary",
-      "coverage": "Fire &/or Lightning only",
-      "location": "lalbagh Roard , Lalabagh Dhaka 1203",
-      "construction": "2nd Class",
-      "owner": "The Insured",
-      "usedAs": "Shop-Cum-Godwon Only",
-      "periodFrom": "2024-08-31",
-      "periodTo": "2025-08-31"
-    },
-    {
       "billNo": "",
       "date": "2024-08-18",
       "bankName": "Brack Bank PLC,dhaka branch",
@@ -209,7 +191,6 @@
           "periodTo": "2025-08-02"
         }
       }
-    
     }
   ]
 }
