@@ -24,6 +24,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { SearchComponent } from './search/search.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     UserprofileComponent,
     LogoutComponent,
+    SearchComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -13,17 +13,6 @@
 
   <!-- Custom CSS -->
   <style>
-    /* Custom styles for the buttons */
-    .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-    }
-
-    .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #004085;
-    }
-
     .printbtn {
       background-color: #28a745;
       border-color: #28a745;
@@ -34,13 +23,9 @@
       border-color: #1e7e34;
     }
 
-    /* Custom styles for tables */
-    .table th, .table td {
-      text-align: left;
-    }
-
-    .table th {
+    .card-header {
       background-color: #f8f9fa;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -57,130 +42,69 @@
 
     <!-- Print Section -->
     <div id="print-section">
-      <div class="receipt">
 
-        <!-- Bill Information Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Bill Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Bill No:</strong> {{ receipt.bill.policies.billNo }}</td>
-              <td><strong>Date:</strong> {{ receipt.bill.policies.date | date }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Insured Details Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Insured Details</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Bank Name:</strong> {{ receipt.bill.policies.bankName }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts">
-              <td><strong>Policyholder:</strong> {{ receipt.bill.policies.policyholder }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Address:</strong> {{ receipt.bill.policies.address }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Segregation of The Sum Insured Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Segregation of The Sum Insured</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Stock Insured:</strong> {{ receipt.bill.policies.stockInsured }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Sum Insured:</strong> {{ receipt.bill.policies.sumInsured | currency: 'TK': 'symbol': '1.0-0' }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Situation Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Situation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Interest Insured:</strong> {{ receipt.bill.policies.interestInsured }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Coverage:</strong> {{ receipt.bill.policies.coverage }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Location:</strong> {{ receipt.bill.policies.location }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Construction:</strong> {{ receipt.bill.policies.construction }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Owner:</strong> {{ receipt.bill.policies.owner }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Used As:</strong> {{ receipt.bill.policies.usedAs }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Period Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Period</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Period From:</strong> {{ receipt.bill.policies.periodFrom | date }}</td>
-              <td><strong> To:</strong> {{ receipt.bill.policies.periodTo | date }}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Premium Table -->
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col" colspan="2" class="text-center">Premium Rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Rate:</strong> {{ receipt.bill.fire }}%</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>R&SD:</strong> {{ receipt.bill.rsd }}%</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Fire Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100) | currency: 'TK': 'symbol' }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>VAT:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
-            </tr>
-            <tr *ngFor="let receipt of receipts ">
-              <td><strong>Gross Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 + receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Bill Information Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Bill Information</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Bill No:</strong> {{ receipt.bill.policies.billNo }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Date:</strong> {{ receipt.bill.policies.date | date }}</p>
+        </div>
       </div>
+
+      <!-- Insured Details Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Insured Details</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Bank Name:</strong> {{ receipt.bill.policies.bankName }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Policyholder:</strong> {{ receipt.bill.policies.policyholder }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Address:</strong> {{ receipt.bill.policies.address }}</p>
+        </div>
+      </div>
+
+      <!-- Segregation of The Sum Insured Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Segregation of The Sum Insured</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Stock Insured:</strong> {{ receipt.bill.policies.stockInsured }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Sum Insured:</strong> {{ receipt.bill.policies.sumInsured | currency: 'TK': 'symbol': '1.0-0' }}</p>
+        </div>
+      </div>
+
+      <!-- Situation Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Situation</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Interest Insured:</strong> {{ receipt.bill.policies.interestInsured }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Coverage:</strong> {{ receipt.bill.policies.coverage }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Location:</strong> {{ receipt.bill.policies.location }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Construction:</strong> {{ receipt.bill.policies.construction }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Owner:</strong> {{ receipt.bill.policies.owner }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Used As:</strong> {{ receipt.bill.policies.usedAs }}</p>
+        </div>
+      </div>
+
+      <!-- Period Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Period</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Period From:</strong> {{ receipt.bill.policies.periodFrom | date }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Period To:</strong> {{ receipt.bill.policies.periodTo | date }}</p>
+        </div>
+      </div>
+
+      <!-- Premium Rate Card -->
+      <div class="card mb-3">
+        <div class="card-header text-center">Premium Rate</div>
+        <div class="card-body">
+          <p *ngFor="let receipt of receipts"><strong>Rate:</strong> {{ receipt.bill.fire }}%</p>
+          <p *ngFor="let receipt of receipts"><strong>R&SD:</strong> {{ receipt.bill.rsd }}%</p>
+          <p *ngFor="let receipt of receipts"><strong>Fire Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100) | currency: 'TK': 'symbol' }}</p>
+          <p *ngFor="let receipt of receipts"><strong>VAT:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</p>
+          <p *ngFor="let receipt of receipts"><strong>Gross Premium:</strong> {{ (receipt.bill.policies.sumInsured * receipt.bill.fire / 100 + receipt.bill.policies.sumInsured * receipt.bill.fire / 100 * receipt.bill.tax / 100) | currency: 'TK': 'symbol' }}</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- Print Button centered -->

@@ -42,6 +42,13 @@
       <h4>Policy Details</h4>
       <div formGroupName="policies">
         <div class="form-group">
+          <label for="policyholder">Policyholder</label>
+          <select id="policyholder" formControlName="policyholder" class="form-control">
+            <option *ngFor="let policy of policyholders" [value]="policy.id">{{ policy.policyholder }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
           <label for="billNo">Bill No</label>
           <input id="billNo" formControlName="billNo" class="form-control" />
         </div>
@@ -56,13 +63,7 @@
           <input id="bankName" formControlName="bankName" class="form-control" />
         </div>
 
-        <div class="form-group">
-          <label for="policyholder">Policyholder</label>
-          <select id="policyholder" formControlName="policyholder" class="form-control">
-            <option *ngFor="let policy of policyholders" [value]="policy.id">{{ policy.policyholder }}
-            </option>
-          </select>
-        </div>
+        
 
         <div class="form-group">
           <label for="address">Address</label>
