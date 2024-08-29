@@ -81,6 +81,24 @@
       "id": "73d5"
     },
     {
+      "id": "d888",
+      "billNo": "",
+      "date": "2024-08-17",
+      "bankName": "Brack Bank PLC,dhaka branch",
+      "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+      "address": "Dhanmondi",
+      "sumInsured": 2000000000,
+      "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+      "interestInsured": "Cosmatics and Libary",
+      "coverage": "Fire &/or Lightning only",
+      "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+      "construction": "2nd Class",
+      "owner": "The Insured",
+      "usedAs": "Shop-Cum-Godwon Only",
+      "periodFrom": "2024-08-31",
+      "periodTo": "2025-08-31"
+    },
+    {
       "billNo": "",
       "date": "2024-08-18",
       "bankName": "Brack Bank PLC,dhaka branch",
@@ -124,44 +142,7 @@
         "periodFrom": "2024-08-02",
         "periodTo": "2025-08-02"
       }
-    },
-    {
-      "id": "fead",
-      "fire": 0.012,
-      "rsd": 0.01,
-      "tax": 0.015,
-      "policies": {
-        "id": "1146",
-        "billNo": "",
-        "date": "2024-08-18",
-        "bankName": "Brack Bank PLC,dhaka branch",
-        "policyholder": "M/s Rizvi agro firm , prop: Rezvi chowdhory  ",
-        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-        "sumInsured": 800000,
-        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
-        "interestInsured": "Cosmetics and Others",
-        "usedAs": "Shop-Cum-Godwon Only"
-      }
-    },
-    {
-      "id": "1104",
-      "fire": 0.01,
-      "rsd": 0.01,
-      "tax": 0.015,
-      "policies": {
-        "id": null,
-        "billNo": null,
-        "date": null,
-        "bankName": null,
-        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
-        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-        "sumInsured": 50000,
-        "stockInsured": null,
-        "interestInsured": null,
-        "usedAs": null
-      },
-      "netPremium": 1000,
-      "grossPremium": 1010
+    
     }
   ],
   "reciept": [
@@ -191,6 +172,7 @@
           "periodTo": "2025-08-02"
         }
       }
+    
     }
   ]
 }
