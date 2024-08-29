@@ -12,11 +12,16 @@ export class RecieptService {
 
   constructor(private http: HttpClient) { }
 
-  getAllReciept(): Observable<any> {
-    return this.http.get(this.baseUrl)
+  getAllReciept(): Observable<ReceiptModel[]> {
+    return this.http.get<ReceiptModel[]>(this.baseUrl)
+  }
+  
+
+  getRecieptById(id: string): Observable<ReceiptModel> {
+    return this.http.get<ReceiptModel>(this.baseUrl + id)
   }
 
-  createReceipt(reciept: ReceiptModel): Observable<ReceiptModel> {
+  createReciept(reciept: ReceiptModel): Observable<ReceiptModel> {
     return this.http.post<ReceiptModel>(this.baseUrl, reciept);
   }
 }

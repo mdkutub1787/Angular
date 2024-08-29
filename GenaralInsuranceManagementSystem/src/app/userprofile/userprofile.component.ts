@@ -12,9 +12,14 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./userprofile.component.css']
 })
 export class UserprofileComponent implements OnInit, OnDestroy {
-  user!: UserModel;
-  data: any;
-  private subscription: Subscription = new Subscription();
+  searchCriteria: string = 'username';  // Default search criteria
+  searchValue: string = '';             // Input search value
+  users: UserModel[] = [];              // Array to store search results
+  isLoading: boolean = false;           // Loading state indicator
+  errorMessage: string = '';            // Error message display
+  user!: UserModel;                     // Currently logged in user profile
+  data: any;                            // Data received from the getData method
+  private subscription: Subscription = new Subscription();  // Manage additional subscriptions
 
   constructor(
     private userProfileService: UserprofileService,
@@ -23,21 +28,35 @@ export class UserprofileComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadUserProfile();
-    // If you need to subscribe to additional observables:
-    const dataSubscription = this.userProfileService.getData()
-      .pipe(untilDestroyed(this))
-      .subscribe({
-        next: (response) => {
-          this.data = response;
-          console.log('Data received:', this.data);
-        },
-        error: (err) => {
-          console.error('Error fetching data:', err);
-        }
-      });
-    this.subscription.add(dataSubscription);
   }
 
+  // Method to handle user search
+  onSearch(): void {
+    if (this.searchValue.trim() === '') {
+      this.errorMessage = 'Please enter a search value.';
+      return;
+    }
+
+    this.isLoading = true;
+    const searchSubscription = this.userProfileService.searchUsers(this.searchCriteria, this.searchValue)
+      .pipe(untilDestroyed(this))
+      .subscribe({
+        next: (data) => {
+          this.users = data;
+          this.isLoading = false;
+          this.errorMessage = '';
+        },
+        error: (err) => {
+          this.errorMessage = 'Error occurred while searching for users.';
+          this.isLoading = false;
+          console.error('Error fetching search results:', err);
+        }
+      });
+
+    this.subscription.add(searchSubscription);
+  }
+
+  // Method to load user profile
   loadUserProfile(): void {
     this.userProfileService.getUserProfile()
       .pipe(untilDestroyed(this))
@@ -54,7 +73,7 @@ export class UserprofileComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Clean up any additional subscriptions if needed
+    // Clean up any additional subscriptions
     this.subscription.unsubscribe();
   }
 }

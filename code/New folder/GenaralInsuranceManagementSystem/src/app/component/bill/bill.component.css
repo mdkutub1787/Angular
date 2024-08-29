@@ -4,11 +4,12 @@
   margin-bottom: 1rem;
   color: #e1e8ef;
   border-collapse: collapse;
+  font-size: 0.85rem; /* Smaller font size */
 }
 
 .table th,
 .table td {
-  padding: 0.75rem;
+  padding: 0.5rem; /* Reduced padding */
   vertical-align: middle;
   text-align: center;
   border-top: 1px solid #dee2e6;
@@ -28,7 +29,7 @@
 
 .table-striped tbody tr:hover {
   background-color: #eaeaea; /* Light gray background */
-  box-shadow: 0 4px 8px #1b74e1; /* Sado blue shadow effect */
+  box-shadow: 0 4px 8px #1b74e1; /* Subtle blue shadow effect */
   transform: scale(1.02); /* Slightly scale up for emphasis */
 }
 
@@ -46,7 +47,7 @@
 /* Table cell styling */
 .table td {
   border-bottom: 1px solid #dee2e6;
-  line-height: 1.5;
+  line-height: 1.4; /* Slightly reduced line height */
 }
 
 .table th {
@@ -56,11 +57,11 @@
 /* Responsive table styling */
 @media (max-width: 768px) {
   .table {
-      font-size: 14px; /* Slightly smaller text on smaller screens */
+      font-size: 12px; /* Even smaller text on smaller screens */
   }
 
   .table td, .table th {
-      padding: 8px;
+      padding: 6px; /* Further reduced padding */
   }
 }
 
@@ -71,4 +72,5 @@
 
 .table td button {
   margin: 2px;
+  padding: 0.25rem 0.5rem; /* Smaller buttons */
 }
