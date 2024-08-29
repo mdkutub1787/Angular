@@ -18,7 +18,7 @@ export class PolicyModel {
   usedAs!: string;
   periodFrom!: string;
   periodTo!: string;
-
+ 
 }
 
 

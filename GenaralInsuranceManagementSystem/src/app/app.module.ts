@@ -24,7 +24,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LogoutComponent } from './logout/logout.component';
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './component/search/search.component';
+import { PrintReceiptComponent } from './component/printreceipt/printreceipt.component';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { SearchComponent } from './search/search.component';
     UserprofileComponent,
     LogoutComponent,
     SearchComponent,
-    
+    PrintReceiptComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +58,7 @@ import { SearchComponent } from './search/search.component';
     NgbModule,
     NgxPrintModule,
     AppRoutingModule,
+    
   ],
   providers: [
     // provideClientHydration(),

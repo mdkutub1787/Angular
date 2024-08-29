@@ -2,21 +2,21 @@
 <div class="container d-flex justify-content-center">
   <div class="col-md-10 mb-5">
     <h3 class="text-center">
-      <mat-icon>edit</mat-icon>
+      <i class="fas fa-edit"></i>
       Update Policy
     </h3>
     <form [formGroup]="formValue" (ngSubmit)="updatePolicy()" class="form-container">
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="date" class="form-label">
-            <mat-icon>calendar_today</mat-icon>
+            <i class="fas fa-calendar-alt"></i>
             Date
           </label>
           <input type="date" class="form-control rounded-pill shadow-sm" id="date" formControlName="date">
         </div>
         <div class="col-md-6 mb-3">
           <label for="bankName" class="form-label">
-            <mat-icon>account_balance</mat-icon>
+            <i class="fas fa-university"></i>
             Bank Name
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="bankName" formControlName="bankName"
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="policyholder" class="form-label">
-            <mat-icon>person</mat-icon>
+            <i class="fas fa-user"></i>
             Policy Holder
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="policyholder"
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="address" class="form-label">
-            <mat-icon>home</mat-icon>
+            <i class="fas fa-home"></i>
             Address
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="address" formControlName="address"
@@ -44,7 +44,7 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="stockInsured" class="form-label">
-            <mat-icon>inventory</mat-icon>
+            <i class="fas fa-box"></i>
             Stock Insured
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="stockInsured"
@@ -52,18 +52,17 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="sumInsured" class="form-label">
-            <mat-icon>attach_money</mat-icon>
+            <i class="fas fa-dollar-sign"></i>
             Sum Insured
           </label>
           <input type="number" class="form-control rounded-pill shadow-sm" id="sumInsured" formControlName="sumInsured"
             placeholder="Enter sum insured">
         </div>
-
       </div>
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="interestInsured" class="form-label">
-            <mat-icon>star</mat-icon>
+            <i class="fas fa-star"></i>
             Interest Insured
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="interestInsured"
@@ -71,7 +70,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="coverage" class="form-label">
-            <mat-icon>check_box</mat-icon>
+            <i class="fas fa-check-square"></i>
             Coverage
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="coverage" formControlName="coverage"
@@ -79,10 +78,9 @@
         </div>
       </div>
       <div class="row">
-
         <div class="col-md-6 mb-3">
           <label for="construction" class="form-label">
-            <mat-icon>business</mat-icon>
+            <i class="fas fa-building"></i>
             Construction
           </label>
           <select class="form-control rounded-pill shadow-sm" id="construction" formControlName="construction">
@@ -92,23 +90,19 @@
             <option value="3rd Class">3rd Class</option>
           </select>
         </div>
-
         <div class="col-md-6 mb-3">
           <label for="location" class="form-label">
-            <mat-icon>place</mat-icon>
+            <i class="fas fa-map-marker-alt"></i>
             Location
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="location" formControlName="location"
             placeholder="Enter location">
         </div>
-
       </div>
-
       <div class="row">
-
         <div class="col-md-6 mb-3">
           <label for="owner" class="form-label">
-            <mat-icon>person_outline</mat-icon>
+            <i class="fas fa-user-tie"></i>
             Owner
           </label>
           <input type="text" class="form-control rounded-pill shadow-sm" id="owner" formControlName="owner"
@@ -116,7 +110,7 @@
         </div>
         <div class="col-md-6 mb-3">
           <label for="usedAs" class="form-label">
-            <mat-icon>info</mat-icon>
+            <i class="fas fa-info-circle"></i>
             Used As
           </label>
           <select class="form-control rounded-pill shadow-sm" id="usedAs" formControlName="usedAs">
@@ -130,14 +124,14 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="periodFrom" class="form-label">
-            <mat-icon>schedule</mat-icon>
+            <i class="fas fa-calendar-day"></i>
             Period From
           </label>
           <input type="date" class="form-control rounded-pill shadow-sm" id="periodFrom" formControlName="periodFrom">
         </div>
         <div class="col-md-6 mb-3">
           <label for="periodTo" class="form-label">
-            <mat-icon>schedule</mat-icon>
+            <i class="fas fa-calendar-day"></i>
             Period To
           </label>
           <input type="date" class="form-control rounded-pill shadow-sm" id="periodTo" formControlName="periodTo"
@@ -146,7 +140,7 @@
       </div>
       <div class="text-center mb-3">
         <button type="submit" class="btn btn-outline-success rounded-pill shadow-sm">
-          <mat-icon class="mat-icon">save</mat-icon>
+          <i class="fas fa-save"></i>
           Update
         </button>
       </div>

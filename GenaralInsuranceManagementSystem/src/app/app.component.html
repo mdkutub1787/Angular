@@ -140,12 +140,12 @@
         </li>
        
       <!-- Search bar -->
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <form class="form-inline" [routerLink]="'/search'">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
         </form>
-      </li> -->
+      </li>
         <!-- User profile and logout links directly in the navbar -->
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/userprofile'"><i class="fas fa-user"></i> Profile</a>
@@ -183,7 +183,7 @@
 
     <main role="main" class="flex-fill">
       <div class="container mt-3">
-        <app-search></app-search>
+      
         <router-outlet></router-outlet>
       </div>
     </main>
