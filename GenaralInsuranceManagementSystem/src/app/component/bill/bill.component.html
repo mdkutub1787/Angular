@@ -45,20 +45,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let bil of bills | async">
-      <td>{{ bil.policies.policyholder }}</td>
-      <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
-      <td>{{ bil.policies.sumInsured * bil.fire | currency:'TK':'symbol' }}</td>
-      <td>{{ bil.policies.sumInsured * bil.rsd | currency:'TK':'symbol' }}</td>
-      <td>
-        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) | currency:'TK':'symbol' }}
-      </td>
-      <td>
-        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax | currency:'TK':'symbol' }}
-      </td>
-      <td>
-        {{ (bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) + ((bil.policies.sumInsured * bil.fire + bil.policies.sumInsured * bil.rsd) * bil.tax) | currency:'TK':'symbol' }}
-      </td>
+      <tr *ngFor="let bil of bills ">
+        <td>{{ bil.policies.policyholder }}</td>
+        <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
+        <td>{{ bil.fire | currency:'TK':'symbol' }}</td>
+        <td>{{ bil.rsd | currency:'TK':'symbol' }}</td>
+        <td>{{ getNetPremium(bil) | currency:'TK':'symbol' }}</td>
+        <td>{{ getTaxAmount(bil) | currency:'TK':'symbol' }}</td>
+        <td>{{ getGrossPremium(bil) | currency:'TK':'symbol' }}</td>
+         
       <td>
         <button class="btn btn-outline-secondary" aria-label="Edit" (click)="editBill(bil)">
           <i class="fas fa-edit"></i>
