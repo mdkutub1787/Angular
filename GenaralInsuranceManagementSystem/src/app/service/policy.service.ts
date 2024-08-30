@@ -78,4 +78,8 @@ export class PolicyService {
     console.error('An error occurred:', error);
     return throwError(() => new Error('Something went wrong; please try again later.'));
   }
+
+  getLastBillNo(): Observable<number> {
+    return this.http.get<number>(`${this.baseUrl}/last-bill-no`);
+  }
 }

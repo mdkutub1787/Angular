@@ -37,10 +37,16 @@
       margin-top: 56px; /* Adjust for navbar height */
     }
 
+    /* Medium-sized image */
+    .img-medium {
+      width: 100px;
+      height: 100px;
+    }
+
     /* Custom styles for avatar */
     .avatar {
-      width: 60px; /* Smaller avatar size */
-      height: 60px; /* Smaller avatar size */
+      width: 100px; /* Medium size */
+      height: 100px; /* Medium size */
       border-radius: 50%;
       margin-bottom: 10px;
     }
@@ -113,7 +119,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/home'"><i class="fas fa-home"></i> Home</a>
         </li>
@@ -132,12 +138,14 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/login'"><i class="fas fa-sign-in-alt"></i> Login</a>
         </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <!-- Search icon -->
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-search search-icon"></i></a>
-        </li>
+       
+      <!-- Search bar -->
+      <li class="nav-item">
+        <form class="form-inline" [routerLink]="'/search'">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
         <!-- User profile and logout links directly in the navbar -->
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/userprofile'"><i class="fas fa-user"></i> Profile</a>
@@ -153,9 +161,9 @@
   <div class="d-flex">
     <nav id="sidebar" class="bg-blue-custom">
       <div class="sidebar-header">
-        <img class="avatar" src="https://i.postimg.cc/fLBf6HkV/1683291521920-copy-300x300.jpg" alt="User Admin" />
-        <h5 class="name">Md Kutub Uddin</h5>
-        <p class="designation">mdkutub150gmail.com</p>
+        <img class="avatar" src="https://i.postimg.cc/SxVwPyGz/download.jpg" alt="User Admin" />
+        <h5 class="name">Islami Insurance</h5>
+        <p class="designation">Bangladesh Ltd </p>
       </div>
       <ul class="nav flex-column">
         <li class="nav-item">
@@ -175,10 +183,12 @@
 
     <main role="main" class="flex-fill">
       <div class="container mt-3">
+      
         <router-outlet></router-outlet>
       </div>
     </main>
   </div>
+  
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -186,4 +196,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-  

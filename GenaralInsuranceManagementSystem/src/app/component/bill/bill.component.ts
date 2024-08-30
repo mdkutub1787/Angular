@@ -49,5 +49,8 @@ export class BillComponent implements OnInit{
   navigateToAddBill() {
     this.router.navigateByUrl('/createbill');
   }
+
+
+  
 }
 

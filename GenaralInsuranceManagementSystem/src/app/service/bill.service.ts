@@ -48,6 +48,8 @@ export class BillService {
       );
   }
 
+
+
   private handleError(error: any) {
     console.error('An error occurred:', error);
     return throwError(() => new Error('An error occurred while processing the request.'));
