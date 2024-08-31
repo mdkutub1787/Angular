@@ -123,6 +123,32 @@
         "periodFrom": "2024-09-06",
         "periodTo": "2025-09-06"
       }
+    },
+    {
+      "id": "51b6",
+      "fire": 0.1,
+      "rsd": 0.2,
+      "netPremium": 15000,
+      "tax": ".15",
+      "grossPremium": 17250,
+      "policies": {
+        "id": "5cb2",
+        "billNo": 1001,
+        "date": "2024-08-31",
+        "bankName": "Brack Bank PLC,dhaka branch",
+        "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
+        "address": "Dhanmondi",
+        "sumInsured": 50000,
+        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+        "interestInsured": "Cosmatics and Others",
+        "coverage": "Fire &/or Lightning only",
+        "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "1st Class",
+        "owner": "The Insured",
+        "usedAs": "Godwon Only",
+        "periodFrom": "2024-09-07",
+        "periodTo": "2025-09-07"
+      }
     }
   ],
   "reciept": [
@@ -155,7 +181,7 @@
       }
     },
     {
-      "id": "ac6f",
+      "id": "d290",
       "bill": {
         "fire": 0.1,
         "rsd": 0.2,
@@ -174,7 +200,7 @@
           "interestInsured": "Cosmatics and Others",
           "coverage": "Fire &/or Lightning only",
           "location": "lalbagh Roard , Lalabagh Dhaka 1203",
-          "construction": "2nd Class",
+          "construction": "1st Class",
           "owner": "The Insured",
           "usedAs": "Godwon Only",
           "periodFrom": "2024-09-07",

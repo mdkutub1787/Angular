@@ -1,4 +1,4 @@
-<div class="container" style="max-width: 300px; margin: 0 auto; border: 1px solid #ccc; padding: 20px;">
+<!-- <div class="container" style="max-width: 300px; margin: 0 auto; border: 1px solid #ccc; padding: 20px;">
     <h2 style="font-size: 1.5rem; text-align: center;">Login</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
       <div class="mb-3 form-group">
@@ -25,4 +25,40 @@
       </div>
     </form>
   </div>
-  
+   -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign up / Login Form</title>
+   
+     
+   </head>
+   <body>
+     <div class="main">  
+       <input type="checkbox" id="chk" aria-hidden="true">
+   
+       <div class="signup">
+         <form>
+           <label for="chk" aria-hidden="true">Sign up</label>
+           <input type="text" name="txt" placeholder="User name" required="">
+           <input type="email" name="email" placeholder="Email" required="">
+           <input type="password" name="pswd" placeholder="Password" required="">
+           <button>Sign up</button>
+         </form>
+       </div>
+   
+       <div class="login">
+         <form>
+           <label for="chk" aria-hidden="true">Login</label>
+           <input type="email" name="email" placeholder="Email" required="">
+           <input type="password" name="pswd" placeholder="Password" required="">
+           <button>Login</button>
+         </form>
+       </div>
+     </div>
+   </body>
+   </html>
+   
