@@ -1,0 +1,31 @@
+
+
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav mr-auto">
+
+
+    <ng-container *ngIf="userRole === 'Admin' || 'User'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/home'"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/viewpolicy'"><i class="fas fa-users"></i> Policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/viewbill'"><i class="fas fa-tag"></i> Bill</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/viewreciept'"><i class="fas fa-user"></i> Receipt</a>
+        </li>
+      </ul>
+       
+    </ng-container>
+
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <a class="btn btn-outline-danger my-2 my-sm-0" href="/logout">Logout</a>
+</div>
