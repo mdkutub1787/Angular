@@ -33,10 +33,10 @@ export class CreatepolicyComponent implements OnInit {
       sumInsured: [''],
       stockInsured: [''],
       interestInsured: [''],
-      coverage: [''],
+      coverage: ['Fire &/or Lightning only'],
       location: [''],
       construction: [''],
-      owner: [''],
+      owner: [ 'The Insured' ],
       usedAs: [''],
       periodFrom: ['', Validators.required],
       periodTo: [{ value: '' }] 
