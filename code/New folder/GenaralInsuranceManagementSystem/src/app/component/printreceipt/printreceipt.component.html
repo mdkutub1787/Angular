@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Custom CSS -->
 
+    
+
   </head>
 
   <body>
@@ -22,32 +24,26 @@
         <div class="full-width-left">
           <img class="avatar-small" src="https://i.postimg.cc/SxVwPyGz/download.jpg" />
         </div>
-
-        <!-- Text Information -->
-        <div class="text-right">
-          <h6>HEAD OFFICE</h6>
-          <p>DR Tower (11th Floor), Box Culvert Road,</p>
-          <p>65/2/2 Purana Paltan, Dhaka-1000, Bangladesh</p>
-          <p>PABX- 2226637654 , 2226637655</p>
-        </div>
       </div>
 
       <!-- Tables -->
       <table class="table table-bordered col-mb-3">
         <thead>
           <tr>
-            <th colspan="2" class="text-center">Bill Information</th>
+            <th colspan="4" class="text-center">Bill Information</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Date:</strong></td>
+            <td><strong>Bill No:</strong></td>
+            <td>{{ receipt?.bill?.policies?.billNo }}</td>
+            <td><strong>Issu Date:</strong></td>
             <td>{{ receipt?.bill?.policies?.date | date }}</td>
           </tr>
         </tbody>
+      </table>
 
-
-
+      <table class="table table-bordered col-mb-3">
         <thead>
           <tr>
             <th colspan="2" class="text-center">Insured Details</th>
@@ -115,18 +111,18 @@
             <td>{{ receipt?.bill?.policies?.usedAs }}</td>
           </tr>
         </tbody>
-
+      </table>
+      <table class="table table-bordered col-mb-3">
         <thead>
           <tr>
-            <th colspan="2" class="text-center">Period</th>
+            <th colspan="4" class="text-center">Period</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Period From:</strong></td>
             <td>{{ receipt?.bill?.policies?.periodFrom | date }}</td>
-          </tr>
-          <tr>
+
             <td><strong>Period To:</strong></td>
             <td>{{ receipt?.bill?.policies?.periodTo | date }}</td>
           </tr>
@@ -143,33 +139,38 @@
         <tbody>
           <tr>
             <td><strong>Fire Rate</strong></td>
-            <td>{{ receipt?.bill?.fire | percent }}{{ receipt?.bill?.policies?.sumInsured | currency:'*':'symbol' }}</td>
-            <td>{{ getTotalFire() | currency:'TK':'symbol' }}</td>
+            <td>{{ receipt?.bill?.fire | percent }}{{ receipt?.bill?.policies?.sumInsured | number:'1.2-2' }}</td> <!-- Ensures 2 decimal places -->
+            <td class="currency-symbol">TK</td>
+            <td>{{ getTotalFire() | number:'1.2-2' }}</td> 
           </tr>
           <tr>
             <td><strong>R&SD Rate</strong></td>
-            <td>{{ receipt?.bill?.fire | percent }}{{ receipt?.bill?.policies?.sumInsured | currency:'*':'symbol' }}</td>
-
-            <td>{{ getTotalRsd() | currency:'TK':'symbol' }}</td>
+            <td>{{ receipt?.bill?.rsd | percent }}{{ receipt?.bill?.policies?.sumInsured | number:'1.2-2' }}</td> <!-- Ensures 2 decimal places -->
+            <td class="currency-symbol">TK</td>
+            <td>{{ getTotalRsd() | number:'1.2-2' }}</td> 
           </tr>
           <tr>
             <td colspan="2"><strong>Net Premium (Fire + RSD)</strong></td>
-            <td>{{ getTotalPremium() | currency:'TK':'symbol' }}</td>
+            <td class="currency-symbol">TK</td>
+            <td>{{ getTotalPremium() | number:'1.2-2' }}</td> 
           </tr>
           <tr>
-            <td ><strong>Tax on Net Premium</strong></td>
-            <td >{{ receipt?.bill?.tax | percent }}</td>
-            <td>{{ getTotalTax() | currency:'TK':'symbol' }}</td>
-          </tr>
+            <td><strong>Tax on Net Premium</strong></td>
+            <td>{{ receipt?.bill?.tax | percent }}</td>
+            <td class="currency-symbol">TK</td>
+            <td>{{ getTotalTax() | number:'1.2-2' }}</td> 
           <tr>
             <td colspan="2"><strong>Gross Premium with Tax</strong></td>
-            <td>{{ getTotalPremiumWithTax() | currency:'TK':'symbol' }}</td>
+            <td class="currency-symbol"><strong>TK</strong></td>
+            <td><strong>{{ getTotalPremiumWithTax() | number:'1.2-2' }}</strong></td> 
           </tr>
         </tbody>
+        
+        
       </table>
-      
-      
-     
+
+
+
     </div>
 
 

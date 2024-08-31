@@ -23,6 +23,22 @@
       "password": "000000",
       "role": "User",
       "photo": "https://i.postimg.cc/PqTzLCV7/Kutub.jpg"
+    },
+    {
+      "id": "7668",
+      "name": "Rofikul Islam",
+      "email": "TowhidulAlam787@gmail.com",
+      "password": "000000",
+      "role": "User",
+      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg"
+    },
+    {
+      "id": "15bd",
+      "name": "towhid",
+      "email": "Skipkhan7087@gmail.com",
+      "password": "000000",
+      "role": "User",
+      "photo": "https://i.postimg.cc/HLg3QZnB/download-1.jpg"
     }
   ],
   "policy": [
@@ -65,12 +81,12 @@
   ],
   "bills": [
     {
-      "id": "3132",
+      "id": "038c",
       "fire": 0.1,
-      "rsd": 0.2,
-      "netPremium": 24000,
-      "tax": 0.15,
-      "grossPremium": 26400,
+      "rsd": 0.15,
+      "netPremium": 16000,
+      "tax": 0.1,
+      "grossPremium": 17600,
       "policies": {
         "id": "4e7c",
         "billNo": 1001,
@@ -91,12 +107,12 @@
       }
     },
     {
-      "id": "f5e0",
+      "id": "d263",
       "fire": 0.1,
-      "rsd": 0.2,
-      "netPremium": 2400,
+      "rsd": 0.21,
+      "netPremium": 2480,
       "tax": 0.15,
-      "grossPremium": 2640,
+      "grossPremium": 2728,
       "policies": {
         "id": "5b04",
         "billNo": 1001,
@@ -119,13 +135,13 @@
   ],
   "reciept": [
     {
-      "id": "9949",
+      "id": "3fe5",
       "bill": {
         "fire": 0.1,
-        "rsd": 0.2,
-        "netPremium": 24000,
-        "tax": 0.15,
-        "grossPremium": 26400,
+        "rsd": 0.15,
+        "netPremium": 16000,
+        "tax": 0.1,
+        "grossPremium": 17600,
         "policies": {
           "id": "4e7c",
           "billNo": 1001,
@@ -147,41 +163,13 @@
       }
     },
     {
-      "id": "f86d",
+      "id": "f9df",
       "bill": {
         "fire": 0.1,
-        "rsd": 0.2,
-        "netPremium": 2400,
+        "rsd": 0.21,
+        "netPremium": 2480,
         "tax": 0.15,
-        "grossPremium": 2640,
-        "policies": {
-          "id": "5b04",
-          "billNo": 1001,
-          "date": "2024-08-29",
-          "bankName": "Islami Bank Bangladesh PLC, Baliakandi Sub-Branch, Rajbari",
-          "policyholder": "M/s Rizvi agro firm , prop: Rezvi chowdhory  ",
-          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-          "sumInsured": 8000,
-          "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
-          "interestInsured": "Cosmetics and Library",
-          "coverage": "Fire &/or Lightning only",
-          "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
-          "construction": "2nd Class",
-          "owner": "The Insurd",
-          "usedAs": "Godwon Only",
-          "periodFrom": "2024-09-06",
-          "periodTo": "2025-09-06"
-        }
-      }
-    },
-    {
-      "id": "975a",
-      "bill": {
-        "fire": 0.1,
-        "rsd": 0.2,
-        "netPremium": 2400,
-        "tax": 0.15,
-        "grossPremium": 2640,
+        "grossPremium": 2728,
         "policies": {
           "id": "5b04",
           "billNo": 1001,
