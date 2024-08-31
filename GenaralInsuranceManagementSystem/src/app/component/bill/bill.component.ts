@@ -69,7 +69,7 @@ export class BillComponent implements OnInit {
   }
 
 
-  getNetPremium(bill: BillModel): number {  // Added BillModel type
+  getNetPremium(bill: BillModel): number {  
     const sumInsured = bill.policies.sumInsured || 0;
     const fireRate = bill.fire || 0;
     const rsdRate = bill.rsd || 0;
@@ -77,14 +77,14 @@ export class BillComponent implements OnInit {
     return sumInsured * (fireRate + rsdRate);
   }
 
-  getTaxAmount(bill: BillModel): number {  // Corrected parameter from bills to bill and added BillModel type
+  getTaxAmount(bill: BillModel): number { 
     const netPremium = this.getNetPremium(bill);
     const taxRate = 0.15; // 15% fixed tax rate
 
     return netPremium * taxRate;
   }
 
-  getGrossPremium(bill: BillModel): number {  // Added BillModel type
+  getGrossPremium(bill: BillModel): number {  
     const netPremium = this.getNetPremium(bill);
     const taxAmount = this.getTaxAmount(bill);
 

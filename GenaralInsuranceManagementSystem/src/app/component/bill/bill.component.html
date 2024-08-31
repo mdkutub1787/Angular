@@ -35,6 +35,8 @@
     <thead>
     <tr>
       <th><i class="fas fa-user"></i> Policy Holder</th>
+      <th><i class="fas fa-money-bill-wave"></i> Stock Insured</th>
+      <th><i class="fas fa-money-bill-wave"></i> Construction</th>
       <th><i class="fas fa-money-bill-wave"></i> Sum Insured</th>
       <th><i class="fas fa-fire"></i> Fire</th>
       <th><i class="fas fa-hand-holding-usd"></i> R&SD</th>
@@ -47,11 +49,11 @@
     <tbody>
       <tr *ngFor="let bil of bills ">
         <td>{{ bil.policies.policyholder }}</td>
+        <td>{{ bil.policies.stockInsured }}</td>
+        <td>{{ bil.policies.construction }}</td>
         <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
-        <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
-        <td>{{ bil.policies.sumInsured | currency:'TK':'symbol' }}</td>
-        <td>{{ bil.fire | currency:'TK':'symbol' }}</td>
-        <td>{{ bil.rsd | currency:'TK':'symbol' }}</td>
+        <td>{{ bil.fire }}</td>
+        <td>{{ bil.rsd }}</td>
         <td>{{ getNetPremium(bil) | currency:'TK':'symbol' }}</td>
         <td>{{ getTaxAmount(bil) | currency:'TK':'symbol' }}</td>
         <td>{{ getGrossPremium(bil) | currency:'TK':'symbol' }}</td>
