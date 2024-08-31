@@ -143,29 +143,29 @@
       }
     },
     {
-      "id": "a132",
-      "fire": 0.2,
-      "rsd": 0.1,
-      "netPremium": 24000,
+      "id": "3309",
+      "fire": 0.1,
+      "rsd": 0.2,
+      "netPremium": 15000,
       "tax": ".15",
-      "grossPremium": 27600,
+      "grossPremium": 17250,
       "policies": {
-        "id": "4e7c",
+        "id": "5cb2",
         "billNo": 1001,
-        "date": "2024-08-30",
-        "bankName": "Union Bank Plc",
-        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
-        "address": "dhanmondi",
-        "sumInsured": 80000,
+        "date": "2024-08-31",
+        "bankName": "Brack Bank PLC,dhaka branch",
+        "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
+        "address": "Dhanmondi",
+        "sumInsured": 50000,
         "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
         "interestInsured": "Cosmatics and Others",
-        "coverage": "Pizza Man",
+        "coverage": "Fire &/or Lightning only",
         "location": "lalbagh Roard , Lalabagh Dhaka 1203",
-        "construction": "3rd Class",
-        "owner": "The Insurd",
+        "construction": "1st Class",
+        "owner": "The Insured",
         "usedAs": "Godwon Only",
-        "periodFrom": "2024-08-28",
-        "periodTo": "2025-08-28"
+        "periodFrom": "2024-09-07",
+        "periodTo": "2025-09-07"
       }
     }
   ],
@@ -251,6 +251,34 @@
           "usedAs": "Godwon Only",
           "periodFrom": "2024-08-28",
           "periodTo": "2025-08-28"
+        }
+      }
+    },
+    {
+      "id": "ef05",
+      "bill": {
+        "fire": 0.1,
+        "rsd": 0.2,
+        "netPremium": 15000,
+        "tax": ".15",
+        "grossPremium": 17250,
+        "policies": {
+          "id": "5cb2",
+          "billNo": 1001,
+          "date": "2024-08-31",
+          "bankName": "Brack Bank PLC,dhaka branch",
+          "policyholder": "M/s Mr Ahmed Enterprise  , Prop: Md. Raju Chowdhury  ",
+          "address": "Dhanmondi",
+          "sumInsured": 50000,
+          "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+          "interestInsured": "Cosmatics and Others",
+          "coverage": "Fire &/or Lightning only",
+          "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "construction": "1st Class",
+          "owner": "The Insured",
+          "usedAs": "Godwon Only",
+          "periodFrom": "2024-09-07",
+          "periodTo": "2025-09-07"
         }
       }
     }

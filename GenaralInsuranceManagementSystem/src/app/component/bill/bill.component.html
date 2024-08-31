@@ -14,7 +14,6 @@
       text-align: center;
     }
     .btn-primary {
-      float: right;
       transition: background-color 0.3s ease;
     }
     .btn-primary:hover {
@@ -27,10 +26,21 @@
 </head>
 <body>
 <div class="container">
-  <button type="button" class="btn btn-primary mt-3" (click)="navigateToAddBill()">
-    <i class="fas fa-plus"></i>
-    Create Bill
-  </button>
+  <div class="row mt-3">
+    <div class="col">
+      <button type="button" class="btn btn-primary" (click)="navigateToAddReciept()">
+        <i class="fas fa-plus"></i>
+        Create Receipt
+      </button>
+    </div>
+    <div class="col text-right">
+      <button type="button" class="btn btn-primary" (click)="navigateToAddBill()">
+        <i class="fas fa-plus"></i>
+        Create Bill
+      </button>
+    </div>
+  </div>
+
   <table class="table table-striped mt-3">
     <thead>
       <tr>

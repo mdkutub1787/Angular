@@ -19,6 +19,7 @@ export class BillComponent implements OnInit {
     private policiesService: PolicyService,
     private billService: BillService,
     private router: Router
+
   ) { }
 
 
@@ -66,6 +67,10 @@ export class BillComponent implements OnInit {
 
   navigateToAddBill() {
     this.router.navigateByUrl('/createbill');
+  }
+
+  navigateToAddReciept() {
+    this.router.navigateByUrl('/createreciept');
   }
 
   getFireAmount(bill: BillModel): number {
