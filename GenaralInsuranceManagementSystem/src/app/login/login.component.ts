@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
           console.log('User registered successfully:', res);
           this.authService.storeToken(res.token);
           this.regForm.reset();
-          this.router.navigate(['/login']); 
+          this.router.navigate(['login'])
         },
         error: (err) => {
           console.error('Error registering user:', err);
