@@ -68,16 +68,6 @@ export class BillComponent implements OnInit {
     this.router.navigateByUrl('/createbill');
   }
 
-
-  getFireRate(): number {
-    return this.bills.length > 0 ? (this.bills[0]?.fire ?? 0) : 0;
-  }
-
-  getRsdRate(): number {
-    return this.bills.length > 0 ? (this.bills[0]?.rsd ?? 0) : 0;
-  }
-
-
   getFireAmount(bill: BillModel): number {
     const sumInsured = bill.policies?.sumInsured || 0;
     const fireRate = bill.fire || 0;
@@ -89,8 +79,6 @@ export class BillComponent implements OnInit {
     const rsdRate = bill.rsd || 0;
     return sumInsured * rsdRate;
   }
-
-
 
   getNetPremium(bill: BillModel): number {
     const sumInsured = bill.policies.sumInsured || 0;
