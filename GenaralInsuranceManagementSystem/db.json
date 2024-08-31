@@ -141,6 +141,32 @@
         "periodFrom": "2024-09-07",
         "periodTo": "2025-09-07"
       }
+    },
+    {
+      "id": "a132",
+      "fire": 0.2,
+      "rsd": 0.1,
+      "netPremium": 24000,
+      "tax": ".15",
+      "grossPremium": 27600,
+      "policies": {
+        "id": "4e7c",
+        "billNo": 1001,
+        "date": "2024-08-30",
+        "bankName": "Union Bank Plc",
+        "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+        "address": "dhanmondi",
+        "sumInsured": 80000,
+        "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+        "interestInsured": "Cosmatics and Others",
+        "coverage": "Pizza Man",
+        "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "3rd Class",
+        "owner": "The Insurd",
+        "usedAs": "Godwon Only",
+        "periodFrom": "2024-08-28",
+        "periodTo": "2025-08-28"
+      }
     }
   ],
   "reciept": [
@@ -197,6 +223,34 @@
           "usedAs": "Godwon Only",
           "periodFrom": "2024-09-07",
           "periodTo": "2025-09-07"
+        }
+      }
+    },
+    {
+      "id": "8b3e",
+      "bill": {
+        "fire": 0.2,
+        "rsd": 0.1,
+        "netPremium": 24000,
+        "tax": ".15",
+        "grossPremium": 27600,
+        "policies": {
+          "id": "4e7c",
+          "billNo": 1001,
+          "date": "2024-08-30",
+          "bankName": "Union Bank Plc",
+          "policyholder": "M/s Sanaullah agro firm , prop: Sanaullah chowdhory  ",
+          "address": "dhanmondi",
+          "sumInsured": 80000,
+          "stockInsured": "Onion, Garlic & Seasonal Crops (Without Jute)",
+          "interestInsured": "Cosmatics and Others",
+          "coverage": "Pizza Man",
+          "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "construction": "3rd Class",
+          "owner": "The Insurd",
+          "usedAs": "Godwon Only",
+          "periodFrom": "2024-08-28",
+          "periodTo": "2025-08-28"
         }
       }
     }
