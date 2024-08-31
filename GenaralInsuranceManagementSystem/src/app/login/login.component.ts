@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onLoginSubmit(): void {
+  loginSubmit(): void {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
       this.authService.login(credentials).subscribe({
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
           this.authService.storeToken(res.token);
 
           const role = this.authService.getUserRole();
-          this.router.navigate(['/userprofile']); // Navigate after successful login
+          this.router.navigate(['/userprofile']); 
         },
         error: (err) => {
           console.error('Error logging in:', err);
@@ -58,14 +58,15 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onRegisterSubmit(): void {
+  registerSubmit(): void {
     if (this.regForm.valid) {
       const user: UserModel = this.regForm.value;
       this.authService.registration(user).subscribe({
         next: (res) => {
           console.log('User registered successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/login']); // Navigate to login after successful registration
+          this.regForm.reset();
+          this.router.navigate(['/login']); 
         },
         error: (err) => {
           console.error('Error registering user:', err);
