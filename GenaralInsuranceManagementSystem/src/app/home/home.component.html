@@ -20,7 +20,7 @@
 </head>
 <body>
   <!-- Carousel -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="5000">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -55,10 +55,23 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!DOCTYPE html>
-
 
   <!-- Bootstrap JavaScript Bundle (with Popper) -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript to control autoplay, timeout, and hover pause -->
+  <script>
+    // Options
+    const autoplayTimeout = 2000; // 2 seconds between slides
+
+    // Initialize carousel
+    const carouselElement = document.getElementById('carouselExampleCaptions');
+    const carousel = new bootstrap.Carousel(carouselElement, {
+      interval: autoplayTimeout,
+      ride: 'carousel',
+      pause: false // No pause on hover
+    });
+
+  </script>
 </body>
 </html>
