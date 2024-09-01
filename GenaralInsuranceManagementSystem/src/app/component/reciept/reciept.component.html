@@ -37,9 +37,10 @@
         <td><i class="fas fa-map-marker-alt"></i> {{ receipt.bill.policies.address }}</td>
         <td><i class="fas fa-dollar-sign"></i> {{ receipt.bill.policies.sumInsured }}</td>
         <td class="text-center">
-          <button class="btn btn-outline-secondary" aria-label="View" (click)="viewReceipt(receipt.id)">
-            <i class="fas fa-eye"></i>
-          </button>
+          <button class="btn custom-btn" aria-label="Print View" (click)="viewReceipt(receipt.id)">
+            <i class="fas fa-eye"></i> Print View
+          </button> 
+                 
           <button class="btn btn-outline-danger ml-2" aria-label="Delete" (click)="deleteReceipt(receipt.id)">
             <i class="fas fa-trash-alt"></i>
           </button>

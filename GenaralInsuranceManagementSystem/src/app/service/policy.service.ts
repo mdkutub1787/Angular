@@ -83,8 +83,12 @@ export class PolicyService {
     return this.http.get<number>(`${this.baseUrl}/last-bill-no`);
   }
 
-  searchPolcy(query: string): Observable<PolicyModel[]> {
-    const searchUrl = `${this.baseUrl}?q=${query}`;
-    return this.http.get<PolicyModel[]>(searchUrl);
-  }
+    // Search policies by policyholder
+    policyholder(query: string): Observable<PolicyModel[]> {
+      const searchUrl = `${this.baseUrl}?policyholder_like=${query}`;
+      return this.http.get<PolicyModel[]>(searchUrl)
+        .pipe(
+          catchError(this.handleError)
+        );
+    }
 }

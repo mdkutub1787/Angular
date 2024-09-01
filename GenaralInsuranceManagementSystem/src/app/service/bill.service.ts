@@ -45,7 +45,7 @@ export class BillService {
 
   searchBills(query: string): Observable<BillModel[]> {
     const searchUrl = `${this.baseUrl}?q=${query}`;
-    return this.http.get<BillModel[]>(searchUrl)
+    return this.http.get<BillModel[]>(this.policyUrl)
       .pipe(
         catchError(this.handleError)
       );
@@ -59,7 +59,5 @@ export class BillService {
   }
 
 
-  searchBill(): Observable<PolicyModel[]> {
-    return this.http.get<PolicyModel[]>(this.policyUrl);
-  }
+
 }

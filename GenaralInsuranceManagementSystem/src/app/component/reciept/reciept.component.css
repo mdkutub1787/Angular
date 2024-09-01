@@ -78,3 +78,18 @@
   float: right; /* Aligns the button to the right */
   margin-left: 0; /* Optional: Resets any left margin */
 }
+.custom-btn {
+  background-color: #4CAF50; /* Modern green color */
+  color: #fff; /* White text */
+  border: 1px solid #4CAF50; /* Matching border */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  color: #fff; /* White text on hover */
+}
+
+.custom-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2); /* Subtle shadow on focus */
+}

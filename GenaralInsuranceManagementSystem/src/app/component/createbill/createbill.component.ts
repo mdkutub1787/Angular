@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-createbill',
   templateUrl: './createbill.component.html',
-  styleUrl: './createbill.component.css'
+  styleUrls: ['./createbill.component.css'] // Corrected to styleUrls
 })
-export class CreatebillComponent implements OnInit{
-  
+export class CreatebillComponent implements OnInit {
+
   policies: PolicyModel[] = [];
   filteredPolicies: PolicyModel[] = [];
   billForm!: FormGroup;
@@ -97,7 +97,7 @@ export class CreatebillComponent implements OnInit{
 
   onSearch(): void {
     if (this.searchQuery.trim()) {
-      this.policyService.searchPolcy(this.searchQuery).subscribe({
+      this.policyService.policyholder(this.searchQuery).subscribe({
         next: (res) => {
           this.filteredPolicies = res;
         },
