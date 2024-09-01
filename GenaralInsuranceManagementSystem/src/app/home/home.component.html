@@ -37,7 +37,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://i.postimg.cc/XqkHgcWP/images.jpg" class="d-block w-100" alt="First slide">
+        <img src="https://i.postimg.cc/J0KWssrC/fire-takaful.jpg" class="d-block w-100" alt="First slide">
         <div class="carousel-caption d-none d-md-block">
           <!-- Optional: Add caption content here -->
         </div>
@@ -87,7 +87,7 @@
 
   </script>
 
-  
+
   <ng-container *ngIf="userRole === 'Admin'">
     <div class="container my-4">
       <div class="row g-4">
@@ -135,6 +135,54 @@
   </ng-container>
 
 
+  <!-- kind of insurance card  -->
+  <div class="container my-4">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card fire-insurance-card border-light shadow-sm">
+          <div class="card-header text-center">
+            <h5 class="card-title">Fire Insurance</h5>
+          </div>
+          <div class="card-body text-center">
+            <img src="https://i.postimg.cc/J0KWssrC/fire-takaful.jpg" alt="Fire Insurance Image" class="img-fluid">
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://www.islamiinsurance.com/products-services/fire-takaful" class="btn action-button">Fire
+              Insurance</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card merin-insurance-card border-light shadow-sm">
+          <div class="card-header text-center">
+            <h5 class="card-title">Merin Insurance</h5>
+          </div>
+          <div class="card-body text-center">
+            <img src="https://i.postimg.cc/7hGFXKDX/marine-takaful.jpg" alt="Merin Insurance Image" class="img-fluid">
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://www.islamiinsurance.com/products-services/marine-takaful" class="btn action-button">Merin
+              Insurance</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card motor-insurance-card border-light shadow-sm">
+          <div class="card-header text-center">
+            <h5 class="card-title">Motor Insurance</h5>
+          </div>
+          <div class="card-body text-center">
+            <img src="https://i.postimg.cc/Kcf4rnnh/car.jpg" alt="Motor Insurance Image" class="img-fluid">
+          </div>
+          <div class="card-footer text-center">
+            <a href="https://www.islamiinsurance.com/products-services/motor-takaful" class="btn action-button">Motor
+              Insurance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <!--  Start footer  -->
@@ -162,14 +210,7 @@
                     <img src="https://i.postimg.cc/7LkW0xfB/footer-Open.png">
                     <p class="p_10 time">Available 10:00am - 06:00pm</p>
                   </li>
-                  <li>
-                    <img src="https://i.postimg.cc/rsPHrxrW/SSL-logo.png"
-                      style="width:100%; height:10%; background:black;">
-                  </li>
-                  <li>
-                    <img src="https://i.postimg.cc/L4CwwKbX/ssllogo.jpg"
-                      style="width:30%; height:10%; background:black;">
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -211,24 +252,31 @@
                   <li><a href="https://www.islamiinsurance.com/media/blog">Blog</a></li>
                 </ul>
                 <h4 class="footer-widget-title">PAYMENT GATEWAYS</h4>
-                <ul style="display: flex; padding-left: 0px;">
+                <ul style="display: flex; padding-left: 0px; list-style: none;">
+                  <!-- First Row of Payment Gateway Logos -->
                   <li class="withImage">
-                    <img src="https://i.postimg.cc/LXvwmr4x/bkash.png">
+                    <img src="https://i.postimg.cc/LXvwmr4x/bkash.png" alt="Bkash">
                   </li>
-
-                </ul>
-                <ul style="display: flex; padding-left: 0px;">
-
-                  <li class="withImage">
-                    <img src="https://i.postimg.cc/MTXNK9cx/rocket.png">
+                  <li class="withImage" style="margin-left: 15px;">
+                    <img src="https://i.postimg.cc/MTXNK9cx/rocket.png" alt="Rocket">
                   </li>
-
-                </ul>
-                <ul style="display: flex; padding-left: 0px;">
-                  <li class="withImage">
-                    <img src="https://i.postimg.cc/nznWts0B/footer-Nogod.png">
+                  <li class="withImage" style="margin-left: 15px;">
+                    <img src="https://i.postimg.cc/nznWts0B/footer-Nogod.png" alt="Nogod">
                   </li>
                 </ul>
+
+                <!-- Additional Logos Below -->
+                <ul style="padding-left: 0px; list-style: none;">
+                  <li style="margin-top: 15px;">
+                    <img src="https://i.postimg.cc/rsPHrxrW/SSL-logo.png" alt="SSL Logo"
+                      style="width:100%; height:10%; background:black;">
+                  </li>
+                  <li style="margin-top: 15px;">
+                    <img src="https://i.postimg.cc/L4CwwKbX/ssllogo.jpg" alt="SSL Logo 2"
+                      style="width:30%; height:10%; background:black;">
+                  </li>
+                </ul>
+
               </div>
             </div>
           </div>
