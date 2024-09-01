@@ -81,7 +81,12 @@
 }
 
 /* Footer image sizing */
-.footer img {
-  width: 40px;
-  height: 40px;
+
+.withImage {
+  margin-right: 10px; /* Adjust the spacing between images */
+}
+
+.withImage img {
+  max-width: 40px; /* Adjust the image size if needed */
+  height: auto;
 }
