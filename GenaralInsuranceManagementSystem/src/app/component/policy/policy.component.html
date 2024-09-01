@@ -10,7 +10,34 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Custom CSS -->
-    
+    <style>
+        .table-wrapper {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .table-row {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #ddd;
+        }
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        .table-cell {
+            flex: 1;
+            padding: 10px;
+        }
+        .action-cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .action-cell button {
+            margin: 0 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,26 +54,15 @@
             </div>
         </div>
 
-        <!-- Search Bar -->
-        <div class="search-bar mb-3">
-            <input 
-                type="text" 
-                [(ngModel)]="searchQuery" 
-                placeholder="Search Policyholder" 
-                (input)="searchPolicies()"
-                class="form-control" />
-        </div>
-        
-
         <!-- Table Wrapper Row -->
         <div class="row">
             <div class="col-md-12">
-                <div class="table-wrapper" *ngIf="policies?.length; else noPolicies">
+                <div class="table-wrapper">
                     <!-- Table Rows -->
-                    <div class="table-row" *ngFor="let pol of policies">
+                    <div class="table-row" *ngFor="let pol of policies | async ">
                         <div class="table-cell">
                             <div class="data-row">
-                                <strong>Bill No:</strong> <span>{{ pol.billNo }}</span>
+                                <strong>Bill No:</strong> <span>{{pol.billNo }}</span>
                             </div>
                             <div class="data-row">
                                 <strong>Date:</strong> <span>{{ pol.date }}</span>
@@ -93,21 +109,15 @@
                         </div>
 
                         <div class="action-cell">
-                            <button type="button" class="btn btn-warning" aria-label="Edit policy"
-                                (click)="editPolicy(pol.id)">
+                            <button type="button" class="btn btn-warning" aria-label="Edit policy" (click)="editPolicy(pol.id)">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button type="button" class="btn btn-danger" aria-label="Delete policy"
-                                (click)="deletePolicy(pol.id)">
+                            <button type="button" class="btn btn-danger" aria-label="Delete policy" (click)="deletePolicy(pol.id)">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- No Policies Template -->
-                <ng-template #noPolicies>
-                    <p>No policies found.</p>
-                </ng-template>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@ import { PolicyModel } from '../model/policy.model';
 export class BillService {
   baseUrl: string = "http://localhost:3000/bills/";
 
-  policyUrl: string = "http://localhost:3000/policy";
+  // policyUrl: string = "http://localhost:3000/policy";
 
   constructor(
     private http: HttpClient
@@ -43,13 +43,13 @@ export class BillService {
     return this.http.get<BillModel>(this.baseUrl + billId);
   }
 
-  searchBills(query: string): Observable<BillModel[]> {
-    const searchUrl = `${this.baseUrl}?q=${query}`;
-    return this.http.get<BillModel[]>(this.policyUrl)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+  // searchBills(query: string): Observable<BillModel[]> {
+  //   const searchUrl = `${this.baseUrl}?q=${query}`;
+  //   return this.http.get<BillModel[]>(this.policyUrl)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
 
 

@@ -60,13 +60,13 @@ export class PolicyService {
   }
 
   // Search policies by criteria
-  searchPolicies(criteria: string, value: string): Observable<PolicyModel[]> {
-    const params = new HttpParams().set(criteria, value);
-    return this.http.get<PolicyModel[]>(this.baseUrl, { params })
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+  // searchPolicies(criteria: string, value: string): Observable<PolicyModel[]> {
+  //   const params = new HttpParams().set(criteria, value);
+  //   return this.http.get<PolicyModel[]>(this.baseUrl, { params })
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
   // Get all policies
   getAllPolicies(): Observable<PolicyModel[]> {

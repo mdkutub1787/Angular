@@ -35,11 +35,55 @@
       "periodFrom": "2024-09-01",
       "periodTo": "2025-09-01",
       "id": "e243"
+    },
+    {
+      "id": "7ba2",
+      "billNo": 1001,
+      "date": "2024-09-01",
+      "bankName": "Shahjalal  Bank PLC",
+      "policyholder": "m/s sanaullah agro firm ,prop: sanaullah chowdhory",
+      "address": "Dhanmondi",
+      "sumInsured": 80000,
+      "stockInsured": "Cosmatics Product ",
+      "interestInsured": "Cosmetics and Others",
+      "coverage": "Fire &/or Lightning only",
+      "location": "lalbagh Roard , Lalabagh Dhaka 1203",
+      "construction": "2nd Class",
+      "owner": "The Insured",
+      "usedAs": "Shop Only",
+      "periodFrom": "2024-10-03",
+      "periodTo": "2025-10-03"
     }
   ],
   "bills": [
     {
-      "id": "ec6f",
+      "id": "0f1b",
+      "fire": 0.1,
+      "rsd": 0.12,
+      "netPremium": 400000,
+      "tax": ".15",
+      "grossPremium": 460000,
+      "policies": {
+        "id": "e243",
+        "billNo": 1001,
+        "date": "2024-09-01",
+        "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+        "policyholder": "Kacci Bhai Restaurants , Prop: Md. Raju Chowdhury  ",
+        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "sumInsured": 2000000,
+        "stockInsured": "food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire &/or Lightning only",
+        "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "2nd Class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2024-09-01",
+        "periodTo": "2025-09-01"
+      }
+    },
+    {
+      "id": "1946",
       "fire": 0.1,
       "rsd": 0.2,
       "netPremium": 600000,
@@ -67,13 +111,13 @@
   ],
   "reciept": [
     {
-      "id": "9c6a",
+      "id": "b996",
       "bill": {
         "fire": 0.1,
-        "rsd": 0.2,
-        "netPremium": 600000,
+        "rsd": 0.12,
+        "netPremium": 400000,
         "tax": ".15",
-        "grossPremium": 690000,
+        "grossPremium": 460000,
         "policies": {
           "id": "e243",
           "billNo": 1001,

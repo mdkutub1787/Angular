@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PolicyModel } from '../../model/policy.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BillModel } from '../../model/bill.model';
@@ -9,21 +9,20 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-createbill',
   templateUrl: './createbill.component.html',
-  styleUrls: ['./createbill.component.css'] // Corrected to styleUrls
+  styleUrl: './createbill.component.css'
 })
-export class CreatebillComponent implements OnInit {
-
+export class CreatebillComponent {
+  
   policies: PolicyModel[] = [];
-  filteredPolicies: PolicyModel[] = [];
   billForm!: FormGroup;
   bill: BillModel = new BillModel();
-  searchQuery: string = '';
 
   constructor(
     private billService: BillService,
     private policyService: PolicyService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    
   ) { }
 
   ngOnInit(): void {
@@ -87,27 +86,11 @@ export class CreatebillComponent implements OnInit {
       .subscribe({
         next: res => {
           this.policies = res;
-          this.filteredPolicies = res;
         },
         error: error => {
           console.error('Error loading policies:', error);
         }
       });
-  }
-
-  onSearch(): void {
-    if (this.searchQuery.trim()) {
-      this.policyService.policyholder(this.searchQuery).subscribe({
-        next: (res) => {
-          this.filteredPolicies = res;
-        },
-        error: (error) => {
-          console.error('Error searching policies:', error);
-        }
-      });
-    } else {
-      this.loadPolicies(); // Reset to full list if query is empty
-    }
   }
 
   calculatePremiums(): void {

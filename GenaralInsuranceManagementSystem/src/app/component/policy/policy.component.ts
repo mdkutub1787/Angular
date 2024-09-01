@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PolicyService } from '../../service/policy.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { PolicyModel } from '../../model/policy.model';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,62 +12,41 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./policy.component.css']
 })
 export class PolicyComponent implements OnInit {
-  policies: PolicyModel[] = [];
-  searchQuery: string = '';
+  policies: any;
+
 
   constructor(
     private policyService: PolicyService,
-    private http:HttpClient,
+    private http: HttpClient,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.loadPolicies();
+    this.policies = this.policyService.viewAllPolicy();
+
   }
 
-  loadPolicies(): void {
-    this.policyService.viewAllPolicyForBill().subscribe({
-      next: (data) => {
-        this.policies = data;
-      },
-      error: (error) => {
-        console.error('Error fetching policies', error);
-      }
-    });
-  }
-
-  searchPolicies(): void {
-    if (this.searchQuery.trim() === '') {
-      this.loadPolicies(); // Reload all policies if the search query is empty
-    } else {
-      this.policyService.policyholder(this.searchQuery).subscribe({
-        next: (data) => {
-          this.policies = data;
+  deletePolicy(id: string) {
+    this.policyService.deletePolicy(id)
+      .subscribe({
+        next: res => {
+          console.log(res);
+          this.policies = this.policyService.viewAllPolicy();
+          this.router.navigate(['viewpolicy'])
         },
-        error: (error) => {
-          console.error('Error searching policies:', error);
+        error: error => {
+          console.log(error);
+
         }
+
       });
-    }
   }
 
-  deletePolicy(id: string): void {
-    this.policyService.deletePolicy(id).subscribe({
-      next: res => {
-        console.log(res);
-        this.loadPolicies(); // Reload the policies after deletion
-      },
-      error: error => {
-        console.log('Error deleting policy:', error);
-      }
-    });
-  }
-
-  editPolicy(id: string): void {
+  editPolicy(id: string) {
     this.router.navigate(['updatepolicy', id]);
   }
 
-  navigateToAddPolicy(): void {
+  navigateToAddPolicy() {
     this.router.navigateByUrl('/createpolicy');
   }
 }
