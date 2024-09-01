@@ -2,12 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { BillModel } from '../model/bill.model';
+import { PolicyModel } from '../model/policy.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BillService {
   baseUrl: string = "http://localhost:3000/bills/";
+
+  policyUrl: string = "http://localhost:3000/policy";
 
   constructor(
     private http: HttpClient
@@ -53,5 +56,10 @@ export class BillService {
   private handleError(error: any) {
     console.error('An error occurred:', error);
     return throwError(() => new Error('An error occurred while processing the request.'));
+  }
+
+
+  searchBill(): Observable<PolicyModel[]> {
+    return this.http.get<PolicyModel[]>(this.policyUrl);
   }
 }

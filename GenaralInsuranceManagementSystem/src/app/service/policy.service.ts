@@ -82,4 +82,9 @@ export class PolicyService {
   getLastBillNo(): Observable<number> {
     return this.http.get<number>(`${this.baseUrl}/last-bill-no`);
   }
+
+  searchPolcy(query: string): Observable<PolicyModel[]> {
+    const searchUrl = `${this.baseUrl}?q=${query}`;
+    return this.http.get<PolicyModel[]>(searchUrl);
+  }
 }

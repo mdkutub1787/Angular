@@ -6,6 +6,16 @@
             Bill Add Form
         </h3>
         <form [formGroup]="billForm" (ngSubmit)="createBill()">
+
+            <!-- Search Field -->
+            <div class="form-group mb-3">
+                <label for="search">
+                    <i class="fas fa-search"></i>
+                    Search Policyholder
+                </label>
+                <input id="search" [(ngModel)]="searchQuery" (input)="onSearch()" class="form-control" placeholder="Search by policyholder">
+            </div>
+
             <div class="row">
                 <div class="form-group col-md-6 mb-3" formGroupName="policies">
                     <label for="policyholder">
@@ -14,7 +24,7 @@
                     </label>
                     <select id="policyholder" formControlName="policyholder" class="form-control" required>
                         <option value="" disabled>Select your policy holder</option>
-                        <option *ngFor="let pol of policies" [ngValue]="pol.policyholder">{{pol.policyholder}}</option>
+                        <option *ngFor="let pol of filteredPolicies" [ngValue]="pol.policyholder">{{pol.policyholder}}</option>
                     </select>
                 </div>
 
@@ -25,10 +35,11 @@
                     </label>
                     <select id="address" formControlName="address" class="form-control" required>
                         <option value="" disabled>Select your address</option>
-                        <option *ngFor="let pol of policies" [ngValue]="pol.address">{{pol.address}}</option>
+                        <option *ngFor="let pol of filteredPolicies" [ngValue]="pol.address">{{pol.address}}</option>
                     </select>
                 </div>
             </div>
+
             <div class="row">
                 <div class="form-group col-md-6 mb-3" formGroupName="policies">
                     <label for="stockInsured">
@@ -37,7 +48,7 @@
                     </label>
                     <select id="stockInsured" formControlName="stockInsured" class="form-control" required>
                         <option value="" disabled>Select your stock insured</option>
-                        <option *ngFor="let pol of policies" [ngValue]="pol.stockInsured">{{pol.stockInsured}}</option>
+                        <option *ngFor="let pol of filteredPolicies" [ngValue]="pol.stockInsured">{{pol.stockInsured}}</option>
                     </select>
                 </div>
 
@@ -48,7 +59,7 @@
                     </label>
                     <select id="construction" formControlName="construction" class="form-control" required>
                         <option value="" disabled>Select your construction</option>
-                        <option *ngFor="let pol of policies" [ngValue]="pol.construction">{{pol.construction}}</option>
+                        <option *ngFor="let pol of filteredPolicies" [ngValue]="pol.construction">{{pol.construction}}</option>
                     </select>
                 </div>
             </div>
@@ -61,7 +72,7 @@
                     </label>
                     <select id="sumInsured" formControlName="sumInsured" class="form-control" required>
                         <option value="" disabled>Select sum insured</option>
-                        <option *ngFor="let pol of policies" [ngValue]="pol.sumInsured">{{pol.sumInsured}}</option>
+                        <option *ngFor="let pol of filteredPolicies" [ngValue]="pol.sumInsured">{{pol.sumInsured}}</option>
                     </select>
                 </div>
 
